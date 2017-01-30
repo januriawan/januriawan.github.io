@@ -76,6 +76,18 @@ html {
   color: white;
   font-weight: 400
 }
+.button {
+ font-size: 16px;
+    width: 170px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.3s ease;
+    font-weight: 100;
+    display: block;
+}
 
 
 .home-nav .amr span {
@@ -1822,7 +1834,7 @@ ul.bubbles li:nth-child(20) { bottom: 290px; right: 280px; width: 6px; height: 6
 @media screen and (max-width:760px) {
   .main-t {
       width: 80%;
-      top: 34%
+      top: 32%
 }
 }
 
@@ -1830,7 +1842,11 @@ ul.bubbles li:nth-child(20) { bottom: 290px; right: 280px; width: 6px; height: 6
   .footer-menu li a {
     padding: 0 10px ;
     font-size: 12px ;
+	.main-t h3: 
   }
+  .main-t h3 {
+   font-size: 19px;
+}
 
 .modal-body {
   -webkit-transform:scale(0.8);
