@@ -1,5 +1,4 @@
 * {margin: 0; padding: 0}
-
 html {
   overflow-x: hidden;
   min-height: 600px
@@ -15,8 +14,26 @@ html {
     -o-animation: headerback 15s linear infinite;
     animation: headerback 15s linear infinite;
 }
-
-
+.hidden {
+  opacity:0;
+}
+.console-container {
+  font-family:Droid Sans Mono;
+  font-size:3em;
+  display:block;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
 @-webkit-keyframes headerback {
     25% {background: #85c6db}
     50% {background: #0f355b}
@@ -124,6 +141,7 @@ top: 30%;
     left: 9%;
     color: white;
     font-family: "open sans";
+	list-style:none;
 }
 
 .main-t h1 {
@@ -779,7 +797,7 @@ font-size: 15px
 }
 
 ul.cloud2 {
-  top: 180px;
+  top: 240px;
   right: 12%;
   -webkit-animation: cloudmovee 15s linear infinite;
   -moz-animation: cloudmovee 15s linear infinite;
@@ -899,7 +917,7 @@ left: 8px;
 
 
 ul.cloud1 {
-  top: 90px;
+  top: 45px;
   right: 40%;
   -webkit-animation: cloudmove 15s linear infinite;
   -moz-animation: cloudmove 15s linear infinite;
@@ -1037,7 +1055,7 @@ left: 33px;
   background-color: #ed961d;
   border-radius: 50%;
   right: 17%;
-  top: 150px;
+  top: 210px;
       -webkit-animation: disappear 15s linear infinite;
       -moz-animation: disappear 15s linear infinite;
       -o-animation: disappear 15s linear infinite;
@@ -1094,7 +1112,7 @@ width: 48px;
   box-shadow: 7px 7px 0 0 white;
   right: 17.5%;
       z-index: 9;
-  top: 143px;
+  top: 203px;
       -webkit-animation: appear 15s linear infinite;
       -moz-animation: appear 15s linear infinite;
       -o-animation: appear 15s linear infinite;
@@ -1834,7 +1852,7 @@ ul.bubbles li:nth-child(20) { bottom: 290px; right: 280px; width: 6px; height: 6
 @media screen and (max-width:760px) {
   .main-t {
       width: 80%;
-      top: 32%
+      top: 18%
 }
 }
 
@@ -1867,7 +1885,7 @@ ul.bubbles li:nth-child(20) { bottom: 290px; right: 280px; width: 6px; height: 6
 display: none}
 
 .about {
-  font-size: 15px !important; padding-right: 20px; line-height: 22px !important;
+   padding-right: 20px; line-height: 22px !important;
 }
 
 }
