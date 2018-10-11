@@ -1,1 +1,1 @@
- <img src="https://raw.githubusercontent.com/januriawan/januriawan.github.io/master/januriawan/januriawan.github.io.png" alt="januriawan"> 
+ <img src="https://raw.githubusercontent.com/januriawan/januriawan.github.io/master/januriawan/januriawan.png" alt="januriawan"> 
