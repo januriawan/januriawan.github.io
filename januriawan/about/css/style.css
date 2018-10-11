@@ -28,7 +28,7 @@ h2 strong {
   height: 550px;
   margin: auto;
   background-color: lightyellow;
-  position: inherit;
+  position: relative;
   border-radius: 7px;
 }
 
