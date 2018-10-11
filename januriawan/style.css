@@ -18,7 +18,7 @@ html {
   opacity:0;
 }
 .console-container {
-  font-family:Droid Sans Mono;
+  font-family:Roboto;
   font-size:3em;
   display:block;
   color:white;
@@ -103,7 +103,7 @@ html {
     border: 1px solid #fff;
     transition: 0.3s ease;
     font-weight: 100;
-    display: block;
+	margin: 10px 10px 8px 0px;
 }
 
 
@@ -797,7 +797,7 @@ font-size: 15px
 }
 
 ul.cloud2 {
-  top: 240px;
+  top: 220px;
   right: 12%;
   -webkit-animation: cloudmovee 15s linear infinite;
   -moz-animation: cloudmovee 15s linear infinite;
@@ -1055,7 +1055,7 @@ left: 33px;
   background-color: #ed961d;
   border-radius: 50%;
   right: 17%;
-  top: 210px;
+  top: 190px;
       -webkit-animation: disappear 15s linear infinite;
       -moz-animation: disappear 15s linear infinite;
       -o-animation: disappear 15s linear infinite;
@@ -1112,7 +1112,7 @@ width: 48px;
   box-shadow: 7px 7px 0 0 white;
   right: 17.5%;
       z-index: 9;
-  top: 203px;
+  top: 183px;
       -webkit-animation: appear 15s linear infinite;
       -moz-animation: appear 15s linear infinite;
       -o-animation: appear 15s linear infinite;
@@ -1752,7 +1752,10 @@ color: #C0C0C0;
 
 
 
-
+ div.row.absolute {
+      margin: 0 auto;
+	  width: 100%;
+}
 
 .inline-list > li {
  float: left; }
@@ -1846,7 +1849,6 @@ ul.bubbles li:nth-child(20) { bottom: 290px; right: 280px; width: 6px; height: 6
 .grass, .tree1, .tree2 {
   display: none !important
 }
-
 }
 
 @media screen and (max-width:760px) {
@@ -1866,6 +1868,28 @@ ul.bubbles li:nth-child(20) { bottom: 290px; right: 280px; width: 6px; height: 6
    font-size: 19px;
 }
 
+@media screen and (max-width:430px) {
+  .main-t {
+      width: 68%;
+      top: 15%
+}
+}
+@media screen and (max-width:400px) {
+  div.row.absolute {
+      margin: 0 auto;
+	  width: 88%;
+}
+}
+@media screen and (max-width:330px) {
+  .main-t {
+      width: 62%;
+      top: 13%
+}
+  div.row.absolute {
+      margin: 0 auto;
+	  width: 70%;
+}
+}
 .modal-body {
   -webkit-transform:scale(0.8);
   -moz-transform:scale(0.8);
@@ -1973,13 +1997,69 @@ margin-left: 9px;
   padding: 30px;
   font-size: 37px
 }
+.black1:before {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+    content: ''
+}
+#modals1:target .black1:before{
+   display: block;
+}
 
+#modals1:target .modal1-body{
+   top: 50%
+}
+
+.modal1-body {
+    width: 550px;
+    height: 425px;
+    position: fixed;
+    text-align: left;
+    left: 50%;
+    top: -120%;
+    z-index: 99999;
+    margin-left: -275px;
+    margin-top: -220px;
+    background-color: white;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.80);
+    border-top: 5px solid #1b7dbe;
+    border-bottom: 5px solid #1b7dbe;
+    background: url('../images/tree.png') no-repeat 323px 290px white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+  }
+
+.modal1 h1 {
+  color: #1b7dbe;
+  font-weight: 400;
+  padding: 30px;
+  font-size: 37px
+}
 #lets_talk {
       color: #55585a;
     font-weight: 100;
     padding: 0 20px 0 30px;
     font-size: 17px;
     line-height: 25px;
+}
+#lets_rich {
+     color: #55585a;
+font-weight: 100;
+padding: 0 20px 0 30px;
+font-size: 22px;
+line-height: 25px;
+text-align: center;
+margin: 20px;
 }
 
 
@@ -2019,7 +2099,7 @@ margin-left: 9px;
 
 .find-me {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
 }
 
 .find-me p {
