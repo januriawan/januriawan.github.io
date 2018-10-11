@@ -10,6 +10,8 @@ body {
   background-image: url(https://desktop.github.com/images/star-bg.svg),linear-gradient(#191c20, #24292e 15%);
   background-size: cover;
   background-repeat: no-repeat;
+   flex-direction: column;
+  margin: 0;
 }
 
 h2 {
@@ -24,12 +26,8 @@ h2 strong {
 }
 
 .cards {
-  width: 768px;
-  height: 550px;
-  margin: auto;
-  background-color: lightyellow;
-  position: relative;
-  border-radius: 7px;
+display: flex;
+  flex: 1;
 }
 
 .card-control {
@@ -187,6 +185,9 @@ h2 {
 body {
     font-size: 15px;
 }
+    .cards {
+    display: block;
+  }
 h2 {
     font-size: 1.9em;
 }
