@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700&subset=latin,cyrillic);
 body {
-  min-height: 100vh;
-  display: flex;
   justify-content: center;
   font-family: Ubuntu;
   font-weight: 300;
@@ -24,12 +22,7 @@ h2 strong {
 }
 
 .cards {
-  width: 768px;
-  height: 550px;
   margin: auto;
-  background-color: lightyellow;
-  position: relative;
-  border-radius: 7px;
 }
 
 .card-control {
