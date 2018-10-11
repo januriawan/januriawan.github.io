@@ -173,34 +173,3 @@ h2 strong {
 .btnt:hover {
   opacity: .5;
 }
-@media screen and (max-width:720px) {
-h2 {
-    font-size: 2.1em;
-}
-}
-@media screen and (max-width:500px) {
-body {
-    font-size: 15px;
-}
-h2 {
-    font-size: 1.9em;
-}
-}
-@media screen and (max-width:425px) {
-body {
-    font-size: 14px;
-}
-h2 {
-    font-size: 1.7em;
-}
-}
-@media screen and (max-width:380px) {
-h2 {
-    font-size: 1.5em;
-}
-}
-@media screen and (max-width:310px) {
-body {
-    font-size: 13px;
-}
-}
