@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700&subset=latin,cyrillic);
 body {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   font-family: Ubuntu;
