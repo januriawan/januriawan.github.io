@@ -6,8 +6,8 @@ body {
   font-family: Ubuntu;
   font-weight: 300;
   line-height: 1.4;
-  background-color: #eaeaea;
-  background-image: url(https://dl.dropboxusercontent.com/u/26808427/cdn/bg.jpg);
+  background-color: #24292e;
+  background-image: url(/images/star-bg.svg),linear-gradient(#191c20, #24292e 15%);
   background-size: cover;
   background-repeat: no-repeat;
 }
