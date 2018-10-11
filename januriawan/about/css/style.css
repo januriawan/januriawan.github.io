@@ -24,12 +24,7 @@ h2 strong {
 }
 
 .cards {
-  width: 768px;
-  height: 550px;
   margin: auto;
-  background-color: lightyellow;
-  position: relative;
-  border-radius: 7px;
 }
 
 .card-control {
