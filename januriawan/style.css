@@ -116,7 +116,7 @@ html {
 }
 
 body {
-    min-width: 400px !important;  
+    width: 100% !important;  
     position: relative;
               text-align: center;
           font-family: "open sans";
