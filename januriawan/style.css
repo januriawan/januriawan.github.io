@@ -1540,7 +1540,7 @@ color: #C0C0C0;
 }
 
 .follow  {
-  margin-top: 17px
+  margin-top: 15px
 }
 
 .follow a {
@@ -2168,4 +2168,15 @@ margin: 20px;
 	padding: 9px 0 0 0;
 	border-radius: 20px;
 	box-shadow: 0 1px 0px 1px rgba(78, 180, 219, 0.7);
+}
+@media only screen and (max-width: 600px) {
+ .kepala {
+    font-size: 2em !important;
+  }	
+ .punggung {
+    font-size: 18px !important;
+  }	
+  .tulisan {
+    font-size: 12px !important;
+  }
 }
