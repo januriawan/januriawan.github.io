@@ -135,7 +135,7 @@ body {
 
 .main-t {
 top: 30%;
-    text-align: left;
+    text-align: justify;
     position: absolute;
     width: 50%;
     left: 9%;
@@ -1853,8 +1853,8 @@ ul.bubbles li:nth-child(20) { bottom: 290px; right: 280px; width: 6px; height: 6
 
 @media screen and (max-width:760px) {
   .main-t {
-      width: 80%;
-      top: 18%
+      width: 85%;
+      top: 22%
 }
 }
 
