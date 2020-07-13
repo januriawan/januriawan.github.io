@@ -1871,9 +1871,6 @@ ul.bubbles li:nth-child(20) { bottom: 290px; right: 280px; width: 6px; height: 6
 	.main-t {
       width: 78%;
 }
-	.header {
-		width: 430px;
-	}
 }
 @media screen and (max-width:400px) {
   div.row.absolute {
