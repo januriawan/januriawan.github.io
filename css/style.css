@@ -446,7 +446,7 @@ body::-webkit-scrollbar-thumb{
     position:fixed;
     left:0;
     top:0;
-    border-right:1px solid rgba(85,82,124,.1);
+    border-right: 1px solid rgba(85, 82, 124, 0.03);
     background: transparent url("../img/background.png") center center / cover no-repeat; 
 }
 .januriawan_tm_sidebar .sidebar_inner{
