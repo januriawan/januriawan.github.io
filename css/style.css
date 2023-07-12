@@ -344,7 +344,7 @@ body::-webkit-scrollbar-thumb{
     padding:0
 }
 .januriawan_tm_topbar .hamburger-inner,.januriawan_tm_topbar .hamburger-inner:after,.januriawan_tm_topbar .hamburger-inner:before{
-    width:15px;
+    width:20px;
     height:2px
 }
 .januriawan_tm_topbar .trigger{
@@ -352,7 +352,7 @@ body::-webkit-scrollbar-thumb{
     top:5px
 }
 .januriawan_tm_topbar .hamburger-box{
-    width:15px
+    width:20px
 }
 .januriawan_tm_mobile_menu{
     position:fixed;
