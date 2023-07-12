@@ -1589,7 +1589,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0;
     float: left;
     width: 25%;
-    border: 2px solid #e7e7e7;
+    border: 2px solid #f7f7f775;
     text-align: center;
     height: 180px;
     line-height: 180px;
@@ -1601,7 +1601,7 @@ body::-webkit-scrollbar-thumb {
 
 .januriawan_tm_partners ul li img {
     max-width: 88%;
-    max-height: 100px
+    max-height: 100px;
 }
 
 .januriawan_tm_partners ul li .list_inner {
@@ -3370,28 +3370,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media(max-width:768px) {
-    .januriawan_tm_home .title {
-        width: 100%;
-        float: left;
-        margin-bottom: 21px;
-        background: rgba(19, 19, 19, 0.7);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        padding: 20px;
-        border-radius: 16px;
-    }
-
-    .januriawan_tm_home .subtitle {
-        margin-bottom: 30px;
-        background: rgba(19, 19, 19, 0.7);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        padding: 20px;
-        border-radius: 16px;
-    }
-
     .januriawan_tm_home .subtitle {
         width: 100%;
         max-width: 100%;
