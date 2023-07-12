@@ -1614,7 +1614,8 @@ body::-webkit-scrollbar-thumb {
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
-    transition: all .3s ease
+    transition: all .3s ease;
+    opacity: 1;
 }
 
 .januriawan_tm_partners ul li .list_inner:hover {
