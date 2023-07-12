@@ -1031,7 +1031,7 @@ body::-webkit-scrollbar-thumb{
     clear:both;
     float:left;
     position:relative;
-    border:1px solid rgba(30,30,30,.2);
+    border: 1px solid rgba(164, 164, 164, 0.2);
     padding:32px 40px 55px;
     border-radius:14px;
     -webkit-transition:all .3s ease;
