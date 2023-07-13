@@ -13,7 +13,7 @@
 	color: transparent;
 	background-image: linear-gradient(to left, #f1c40f, #f1c40f, #1830a2, #1830a2);
 	-webkit-background-clip: text;
-	animation: animate 20s linear infinite;
+	animation: animate 15s linear infinite;
 	background-size: 1000%;
 }
 
