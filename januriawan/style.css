@@ -9,6 +9,26 @@
   animation: headerback 15s linear infinite;
 }
 
+.color-text {
+	color: transparent;
+	background-image: linear-gradient(to left, #f1c40f, #f1c40f, #1830a2, #1830a2);
+	-webkit-background-clip: text;
+	animation: animate 20s linear infinite;
+	background-size: 1000%;
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0% 100%;
+	}
+	50% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: 0% 100%;
+	}
+}
+
 .hidden {
   opacity: 0;
 }
