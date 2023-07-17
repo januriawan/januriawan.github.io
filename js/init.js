@@ -422,12 +422,12 @@ function januriawan_tm_owl_carousel() {
     carousel3.each(function() {
         var element = jQuery(this);
         element.owlCarousel({
-            loop: false,
+            loop: true,
             items: 3,
             lazyLoad: false,
             margin: 30,
             autoplay: true,
-            autoplayTimeout: 7000,
+            autoplayTimeout: 5000,
             rtl: rtlMode,
             dots: true,
             nav: false,
