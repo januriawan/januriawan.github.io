@@ -342,6 +342,11 @@ body::-webkit-scrollbar-thumb {
     position: relative
 }
 
+.more-text-center {
+    text-align: center;
+    padding-top: 530px;
+}
+
 .tm_content {
     width: 100%;
     max-width: 1250px;
