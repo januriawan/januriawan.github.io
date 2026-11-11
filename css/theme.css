@@ -302,3 +302,11 @@
         display: none;
     }
 }
+
+:root[data-theme="dark"] .contact::before {
+    --contact-pattern-color: rgb(168 188 255 / 0.12);
+}
+
+:root[data-theme="dark"] .contact-art {
+    --city-silhouette-color: #b3b3b3;
+}
