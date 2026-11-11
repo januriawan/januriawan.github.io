@@ -285,7 +285,7 @@
         ["Enlarge preview", "Perbesar pratinjau"],
         ["Visit website", "Kunjungi website"],
         ["Project notes", "Catatan proyek"],
-        ["A responsive website built with Laravel 7 for the Ministry of Trade, Republic of Indonesia. The project includes dark mode, interactive maps, digital magazines, and text-to-speech functionality.", "Website responsif yang dibangun dengan Laravel 7 untuk Kementerian Perdagangan RI. Proyek ini mencakup mode gelap, peta interaktif, majalah digital, dan fitur teks ke suara."],
+        ["A responsive website built with Laravel for the Ministry of Trade, Republic of Indonesia. The project includes dark mode, interactive maps, digital magazines, and text-to-speech functionality.", "Website responsif yang dibangun dengan Laravel untuk Kementerian Perdagangan RI. Proyek ini mencakup mode gelap, peta interaktif, majalah digital, dan fitur teks ke suara."],
         ["The website engine was also used for these ministry units:", "Mesin website ini juga digunakan untuk unit berikut di lingkungan kementerian:"],
         ["Directorate General of National Export Development", "Direktorat Jenderal Pengembangan Ekspor Nasional"],
         ["Directorate General of Consumer Protection and Trade Compliance", "Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga"],
