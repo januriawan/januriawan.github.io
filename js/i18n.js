@@ -2,6 +2,8 @@
 
 (() => {
     const entries = [
+        ["Navigation menu", "Menu navigasi"],
+        ["Close menu", "Tutup menu"],
         ["Fajar Januriawan — Open to work", "Fajar Januriawan — Terbuka untuk peluang kerja"],
         ["Moodle plugin", "Plugin Moodle"],
         ["KUmeet — Moodle Plugin", "KUmeet — Plugin Moodle"],

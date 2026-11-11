@@ -305,3 +305,12 @@
         display: none;
     }
 }
+:root[data-theme="dark"] .mobile-menu-toggle {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+:root[data-theme="dark"] .mobile-menu-toggle:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
