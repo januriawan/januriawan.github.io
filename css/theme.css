@@ -310,3 +310,115 @@
 :root[data-theme="dark"] .contact-art {
     --city-silhouette-color: #b3b3b3;
 }
+
+:is(#main-navigation, .hero .actions) a[href="#contact"],
+#contact-form button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(110deg, #c79525, #e7bb51);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+:is(#main-navigation, .hero .actions) a[href="#contact"] > i,
+#contact-form button[type="submit"] > i {
+    transition: color 0.3s ease;
+}
+
+:is(#main-navigation, .hero .actions) a[href="#contact"]::before,
+:is(#main-navigation, .hero .actions) a[href="#contact"]::after,
+#contact-form button[type="submit"]::before,
+#contact-form button[type="submit"]::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+:is(#main-navigation, .hero .actions) a[href="#contact"]::before,
+#contact-form button[type="submit"]::before {
+    top: 8px;
+    right: 9px;
+    bottom: 8px;
+    width: 40px;
+    background:
+        radial-gradient(circle at 10% 25%, #fff8d6 0 1.5px, transparent 2px),
+        radial-gradient(circle at 85% 60%, #fff8d6 0 2px, transparent 2.5px),
+        radial-gradient(circle at 35% 90%, #fff8d6 0 1px, transparent 1.5px);
+}
+
+:is(#main-navigation, .hero .actions) a[href="#contact"]::after,
+#contact-form button[type="submit"]::after {
+    right: -35px;
+    bottom: -43px;
+    width: 72px;
+    height: 72px;
+    border: 1px solid rgb(255 255 255 / 0.45);
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.08);
+    box-shadow:
+        0 0 0 12px rgb(255 255 255 / 0.12),
+        0 0 0 24px rgb(255 255 255 / 0.08);
+}
+
+:is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible)::before,
+#contact-form button[type="submit"]:is(:hover, :focus-visible)::before {
+    animation: contact-twinkle 1.4s ease-in-out both;
+}
+
+:is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible)::after,
+#contact-form button[type="submit"]:is(:hover, :focus-visible)::after {
+    animation: contact-rings 0.4s ease-out both;
+}
+
+@keyframes contact-twinkle {
+    0%, 100% { opacity: 0; }
+    25%, 75% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+@keyframes contact-rings {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+:root :is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible),
+:root[data-theme="dark"] :is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible),
+:root #contact-form button[type="submit"]:is(:hover, :focus-visible) {
+    background-size: 100% 100%;
+    border-color: #d4a62e;
+    color: #fff;
+}
+
+#contact-form button[type="submit"]:is(:hover, :focus-visible) {
+    transform: none;
+}
+
+:root :is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible) > i,
+:root[data-theme="dark"] :is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible) > i,
+:root #contact-form button[type="submit"]:is(:hover, :focus-visible) > i {
+    background: transparent;
+    color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :is(#main-navigation, .hero .actions) a[href="#contact"],
+    :is(#main-navigation, .hero .actions) a[href="#contact"] > i,
+    #contact-form button[type="submit"],
+    #contact-form button[type="submit"] > i {
+        transition: none;
+    }
+
+    :is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible)::before,
+    :is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible)::after,
+    #contact-form button[type="submit"]:is(:hover, :focus-visible)::before,
+    #contact-form button[type="submit"]:is(:hover, :focus-visible)::after {
+        animation: none;
+    }
+
+    :is(#main-navigation, .hero .actions) a[href="#contact"]:is(:hover, :focus-visible)::after,
+    #contact-form button[type="submit"]:is(:hover, :focus-visible)::after {
+        opacity: 1;
+    }
+}
