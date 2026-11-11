@@ -1,0 +1,870 @@
+.hero {
+    --hero-gutter: 22px;
+}
+.motion-toggle {
+    position: absolute;
+    bottom: 14px;
+    right: 0;
+    z-index: 11;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #849ca9;
+    border-radius: 3px;
+    background: var(--navy);
+    color: #d5dee2;
+    min-height: 44px;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+}
+.motion-toggle:hover {
+    background: #294553;
+    color: #fff;
+}
+.motion-symbol {
+    width: 12px;
+    text-align: center;
+}
+.hero-layout {
+    position: relative;
+    isolation: isolate;
+    padding-bottom: 0;
+    gap: 0;
+}
+.hero-copy {
+    position: relative;
+    z-index: 2;
+}
+.hero-scene {
+    --scene-cycle: 32s;
+    position: relative;
+    height: 365px;
+    margin: 12px calc(-1 * var(--hero-gutter)) 0;
+    overflow: hidden;
+    isolation: isolate;
+    pointer-events: none;
+    background: #edf3f7;
+    animation: scene-sky var(--scene-cycle) ease-in-out infinite;
+}
+/* Blend the scene behind the copy without covering it with a rectangular panel. */
+.hero-scene::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background: linear-gradient(var(--navy), transparent 25%);
+}
+.hero-scene *,
+.hero-scene *::before,
+.hero-scene *::after {
+    box-sizing: border-box;
+}
+.hero-scene ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.hero-scene .sun,
+.hero-scene .moon {
+    position: absolute;
+    top: 65px;
+    right: 20%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.hero-scene .sun {
+    background: #f7b953;
+    box-shadow: inset -5px -3px #ed961d;
+    animation: scene-day var(--scene-cycle) ease-in-out infinite;
+}
+.hero-scene .moon {
+    background: transparent;
+    box-shadow: 8px 5px 0 0 #fff4d8;
+    transform: translate(-8px, -5px);
+    animation: scene-night var(--scene-cycle) ease-in-out infinite;
+}
+.hero-scene .stars {
+    position: absolute;
+    inset: 0;
+    animation: scene-night var(--scene-cycle) ease-in-out infinite;
+}
+.hero-scene .stars li {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #f8f2dd;
+}
+.hero-scene .stars li:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+.hero-scene .stars li:nth-child(2) {
+    top: 23%;
+    left: 26%;
+}
+.hero-scene .stars li:nth-child(3) {
+    top: 15%;
+    left: 43%;
+}
+.hero-scene .stars li:nth-child(4) {
+    top: 35%;
+    left: 57%;
+}
+.hero-scene .stars li:nth-child(5) {
+    top: 11%;
+    left: 72%;
+}
+.hero-scene .stars li:nth-child(6) {
+    top: 39%;
+    left: 86%;
+}
+.hero-scene .stars li:nth-child(7) {
+    top: 18%;
+    left: 92%;
+}
+.hero-scene .stars li:nth-child(8) {
+    top: 40%;
+    left: 18%;
+}
+.hero-scene .stars li:nth-child(9) {
+    top: 7%;
+    left: 54%;
+}
+.hero-scene .stars li:nth-child(10) {
+    top: 46%;
+    left: 41%;
+}
+.hero-scene .stars li:nth-child(11) {
+    top: 29%;
+    left: 67%;
+}
+.hero-scene .stars li:nth-child(12) {
+    top: 51%;
+    left: 95%;
+}
+.hero-scene .cloud {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    height: 38px;
+    animation: scene-cloud 24s ease-in-out infinite;
+}
+.hero-scene .cloud-one {
+    top: 60px;
+    left: 20%;
+}
+.hero-scene .cloud-two {
+    top: 140px;
+    right: 5%;
+    transform: scale(0.7);
+    animation-delay: -8s;
+}
+.hero-scene .cloud span {
+    display: block;
+    background: #d8eaf0;
+    border-radius: 30px 30px 0 0;
+    width: 32px;
+    height: 22px;
+    animation: scene-cloud-color var(--scene-cycle) ease-in-out infinite;
+}
+.hero-scene .cloud span:nth-child(2) {
+    height: 38px;
+    width: 40px;
+}
+.hero-scene .cloud span:nth-child(3) {
+    height: 28px;
+}
+.hero-scene .distant-island {
+    position: absolute;
+    bottom: 59px;
+    left: -20%;
+    width: 140%;
+    height: 120px;
+    border-radius: 50% 65% 0 0;
+    background: #d4e2ea;
+    animation: scene-island var(--scene-cycle) ease-in-out infinite;
+}
+.hero-scene .mountain {
+    position: absolute;
+    bottom: 80px;
+    right: -25px;
+    height: 145px;
+    width: 160px;
+    background: #b3a385;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.hero-scene .mountain::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 50%;
+    background: #a18e6e;
+}
+.hero-scene .mountain-back::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 56px;
+    width: 49px;
+    height: 45px;
+    background: #e5ece9;
+    clip-path: polygon(50% 0, 100% 100%, 65% 80%, 50% 100%, 30% 80%, 0 100%);
+}
+.hero-scene .mountain-front {
+    right: 42px;
+    height: 85px;
+    width: 110px;
+    background: #9e987e;
+}
+.hero-scene .lighthouse-island {
+    position: absolute;
+    z-index: 2;
+    right: -65px;
+    bottom: 66px;
+    width: 310px;
+    height: 40px;
+    background: #217359;
+    border-radius: 60% 40% 0 0;
+}
+.hero-scene .tree-island {
+    position: absolute;
+    z-index: 11;
+    bottom: 66px;
+    left: -24px;
+    width: 220px;
+    height: 34px;
+    border-radius: 0 28px 28px 0;
+    background: #176b4c;
+}
+.hero-scene .scene-tree {
+    position: absolute;
+    bottom: 30px;
+    width: 3px;
+    background: #e2eee4;
+}
+.hero-scene .scene-tree::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: var(--tree-crown);
+    height: var(--tree-crown);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: var(--tree-color);
+    box-shadow: inset -5px -4px rgb(0 0 0 / 0.12);
+}
+.hero-scene .tree-small {
+    --tree-crown: 48px;
+    --tree-color: #24a46b;
+    left: 70px;
+    height: 86px;
+}
+.hero-scene .tree-tall {
+    --tree-crown: 62px;
+    --tree-color: #219447;
+    left: 130px;
+    height: 120px;
+}
+.hero-scene .scene-bush {
+    position: absolute;
+    bottom: 22px;
+    width: 50px;
+    height: 44px;
+    border-radius: 50% 50% 0 0;
+    background: #209264;
+}
+.hero-scene .bush-one {
+    left: 8px;
+}
+.hero-scene .bush-two {
+    left: 104px;
+    width: 58px;
+    height: 58px;
+    background: #176b4c;
+}
+.hero-scene .bush-three {
+    left: 160px;
+}
+.hero-scene .lighthouse {
+    position: absolute;
+    z-index: 3;
+    bottom: 95px;
+    right: 94px;
+    width: 72px;
+    height: 190px;
+}
+.hero-scene .tower {
+    position: absolute;
+    bottom: 0;
+    width: 72px;
+    height: 145px;
+    background: #f6f1de;
+    clip-path: polygon(24% 0, 76% 0, 95% 100%, 5% 100%);
+    overflow: hidden;
+}
+.hero-scene .tower::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 57%;
+    background: rgb(28 45 53 / 0.12);
+}
+.hero-scene .tower > span {
+    display: block;
+    width: 100px;
+    height: 21px;
+    background: #e16c55;
+    margin: 19px 0 25px -8px;
+    transform: rotate(-21deg);
+}
+.hero-scene .tower-door {
+    position: absolute;
+    bottom: 0;
+    left: 29px;
+    width: 14px;
+    height: 25px;
+    border-radius: 9px 9px 0 0;
+    background: #263f4c;
+}
+.hero-scene .lantern {
+    position: absolute;
+    bottom: 145px;
+    left: 20px;
+    width: 32px;
+    height: 28px;
+    background: #f7edc8;
+    border-inline: 3px solid #e16c55;
+}
+.hero-scene .lantern > span {
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: #ffc275;
+}
+.hero-scene .balcony {
+    position: absolute;
+    bottom: 141px;
+    left: 10px;
+    width: 52px;
+    height: 10px;
+    border-block: 3px solid #cf5b47;
+    background: repeating-linear-gradient(90deg, #cf5b47 0 2px, transparent 2px 8px);
+}
+.hero-scene .dome {
+    position: absolute;
+    bottom: 173px;
+    left: 15px;
+    width: 42px;
+    height: 22px;
+    border-radius: 28px 28px 0 0;
+    background: #b94b3a;
+    border-bottom: 4px solid #e16c55;
+}
+.hero-scene .spire {
+    position: absolute;
+    bottom: 192px;
+    left: 33px;
+    width: 5px;
+    height: 16px;
+    border-radius: 3px;
+    background: #b94b3a;
+}
+.hero-scene .light-beam {
+    position: absolute;
+    top: -90px;
+    left: 35px;
+    width: 310px;
+    height: 230px;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    background: linear-gradient(90deg, rgb(255 224 158 / 0.12), transparent);
+    transform-origin: 0 50%;
+    animation: scene-beam var(--scene-cycle) ease-in-out infinite;
+}
+.hero-scene .boat {
+    position: absolute;
+    z-index: 13;
+    right: -110px;
+    bottom: 68px;
+    width: 100px;
+    height: 65px;
+    animation: scene-boat 28s linear infinite;
+}
+.hero-scene .boat-body {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 20px;
+    border-radius: 3px 3px 12px 28px;
+    background: #e16c55;
+    border-top: 3px solid #f7edc8;
+}
+.hero-scene .white-body {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 65px;
+    height: 18px;
+    border-radius: 15px 3px 0 0;
+    background: #f7f5eb;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+}
+.hero-scene .white-body > span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #3e6e88;
+}
+.hero-scene .smokestack {
+    position: absolute;
+    bottom: 38px;
+    left: 45px;
+    height: 15px;
+    width: 10px;
+    background: #d5ac72;
+}
+.hero-scene .fume {
+    position: absolute;
+    left: 46px;
+    bottom: 57px;
+}
+.hero-scene .fume li {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #e2e8e6;
+    animation: scene-smoke 3s ease-out infinite;
+}
+.hero-scene .fume li:nth-child(2) {
+    animation-delay: -1s;
+}
+.hero-scene .fume li:nth-child(3) {
+    animation-delay: -2s;
+}
+.hero-scene .sea {
+    position: absolute;
+    z-index: 12;
+    bottom: 60px;
+    width: 100%;
+    height: 10px;
+    background: #a9c3d3;
+    border-top: 3px solid #c7dce7;
+    animation: scene-water var(--scene-cycle) ease-in-out infinite;
+}
+.hero-scene .sea > span {
+    position: absolute;
+    background: rgb(255 255 255 / 0.45);
+    height: 2px;
+    width: 45px;
+    top: 2px;
+    animation: scene-wave 5s ease-in-out infinite alternate;
+}
+.hero-scene .sea > span:nth-child(1) {
+    left: 12%;
+}
+.hero-scene .sea > span:nth-child(2) {
+    left: 32%;
+    width: 28px;
+    animation-delay: -3s;
+}
+.hero-scene .sea > span:nth-child(3) {
+    left: 58%;
+    animation-delay: -1s;
+}
+.hero-scene .sea > span:nth-child(4) {
+    left: 80%;
+    width: 20px;
+    animation-delay: -2s;
+}
+.hero-scene .underwater {
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #e7eef3;
+    animation: scene-depth var(--scene-cycle) ease-in-out infinite;
+}
+.hero-scene .sea-plant {
+    position: absolute;
+    left: 20%;
+    bottom: -8px;
+    width: 4px;
+    height: 45px;
+    border-radius: 3px;
+    background: #33867d;
+    transform-origin: bottom;
+    animation: scene-sway 6s ease-in-out infinite alternate;
+}
+.hero-scene .sea-plant span {
+    position: absolute;
+    left: -9px;
+    width: 16px;
+    height: 4px;
+    border-radius: 3px;
+    background: #33867d;
+    transform: rotate(40deg);
+}
+.hero-scene .sea-plant span:nth-child(1) {
+    top: 12px;
+}
+.hero-scene .sea-plant span:nth-child(2) {
+    top: 24px;
+    left: 0;
+    transform: rotate(-40deg);
+}
+.hero-scene .sea-plant span:nth-child(3) {
+    top: 35px;
+}
+.hero-scene .plant-two {
+    left: 85%;
+    height: 60px;
+    animation-delay: -3s;
+}
+.hero-scene .bubbles li {
+    position: absolute;
+    bottom: -7px;
+    left: 40%;
+    width: 5px;
+    height: 5px;
+    border: 1px solid #a8bfcd;
+    border-radius: 50%;
+    animation: scene-bubble 5s linear infinite;
+}
+.hero-scene .bubbles li:nth-child(2) {
+    left: 42%;
+    animation-delay: -2s;
+    width: 3px;
+    height: 3px;
+}
+.hero-scene .bubbles li:nth-child(3) {
+    left: 65%;
+    animation-delay: -3s;
+}
+.hero-scene .bubbles li:nth-child(4) {
+    left: 14%;
+    animation-delay: -1s;
+}
+.hero-scene .bubbles li:nth-child(5) {
+    left: 80%;
+    animation-delay: -4s;
+}
+.hero-scene,
+.hero-scene *,
+.hero-scene *::before,
+.hero-scene *::after {
+    animation-play-state: paused !important;
+}
+.hero-scene[data-motion="playing"],
+.hero-scene[data-motion="playing"] *,
+.hero-scene[data-motion="playing"] *::before,
+.hero-scene[data-motion="playing"] *::after {
+    animation-play-state: running !important;
+}
+.hero-scene[data-motion="paused"],
+.hero-scene[data-motion="paused"] *,
+.hero-scene[data-motion="paused"] *::before,
+.hero-scene[data-motion="paused"] *::after {
+    animation-play-state: paused !important;
+}
+@keyframes scene-sky {
+    0%,
+    100% {
+        background: #edf3f7;
+    }
+    45%,
+    80% {
+        background: #182638;
+    }
+}
+@keyframes scene-day {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    40%,
+    85% {
+        opacity: 0;
+    }
+}
+@keyframes scene-night {
+    0%,
+    15%,
+    100% {
+        opacity: 0;
+    }
+    45%,
+    80% {
+        opacity: 1;
+    }
+}
+@keyframes scene-cloud-color {
+    0%,
+    100% {
+        background: #f8fbfd;
+    }
+    45%,
+    80% {
+        background: #43566c;
+    }
+}
+@keyframes scene-island {
+    0%,
+    100% {
+        background: #d4e2ea;
+    }
+    45%,
+    80% {
+        background: #30465b;
+    }
+}
+@keyframes scene-water {
+    0%,
+    100% {
+        background: var(--scene-water-day, #a9c3d3);
+        border-color: var(--scene-water-edge-day, #c7dce7);
+    }
+    45%,
+    80% {
+        background: #34546b;
+        border-color: #6a899f;
+    }
+}
+@keyframes scene-depth {
+    0%,
+    100% {
+        background: var(--scene-depth-day, #e7eef3);
+    }
+    45%,
+    80% {
+        background: #142c40;
+    }
+}
+@keyframes scene-cloud {
+    0%,
+    100% {
+        translate: 0;
+    }
+    50% {
+        translate: -35px;
+    }
+}
+@keyframes scene-beam {
+    0%,
+    15%,
+    100% {
+        opacity: 0;
+        rotate: -12deg;
+    }
+    45%,
+    80% {
+        opacity: 1;
+        rotate: 8deg;
+    }
+}
+@keyframes scene-boat {
+    from {
+        right: -110px;
+    }
+    to {
+        right: calc(100% + 10px);
+    }
+}
+@keyframes scene-smoke {
+    from {
+        opacity: 0.7;
+        transform: translate(0, 0) scale(0.6);
+    }
+    to {
+        opacity: 0;
+        transform: translate(20px, -32px) scale(1.8);
+    }
+}
+@keyframes scene-wave {
+    to {
+        transform: translateX(18px);
+    }
+}
+@keyframes scene-sway {
+    from {
+        rotate: -7deg;
+    }
+    to {
+        rotate: 7deg;
+    }
+}
+@keyframes scene-bubble {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    30% {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-58px);
+    }
+}
+@media (min-width: 620px) {
+    .hero {
+        --hero-gutter: 38px;
+    }
+    .hero-layout {
+        padding-bottom: 0;
+    }
+    .hero-scene {
+        height: 390px;
+    }
+    .hero-scene .lighthouse {
+        right: 17%;
+    }
+    .hero-scene .lighthouse-island {
+        width: 400px;
+    }
+}
+@media (min-width: 900px) {
+    .hero-layout {
+        display: block;
+        padding: 76px 0 205px;
+    }
+    .hero-copy {
+        width: 64%;
+    }
+    .hero-description {
+        max-width: 490px;
+    }
+    .hero-copy h1 {
+        font-size: clamp(3rem, 4.6vw, 5rem);
+    }
+    .hero-scene {
+        position: absolute;
+        inset: 0 calc(-1 * var(--hero-gutter));
+        height: 100%;
+        margin: 0;
+        z-index: -1;
+    }
+    .hero-scene::after {
+        background: radial-gradient(
+            ellipse 90% 110% at 0% 30%,
+            var(--navy) 0% 52%,
+            transparent 100%
+        );
+    }
+    .hero-scene .sun,
+    .hero-scene .moon {
+        top: 90px;
+        right: 10%;
+    }
+    .hero-scene .cloud-one {
+        left: 73%;
+    }
+    .hero-scene .cloud-two {
+        top: 190px;
+        right: -4%;
+    }
+    .hero-scene .lighthouse {
+        right: 8%;
+        bottom: 100px;
+    }
+    .hero-scene .lighthouse-island {
+        width: 290px;
+    }
+    .hero-scene .boat {
+        animation-delay: -8s;
+    }
+    .hero-scene .sea-plant {
+        left: 75%;
+    }
+    .hero-scene .plant-two {
+        left: 92%;
+    }
+    .hero-foot {
+        position: relative;
+        z-index: 2;
+    }
+}
+@media (min-width: 1050px) {
+    .hero {
+        --hero-gutter: clamp(38px, 5vw, 100px);
+    }
+    .hero-copy {
+        width: 70%;
+    }
+    .hero-copy h1 {
+        font-size: clamp(2.8rem, 4.4vw, 5rem);
+    }
+}
+@media (min-width: 1280px) {
+    .hero-copy {
+        width: 64%;
+    }
+    .hero-layout {
+        padding: 88px 0 205px;
+    }
+    .hero-scene .lighthouse {
+        right: 10%;
+        scale: 1.15;
+        transform-origin: bottom;
+    }
+}
+@media (min-width: 1450px) {
+    .hero-layout {
+        padding-top: 105px;
+        padding-bottom: 205px;
+    }
+    .hero-scene .lighthouse {
+        right: 13%;
+        scale: 1.3;
+    }
+    .hero-scene .sun,
+    .hero-scene .moon {
+        right: 16%;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-scene,
+    .hero-scene *,
+    .hero-scene *::before,
+    .hero-scene *::after {
+        animation: none !important;
+    }
+    .hero-scene {
+        background: #182638;
+    }
+    .hero-scene .sun {
+        opacity: 0;
+    }
+    .hero-scene .moon,
+    .hero-scene .stars {
+        opacity: 1;
+    }
+    .hero-scene .cloud span {
+        background: #43566c;
+    }
+    .hero-scene .distant-island {
+        background: #30465b;
+    }
+    .hero-scene .sea {
+        background: #34546b;
+        border-color: #6a899f;
+    }
+    .hero-scene .underwater {
+        background: #142c40;
+    }
+    .hero-scene .boat {
+        right: 58%;
+    }
+    .hero-scene .fume,
+    .hero-scene .bubbles {
+        opacity: 0;
+    }
+    .hero-scene .light-beam {
+        opacity: 0.8;
+    }
+}

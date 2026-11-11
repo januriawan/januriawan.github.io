@@ -1,0 +1,251 @@
+.hero-location {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+.hero-top {
+    align-items: center;
+}
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 56px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+.theme-track {
+    display: flex;
+    align-items: center;
+    width: 52px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 999px;
+    background: #64748b;
+    transition: background-color 0.18s ease;
+}
+.theme-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    color: #243347;
+    font-size: 13px;
+    transition: transform 0.18s ease;
+}
+.theme-toggle[aria-checked="true"] .theme-track {
+    background: #5269b8;
+}
+.theme-toggle[aria-checked="true"] .theme-thumb {
+    transform: translateX(22px);
+}
+.theme-toggle:hover .theme-track {
+    outline: 1px solid currentColor;
+    outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .theme-track,
+    .theme-thumb {
+        transition: none;
+    }
+}
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --ink: #f1f5f9;
+    --muted: #b8c5d6;
+    --paper: #15202e;
+    --soft: #243347;
+    --line: #40516a;
+    --navy: #1f2e40;
+    --night: #24384c;
+    --accent-soft: #2b3d57;
+    --theme-surface: #1d2b3d;
+    --theme-link: #a8bcff;
+    color: var(--ink);
+    background: var(--paper);
+}
+:root[data-theme="dark"] .sidebar,
+:root[data-theme="dark"] .section,
+:root[data-theme="dark"] .portfolio-card,
+:root[data-theme="dark"] dialog {
+    background: var(--theme-surface);
+    color: var(--ink);
+}
+:root[data-theme="dark"] .hero,
+:root[data-theme="dark"] .contact {
+    background: var(--navy);
+    color: var(--ink);
+    border-color: var(--line);
+}
+:root[data-theme="dark"] .hero-top,
+:root[data-theme="dark"] .hero-foot {
+    border-color: var(--line);
+}
+:root[data-theme="dark"] .hello,
+:root[data-theme="dark"] .hero-description,
+:root[data-theme="dark"] .hero-top,
+:root[data-theme="dark"] .hero-foot p:first-child span,
+:root[data-theme="dark"] .hero-specialty,
+:root[data-theme="dark"] .hero-specialty span,
+:root[data-theme="dark"] .contact-copy > p,
+:root[data-theme="dark"] .partner-item figcaption,
+:root[data-theme="dark"] .form-note,
+:root[data-theme="dark"] .form-status,
+:root[data-theme="dark"] .page-footer,
+:root[data-theme="dark"] .directory-number,
+:root[data-theme="dark"] .service-number {
+    color: var(--muted);
+}
+:root[data-theme="dark"] .section-label,
+:root[data-theme="dark"] .directory-kind,
+:root[data-theme="dark"] .agency-order,
+:root[data-theme="dark"] .experience-list .company,
+:root[data-theme="dark"] .service-icon,
+:root[data-theme="dark"] .expand,
+:root[data-theme="dark"] .scroll-link,
+:root[data-theme="dark"] .page-footer a,
+:root[data-theme="dark"] .hero .accent,
+:root[data-theme="dark"] .contact .accent,
+:root[data-theme="dark"] .identity .accent,
+:root[data-theme="dark"] .portfolio-card-copy .gallery-agency,
+:root[data-theme="dark"] .project-title-button:hover,
+:root[data-theme="dark"] .service-list summary:hover h3 {
+    color: var(--theme-link);
+}
+:root[data-theme="dark"] .experience-list li,
+:root[data-theme="dark"] .service-list details,
+:root[data-theme="dark"] .directory-list li,
+:root[data-theme="dark"] .directory-tools,
+:root[data-theme="dark"] .gallery-preview,
+:root[data-theme="dark"] .agency-count {
+    background: var(--soft);
+    color: var(--ink);
+}
+:root[data-theme="dark"] .service-list details[open] {
+    background: var(--theme-surface);
+}
+:root[data-theme="dark"] .partner-item {
+    background: var(--soft);
+}
+/* Keep the supplied logos on white so their original artwork stays legible. */
+:root[data-theme="dark"] .partner-image {
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px;
+}
+:root[data-theme="dark"] .menu-toggle,
+:root[data-theme="dark"] .social-links a,
+:root[data-theme="dark"] .motion-toggle,
+:root[data-theme="dark"] .dialog-close,
+:root[data-theme="dark"] .project-dialog-footer button,
+:root[data-theme="dark"] .explorer-views button:not([aria-pressed="true"]),
+:root[data-theme="dark"] .agency-filters button:not([aria-pressed="true"]) {
+    background: var(--soft);
+    color: var(--ink);
+    border-color: #8b9cb3;
+}
+:root[data-theme="dark"] .menu-toggle:hover,
+:root[data-theme="dark"] .social-links a:hover,
+:root[data-theme="dark"] .motion-toggle:hover,
+:root[data-theme="dark"] .dialog-close:hover,
+:root[data-theme="dark"] .agency-filters button:not([aria-pressed="true"]):hover {
+    background: var(--accent-soft);
+}
+:root[data-theme="dark"] .actions .text-link,
+:root[data-theme="dark"] .preview-label {
+    background: var(--theme-surface);
+    color: var(--theme-link);
+    border-color: #8b9cb3;
+}
+:root[data-theme="dark"] #main-navigation a {
+    color: var(--muted);
+}
+:root[data-theme="dark"] #main-navigation a > i {
+    color: var(--muted);
+}
+:root[data-theme="dark"] #main-navigation a:hover {
+    background: var(--soft);
+    color: var(--ink);
+}
+:root[data-theme="dark"] #main-navigation a[aria-current],
+:root[data-theme="dark"] #main-navigation a[aria-current] > i {
+    background: var(--accent);
+    color: #fff;
+}
+:root[data-theme="dark"] #contact-form {
+    background: var(--theme-surface);
+    color: var(--ink);
+    border-color: var(--line);
+}
+:root[data-theme="dark"] #contact-form label {
+    color: var(--ink);
+}
+:root[data-theme="dark"] #contact-form input,
+:root[data-theme="dark"] #contact-form textarea,
+:root[data-theme="dark"] .project-search input {
+    background: var(--paper);
+    color: var(--ink);
+    border-color: #8b9cb3;
+}
+:root[data-theme="dark"] #contact-form input::placeholder,
+:root[data-theme="dark"] #contact-form textarea::placeholder {
+    color: var(--muted);
+}
+:root[data-theme="dark"] #expand-project-image {
+    background: var(--soft);
+}
+:root[data-theme="dark"] #expand-project-image span {
+    color: var(--theme-link);
+}
+:root[data-theme="dark"] :focus-visible {
+    outline-color: var(--theme-link);
+}
+:root[data-theme="dark"] .hero-scene {
+    --scene-water-day: #607f99;
+    --scene-water-edge-day: #88a6bd;
+    --scene-depth-day: #24384c;
+    animation-name: dark-scene-sky;
+    background: #243b50;
+}
+:root[data-theme="dark"] .hero-scene .sea {
+    background: #607f99;
+    border-color: #88a6bd;
+}
+:root[data-theme="dark"] .hero-scene .underwater {
+    background: #24384c;
+}
+:root[data-theme="dark"] .contact::before {
+    opacity: 0.6;
+}
+@keyframes dark-scene-sky {
+    0%,
+    100% {
+        background: #243b50;
+    }
+    45%,
+    80% {
+        background: #0c1624;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root[data-theme="dark"] .hero-scene {
+        background: #0c1624;
+    }
+    :root[data-theme="dark"] .hero-scene .sea {
+        background: #34546b;
+        border-color: #6a899f;
+    }
+    :root[data-theme="dark"] .hero-scene .underwater {
+        background: #142c40;
+    }
+}

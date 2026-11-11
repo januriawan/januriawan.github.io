@@ -1,410 +1,219 @@
-<!DOCTYPE html>
-<!--    | |                      (_)                          
-      | | __ _ _ __  _   _ _ __ _  __ ___      ____ _ _ __  
-  _   | |/ _` | '_ \| | | | '__| |/ _` \ \ /\ / / _` | '_ \ 
- | |__| | (_| | | | | |_| | |  | | (_| |\ V  V / (_| | | | |
-  \____/ \__,_|_| |_|\__,_|_|  |_|\__,_| \_/\_/ \__,_|_| |_|
-                                                            
-                                                            -->
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Hello there! My name is Fajar Januriawan. I am a web designer & developer, and I'm very passionate and dedicated to my work. With 10+ years experience as a professional frontend & graphic designer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.">
-    <meta name="author" content="Januriawan">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <meta property="og:image" content="img/background.jpg">
-    <title>Januriawan - Frontend | Graphic Designer</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kristi&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" href="januriawan/style.css" type="text/css" media="screen">
-    <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script>-->
-</head>
-
-<body>
-    <div class="januriawan_tm_all_wrap" data-magic-cursor="show" data-enter="fadeInLeft" data-exit>
-        <div class="januriawan_tm_topbar">
-            <div class="topbar_inner">
-                <div class="logo" data-type="image">
-                    <a class="image" href="#"></a>
-                    <a class="text" href="#"><span></span></a>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Fajar Januriawan is a web designer, frontend developer and graphic designer based in Indonesia, with 10+ years of experience."
+        />
+        <meta name="author" content="Fajar Januriawan" />
+        <meta property="og:title" content="Fajar Januriawan | Designer & Developer" />
+        <meta
+            property="og:description"
+            content="Web design, frontend development and graphic design. Based in Indonesia."
+        />
+        <meta property="og:image" content="img/background.jpg" />
+        <title>Fajar Januriawan | Designer & Developer</title>
+        <link rel="icon" href="img/favicon.png" type="image/png" />
+        <link rel="stylesheet" href="css/vendor/fontawesome/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="css/vendor/fontawesome/css/solid.min.css" />
+        <link rel="stylesheet" href="css/vendor/fontawesome/css/brands.min.css" />
+        <script>
+            try {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme === "dark" || savedTheme === "light") {
+                    document.documentElement.dataset.theme = savedTheme;
+                }
+            } catch {}
+        </script>
+        <link rel="stylesheet" href="css/vendor/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/portfolio.css" />
+        <link rel="stylesheet" href="css/hero-scene.css" />
+        <link rel="stylesheet" href="css/tailwind-style.css" />
+        <link rel="stylesheet" href="css/project-explorer.css" />
+        <link rel="stylesheet" href="css/theme.css" />
+        <script src="js/vendor/swiper/swiper-bundle.min.js" defer></script>
+        <script src="js/portfolio.js" defer></script>
+        <script src="js/project-explorer.js" defer></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header class="sidebar">
+            <a class="identity" href="#home">
+                <img
+                    src="img/about/1.png"
+                    width="1000"
+                    height="1000"
+                    alt=""
+                    class="sidebar-avatar"
+                />
+                <span class="identity-name"
+                    >Fajar<br />Januriawan<span class="accent">.</span></span
+                >
+                <span class="identity-role">Designer &amp; Developer</span>
+            </a>
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-controls="main-navigation"
+                aria-expanded="false"
+                hidden
+            >
+                Menu <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav id="main-navigation" aria-label="Main navigation">
+                <a href="#home" aria-current="location"
+                    ><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a
+                >
+                <a href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i> About</a>
+                <a href="#service"
+                    ><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Services</a
+                >
+                <a href="#portfolio"
+                    ><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Portfolio</a
+                >
+                <a href="#contact"
+                    ><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a
+                >
+            </nav>
+            <div class="sidebar-bottom">
+                <p>Based in Indonesia.<br />Creating for the web.</p>
+                <div class="social-links" aria-label="Social profiles">
+                    <a
+                        href="https://github.com/januriawan"
+                        aria-label="GitHub"
+                        title="GitHub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-brands fa-github" aria-hidden="true"></i
+                    ></a>
+                    <a
+                        href="https://www.linkedin.com/in/januriawan/"
+                        aria-label="LinkedIn"
+                        title="LinkedIn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+                    ></a>
+                    <a
+                        href="https://www.instagram.com/januriawan"
+                        aria-label="Instagram"
+                        title="Instagram"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+                    ></a>
                 </div>
-                <div class="trigger">
-                    <div class="hamburger hamburger--slider">
-                        <div class="hamburger-box">
-                            <div class="hamburger-inner"></div>
+                <small>© <span data-year>2026</span> Januriawan</small>
+            </div>
+        </header>
+
+        <main id="main">
+            <section class="hero" id="home" aria-labelledby="hero-title">
+                <div class="hero-top">
+                    <span>Personal portfolio</span>
+                    <div class="hero-location">
+                        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jakarta,
+                            Indonesia</span>
+                        <button
+                            class="theme-toggle"
+                            type="button"
+                            role="switch"
+                            aria-checked="false"
+                            aria-label="Dark mode"
+                            title="Dark mode"
+                            hidden
+                        >
+                            <span class="theme-track" aria-hidden="true">
+                                <span class="theme-thumb"><i class="fa-solid fa-moon"></i></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-layout">
+                    <div class="hero-copy">
+                        <p class="hello">Hello, I'm Fajar.</p>
+                        <h1 id="hero-title" aria-label="A designer. A developer. A creative mind.">
+                            <span class="hero-title-words" aria-hidden="true">
+                                <span class="hero-title-word">A designer.</span>
+                                <span class="hero-title-word">A developer.</span>
+                                <span class="hero-title-word accent">A creative mind.</span>
+                            </span>
+                        </h1>
+                        <p class="hero-description">
+                            I bring design and code together to build thoughtful websites and visual
+                            experiences.
+                        </p>
+                        <div class="actions">
+                            <a class="button button-primary" href="#portfolio"
+                                ><i class="fa-solid fa-briefcase" aria-hidden="true"></i> View my
+                                work</a
+                            >
+                            <a class="text-link light-link" href="#contact"
+                                ><i class="fa-solid fa-envelope" aria-hidden="true"></i> Let's
+                                talk</a
+                            >
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="januriawan_tm_mobile_menu">
-            <div class="inner">
-                <div class="wrapper">
-                    <div class="avatar">
-                        <div class="image" data-img-url="img/about/1.png"></div>
-                    </div>
-                    <div class="menu_list">
-                        <ul class="transition_link">
-                            <li class="active"><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#service">Services</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                    <div class="hero-scene" id="hero-scene" data-motion="paused" aria-hidden="true">
+                        <span class="sun"></span>
+                        <span class="moon"></span>
+                        <ul class="stars">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
-                    </div>
-                    <div class="social">
-                        <ul>
-                            <li><a href="https://www.facebook.com/januriawan/"><img class="svg"
-                                        src="img/svg/social/facebook.svg" alt /></a></li>
-                            <li><a href="https://www.twitter.com/januriawan"><img class="svg"
-                                        src="img/svg/social/twitter.svg" alt /></a></li>
-                            <li><a href="https://www.instagram.com/januriawan"><img class="svg"
-                                        src="img/svg/social/instagram.svg" alt /></a></li>
-                            <li><a href="https://www.tiktok.com/@januriawan"><img class="svg"
-                                        src="img/svg/social/tik-tok.svg" alt /></a></li>
-                        </ul>
-                    </div>
-                    <div class="copyright">
-                        <p>Copyright &copy; 2023</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="januriawan_tm_sidebar">
-            <div class="sidebar_inner">
-                <div class="author">
-                    <div class="image">
-                        <img src="img/thumbs/1-1.jpg" alt />
-                        <div class="main" data-img-url="img/about/1.png"></div>
-                    </div>
-                    <div class="name">
-                        <h3><span><span class="back">Fajar Januriawan</span></span></h3>
-                    </div>
-                </div>
-                <div class="menu scrollable">
-                    <ul class="transition_link">
-                        <li class="active"><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#service">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="copyright">
-                    <div class="social">
-                        <ul>
-                            <li><a href="https://www.facebook.com/januriawan/"><i class="icon-facebook-1"></i></a></li>
-                            <li><a href="https://www.twitter.com/januriawan/"><i class="icon-twitter-1"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/januriawan/"><i class="icon-linkedin-1"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="text">
-                        <p>Copyright © 2023. All rights reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="januriawan_tm_mainpart">
-            <div class="mainpart_inner">
-
-                <div class="januriawan_tm_section animated" id="home">
-                    <div class="januriawan_tm_home">
-                        <div class="container-fluid">
-                            <div class="row headerer">
-                                <div class="tm_content">
-                                    <div class="details">
-                                        <div class="left">
-                                            <div class="title">
-                                                <h3 class="text-white">Hi, I'm <span
-                                                        class="color-text">januriawan!</span></h3>
-                                                <h3>
-                                                    <span class="cd-headline rotate-1 text-white">
-                                                        <span class="blc">Creative</span>
-                                                        <span class="cd-words-wrapper">
-                                                            <b class="is-visible">Designer</b>
-                                                            <b>Coder</b>
-                                                            <b>Player</b>
-                                                        </span>
-                                                    </span>
-                                                </h3>
-                                                <h3 class="text-white">Based in Indonesia</h3>
-                                            </div>
-                                            <div class="subtitle text-bro">
-                                                <p>I'm a Indonesia based web designer &amp; front‑end developer with
-                                                    <span class="color-text">10+ years</span> of experience
-                                                </p>
-                                            </div>
-                                            <div class="buttons">
-                                                <div class="januriawan_tm_button transition_link">
-                                                    <a href="#portfolio">Got a project?</a>
-                                                </div>
-                                                <div class="januriawan_tm_button transition_link" data-style="border">
-                                                    <a class="text-white" href="#contact">Let's talk</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=" dark-back"></div>
-
-                                <div class="grass">
-                                    <span class="land_tree leftt-gras">
-                                        <ul class="inline-list">
-                                            <li class="t_grass"></li>
-                                            <li class="t_grass"></li>
-                                            <li class="t_grass"></li>
-                                        </ul>
-                                    </span>
-                                </div>
-
-                                <span class="absolute sun"></span>
-                                <span class="absolute moon"></span>
-
-
-                                <ul class="absolute cloud1">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-
-                                <ul class="absolute cloud2">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-
-
-                                <span class="absolute tree1"></span>
-                                <span class="absolute tree2"></span>
-
-                                <div class="grass-right hidden-xs">
-                                    <span class="land_tree">
-                                        <ul class="inline-list">
-                                            <li class="t_grass"></li>
-                                            <li class="t_grass"></li>
-                                            <li class="t_grass"></li>
-                                        </ul>
-                                    </span>
-                                </div>
-
-                                <div class="r-mountain hidden-xs">
-                                    <ul class="snow inline-list">
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                                <div class="l-mountain hidden-xs"></div>
-
-                                <div class="absolute boat">
-                                    <ul class="no-bullet">
-                                        <ul class="no-bullet fume">
-                                            <li class="fume4"></li>
-                                            <li class="fume3"></li>
-                                            <li class="fume2"></li>
-                                            <li class="fume1"></li>
-                                        </ul>
-                                        <li class="smokestack"></li>
-                                        <li class="white-body">
-                                            <ul class="windows inline-list">
-                                                <li class="circle"></li>
-                                                <li class="circle"></li>
-                                                <li class="circle"></li>
-                                            </ul>
-                                        </li>
-                                        <li class="boat-body"></li>
-                                    </ul>
-                                </div>
-
-                                <div class="light-box index hidden-xs">
-
-                                    <span class="dome"></span>
-
-                                    <span class="top-box upper"></span>
-
-                                    <span class="top-box">
-
-                                        <span class="white-light"></span>
-                                        <ul class="no-bullet balcony">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ul>
-                                        <span class="line-strip"></span>
-                                    </span>
-                                </div>
-
-                                <div class="lighthouse index hidden-xs">
-
-                                    <ul class="no-bullet red-strips">
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-
-                                    <span class="shadow"></span>
-
-                                    <div class="light-body hidden-xs"></div>
-
-                                </div>
-
-                                <div class="absolute left-lights hidden-xs"></div>
-                                <div class="absolute left-lights flip-light hidden-xs"></div>
-
-                                <div class="absolute sea">
-                                    <span class="wave1"></span>
-                                    <span class="wave2"></span>
-                                    <span class="wave3"></span>
-                                    <span class="wave4"></span>
-                                </div>
-
-                                <ul class="no-bullet stars">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-
-                            </div>
+                        <div class="cloud cloud-one"><span></span><span></span><span></span></div>
+                        <div class="cloud cloud-two"><span></span><span></span><span></span></div>
+                        <div class="distant-island"></div>
+                        <div class="tree-island">
+                            <span class="scene-tree tree-small"></span>
+                            <span class="scene-tree tree-tall"></span>
+                            <span class="scene-bush bush-one"></span>
+                            <span class="scene-bush bush-two"></span>
+                            <span class="scene-bush bush-three"></span>
                         </div>
-                        <div class="container-fluid footer">
-                            <div class="planet-container  hidden-sm hidden-xs">
-                                <ul class="planet">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                        <div class="mountain mountain-back"></div>
+                        <div class="mountain mountain-front"></div>
+                        <div class="lighthouse-island"></div>
+                        <div class="lighthouse">
+                            <div class="light-beam"></div>
+                            <span class="spire"></span>
+                            <span class="dome"></span>
+                            <span class="lantern"><span></span></span>
+                            <span class="balcony"></span>
+                            <div class="tower"><span></span><span></span><span></span></div>
+                            <span class="tower-door"></span>
+                        </div>
+                        <div class="boat">
+                            <ul class="fume">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <span class="smokestack"></span>
+                            <div class="white-body"><span></span><span></span><span></span></div>
+                            <span class="boat-body"></span>
+                        </div>
+                        <div class="sea"><span></span><span></span><span></span><span></span></div>
+                        <div class="underwater">
+                            <div class="sea-plant plant-one">
+                                <span></span><span></span><span></span>
                             </div>
-
-                            <div class="planet-container planet-yellow">
-                                <ul class="planet">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                            <div class="sea-plant plant-two">
+                                <span></span><span></span><span></span>
                             </div>
-
-                            <div class="planet-container planet-corner  hidden-sm hidden-xs">
-                                <ul class="planet">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-
-                            <div class="planet-container planet-corner2  ">
-                                <ul class="planet">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-
-                            <div class="help-container visible-lg visible-md">
-                                <ul class="help">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-
-                            <ul class="no-bullet bubbles">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                            <ul class="bubbles">
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -413,767 +222,1464 @@
                             </ul>
                         </div>
                     </div>
+                    <button
+                        class="motion-toggle"
+                        type="button"
+                        aria-controls="hero-scene hero-title"
+                        hidden
+                    >
+                        <span class="motion-symbol" aria-hidden="true"
+                            ><i class="fa-solid fa-pause"></i
+                        ></span>
+                        <span class="motion-label">Pause animation</span>
+                    </button>
                 </div>
-                <div class="januriawan_tm_section" id="about">
-                    <div class="januriawan_tm_about">
-                        <div class="tm_content">
-                            <div class="januriawan_tm_biography">
-                                <div class="left">
-                                    <div class="title">
-                                        <span class="mini">- Nice to meet you!</span>
-                                        <h3 class="name">Fajar Januriawan</h3>
-                                        <span class="job">
-                                            <span class="cd-headline rotate-1">
-                                                <span class="blc">Web designer &amp;</span>
-                                                <span class="cd-words-wrapper">
-                                                    <b class="is-visible">Developer</b>
-                                                    <b>Coder</b>
-                                                    <b>Player</b>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div class="januriawan_tm_button transition_link">
-                                        <a href="#portfolio">Got a project?</a>
-                                    </div>
+                <div class="hero-foot">
+                    <p>
+                        <strong>10+</strong
+                        ><span>Years of design<br />&amp; development experience</span>
+                    </p>
+                    <p class="hero-specialty">
+                        Web design <span aria-hidden="true">/</span> Frontend
+                        <span aria-hidden="true">/</span> Graphic design
+                    </p>
+                    <a href="#about" class="scroll-link"
+                        >Meet the person <i class="fa-solid fa-arrow-down" aria-hidden="true"></i
+                    ></a>
+                </div>
+            </section>
+
+            <section class="section about" id="about" aria-labelledby="about-title">
+                <div class="section-heading">
+                    <span class="section-label">01 / About</span>
+                    <h2 id="about-title">Good design starts<br />with a conversation.</h2>
+                </div>
+                <div class="about-layout">
+                    <p class="intro">
+                        I'm Fajar Januriawan,<br />a web designer &amp; developer<br />based in
+                        Indonesia.
+                    </p>
+                    <div class="about-copy">
+                        <p>
+                            With 10+ years of experience in frontend development and graphic design,
+                            I enjoy turning ideas into websites that are useful, easy to navigate,
+                            and pleasing to look at.
+                        </p>
+                        <p>
+                            I enjoy every step of the process, from the first discussion and
+                            collaboration to designing the details and writing the code.
+                        </p>
+                        <dl class="profile-details">
+                            <div>
+                                <dt>What I do</dt>
+                                <dd>Programming &amp; design</dd>
+                            </div>
+                            <div>
+                                <dt>Based in</dt>
+                                <dd>Jakarta, Indonesia</dd>
+                            </div>
+                            <div>
+                                <dt>Email</dt>
+                                <dd>
+                                    <a href="mailto:januriawan@duck.com">januriawan@duck.com</a>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="experience">
+                    <h3>My journey so far</h3>
+                    <ol class="experience-list">
+                        <li>
+                            <span class="experience-date">2019 – Present</span>
+                            <div>
+                                <h4>Web Developer</h4>
+                                <p class="company">Ministry of Trade</p>
+                                <p>
+                                    Building websites and applications for internal teams and the
+                                    public at Indonesia's Ministry of Trade.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="experience-date">2018 – 2019</span>
+                            <div>
+                                <h4>Freelance Designer</h4>
+                                <p class="company">Self-employed</p>
+                                <p>
+                                    Working on web and graphic design projects, alongside online and
+                                    in-person workshops and training.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="experience-date">2017</span>
+                            <div>
+                                <h4>UX Designer</h4>
+                                <p class="company">RistekDikti</p>
+                                <p>
+                                    Collaborating with small businesses through the Integrated
+                                    Learning to Work Program with UMKM.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="experience-date">2013 – 2016</span>
+                            <div>
+                                <h4>IT Division</h4>
+                                <p class="company">Panzer Robotic</p>
+                                <p>
+                                    Creating websites and content, supporting the organization's IT
+                                    needs, and leading the IT division.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="section services" id="service" aria-labelledby="services-title">
+                <div class="section-heading">
+                    <span class="section-label">02 / Services</span>
+                    <h2 id="services-title">From the first idea<br />to the final detail.</h2>
+                    <p>Design and development, with the people using your product in mind.</p>
+                </div>
+                <div class="service-list">
+                    <details>
+                        <summary>
+                            <span class="service-icon"
+                                ><i class="fa-solid fa-laptop-code" aria-hidden="true"></i
+                            ></span>
+                            <h3>Web design</h3>
+                            <span class="expand" aria-hidden="true"
+                                ><i class="fa-solid fa-plus"></i
+                            ></span>
+                        </summary>
+                        <p>
+                            Planning and designing responsive websites with clear navigation,
+                            considered layouts, and a focus on making information easy to find.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            <span class="service-icon"
+                                ><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i
+                            ></span>
+                            <h3>UI / UX design</h3>
+                            <span class="expand" aria-hidden="true"
+                                ><i class="fa-solid fa-plus"></i
+                            ></span>
+                        </summary>
+                        <p>
+                            Designing interfaces around the user's journey, from understanding their
+                            needs to arranging the screens and interactions that help them complete
+                            a task.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            <span class="service-icon"
+                                ><i class="fa-solid fa-palette" aria-hidden="true"></i
+                            ></span>
+                            <h3>Graphic design</h3>
+                            <span class="expand" aria-hidden="true"
+                                ><i class="fa-solid fa-plus"></i
+                            ></span>
+                        </summary>
+                        <p>
+                            Communicating ideas visually through typography, color, imagery, and
+                            layouts for digital and print materials.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            <span class="service-icon"
+                                ><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i
+                            ></span>
+                            <h3>User research</h3>
+                            <span class="expand" aria-hidden="true"
+                                ><i class="fa-solid fa-plus"></i
+                            ></span>
+                        </summary>
+                        <p>
+                            Understanding how people use a product, what they need, and where they
+                            encounter difficulties, to inform design decisions.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            <span class="service-icon"
+                                ><i class="fa-solid fa-film" aria-hidden="true"></i
+                            ></span>
+                            <h3>Animation</h3>
+                            <span class="expand" aria-hidden="true"
+                                ><i class="fa-solid fa-plus"></i
+                            ></span>
+                        </summary>
+                        <p>
+                            Bringing visual ideas to life through movement, with an approach suited
+                            to the story and the format.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            <span class="service-icon"
+                                ><i class="fa-solid fa-clapperboard" aria-hidden="true"></i
+                            ></span>
+                            <h3>Video editing</h3>
+                            <span class="expand" aria-hidden="true"
+                                ><i class="fa-solid fa-plus"></i
+                            ></span>
+                        </summary>
+                        <p>
+                            Shaping footage into a finished video through selection, sequencing,
+                            titles, transitions, sound, and color adjustments.
+                        </p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="section work" id="portfolio" aria-labelledby="work-title">
+                <div class="section-heading work-heading">
+                    <div>
+                        <span class="section-label">03 / Portfolio</span>
+                        <h2 id="work-title">Digital work for<br />public institutions.</h2>
+                    </div>
+                    <p>
+                        Public information, learning platforms,<br />and systems for everyday
+                        operations.
+                    </p>
+                </div>
+                <div class="project-directory" lang="id" aria-labelledby="directory-title">
+                    <div class="directory-heading">
+                        <div>
+                            <span class="section-label">Jelajahi portofolio</span>
+                            <h3 id="directory-title">Galeri &amp; daftar proyek</h3>
+                        </div>
+                        <p>
+                            Telusuri 36 proyek instansi dan 2 karya lainnya. Buka detail proyek
+                            untuk membaca deskripsi dan melihat pratinjaunya.
+                        </p>
+                    </div>
+                    <div class="directory-tools" hidden>
+                        <div class="project-search">
+                            <label for="project-search">Cari proyek</label>
+                            <div class="search-field">
+                                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                <input
+                                    id="project-search"
+                                    type="search"
+                                    placeholder="Nama proyek, singkatan, atau jenis layanan"
+                                    autocomplete="off"
+                                    aria-controls="project-gallery project-groups"
+                                />
+                            </div>
+                        </div>
+                        <div class="agency-filters" role="group" aria-label="Filter instansi">
+                            <button type="button" data-agency-filter="all" aria-pressed="true">
+                                Semua proyek
+                            </button>
+                            <button
+                                type="button"
+                                data-agency-filter="kemendag"
+                                aria-pressed="false"
+                            >
+                                Kementerian Perdagangan RI
+                            </button>
+                            <button type="button" data-agency-filter="pip" aria-pressed="false">
+                                Pusat Investasi Pemerintah
+                            </button>
+                            <button type="button" data-agency-filter="setneg" aria-pressed="false">
+                                Kementerian Sekretariat Negara RI
+                            </button>
+                            <button type="button" data-agency-filter="other" aria-pressed="false">
+                                Karya lainnya
+                            </button>
+                        </div>
+                        <div class="explorer-view-row">
+                            <div
+                                class="explorer-views"
+                                role="group"
+                                aria-label="Tampilan portofolio"
+                            >
+                                <button
+                                    type="button"
+                                    data-project-view="preview"
+                                    aria-pressed="true"
+                                >
+                                    <i class="fa-solid fa-images" aria-hidden="true"></i> Pratinjau
+                                    <span data-view-count="preview">11</span>
+                                </button>
+                                <button type="button" data-project-view="all" aria-pressed="false">
+                                    <i class="fa-solid fa-list" aria-hidden="true"></i> Semua proyek
+                                    <span data-view-count="all">38</span>
+                                </button>
+                            </div>
+                            <p
+                                id="project-results"
+                                class="project-results"
+                                role="status"
+                                aria-atomic="true"
+                            >
+                                36 proyek instansi dan 2 karya lainnya.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        id="project-gallery"
+                        class="portfolio-gallery"
+                        role="list"
+                        aria-label="Proyek dengan pratinjau"
+                        hidden
+                    >
+                        <a
+                            href="img/portfolio/kumeet-kudagang-meeting.jpg"
+                            data-showcase-for="kumeet"
+                            ><img
+                                src="img/portfolio/kumeet-kudagang-meeting.jpg"
+                                width="2880"
+                                height="1450"
+                                loading="lazy"
+                                alt="KUmeet — KUdagang Meeting"
+                        /></a>
+                        <a
+                            href="img/portfolio/kementerian-perdagangan.jpg"
+                            data-showcase-for="kemendag"
+                            ><img
+                                src="img/portfolio/kementerian-perdagangan.jpg"
+                                width="1440"
+                                height="5079"
+                                loading="lazy"
+                                alt="Website utama Kementerian Perdagangan RI"
+                        /></a>
+                        <a
+                            href="img/portfolio/satu-data-perdagangan.jpg"
+                            data-showcase-for="satudata"
+                            ><img
+                                src="img/portfolio/satu-data-perdagangan.jpg"
+                                width="1440"
+                                height="4547"
+                                loading="lazy"
+                                alt="Portal Satu Data Perdagangan"
+                        /></a>
+                        <a href="img/portfolio/portal-kudagang.jpg" data-showcase-for="kudagang"
+                            ><img
+                                src="img/portfolio/portal-kudagang.jpg"
+                                width="1440"
+                                height="4564"
+                                loading="lazy"
+                                alt="Portal pembelajaran Kudagang"
+                        /></a>
+                        <a href="img/portfolio/new-era-office-pip.jpg" data-showcase-for="neo"
+                            ><img
+                                src="img/portfolio/new-era-office-pip.jpg"
+                                width="2880"
+                                height="1450"
+                                loading="lazy"
+                                alt="Dashboard New Era Office PIP"
+                        /></a>
+                        <a
+                            href="img/portfolio/sistem-pendampingan-pip.jpg"
+                            data-showcase-for="pendampingan"
+                            ><img
+                                src="img/portfolio/sistem-pendampingan-pip.jpg"
+                                width="2880"
+                                height="1450"
+                                loading="lazy"
+                                alt="Dashboard SIPENDAMPINGAN PIP"
+                        /></a>
+                        <a
+                            href="img/portfolio/giz-sstc-capacity-building.jpg"
+                            data-showcase-for="giz-capacity"
+                            ><img
+                                src="img/portfolio/giz-sstc-capacity-building.jpg"
+                                width="1440"
+                                height="3138"
+                                loading="lazy"
+                                alt="Platform IndoSSTC Capacity Building"
+                        /></a>
+                        <a href="img/portfolio/hero-kemendag.jpg" data-showcase-for="hero"
+                            ><img
+                                src="img/portfolio/hero-kemendag.jpg"
+                                width="900"
+                                height="1050"
+                                loading="lazy"
+                                alt="Pusat bantuan HERO Kemendag"
+                        /></a>
+                        <a href="img/portfolio/raker-kemendag.jpg" data-showcase-for="raker"
+                            ><img
+                                src="img/portfolio/raker-kemendag.jpg"
+                                width="900"
+                                height="1050"
+                                loading="lazy"
+                                alt="Website Rapat Kerja Kemendag"
+                        /></a>
+                        <a href="img/portfolio/bayu-krisnamurthi.jpg" data-showcase-for="bayu"
+                            ><img
+                                src="img/portfolio/bayu-krisnamurthi.jpg"
+                                width="900"
+                                height="1050"
+                                loading="lazy"
+                                alt="Website personal Bayu Krisnamurthi"
+                        /></a>
+                        <a href="img/portfolio/chirex.jpg" data-showcase-for="chirex"
+                            ><img
+                                src="img/portfolio/chirex.jpg"
+                                width="900"
+                                height="1050"
+                                loading="lazy"
+                                alt="Aplikasi sistem pakar Chirex 1.0"
+                        /></a>
+                    </div>
+                    <div id="project-groups">
+                        <section
+                            class="agency-group"
+                            data-agency="kemendag"
+                            aria-labelledby="agency-kemendag"
+                        >
+                            <div class="agency-heading">
+                                <div>
+                                    <span class="agency-order"
+                                        >01 / Kementerian Perdagangan RI</span
+                                    >
+                                    <h4 id="agency-kemendag">Kementerian Perdagangan RI</h4>
                                 </div>
-                                <div class="right">
-                                    <div class="text">
-                                        <p>Hello there! My name is <span class="yellowColor">Fajar Januriawan</span>. I
-                                            am a
-                                            web designer &amp; developer, and I'm very passionate and dedicated to my
-                                            work.</p>
-                                        <p>With 10+ years experience as a professional frontend & graphic designer, I
-                                            have
-                                            acquired the skills and knowledge necessary to make your project a success.
-                                            I enjoy every step of the design process, from discussion and collaboration.
+                                <span class="agency-count" data-agency-count>28 proyek</span>
+                            </div>
+                            <ol class="directory-list">
+                                <li data-project>
+                                    <span class="directory-number">01</span>
+                                    <div>
+                                        <span class="directory-kind">Portal utama</span>
+                                        <h5
+                                            data-project-id="kemendag"
+                                            data-url="https://kemendag.go.id/"
+                                        >
+                                            Website Utama Kementerian Perdagangan
+                                        </h5>
+                                        <p>
+                                            Portal informasi kementerian yang menyajikan profil
+                                            organisasi, berita, kebijakan, dan akses layanan
+                                            perdagangan bagi masyarakat.
                                         </p>
                                     </div>
-                                    <div class="info">
-                                        <ul>
-                                            <li>
-                                                <span>Current Job</span>
-                                                <span>Programmer</span>
-                                            </li>
-                                            <li>
-                                                <span>Based In</span>
-                                                <span><a class="href_location" href="#">Indonesia</a></span>
-                                            </li>
-                                            <li>
-                                                <span>Mail</span>
-                                                <span><a href="mailto:januriawan@duck.com"><span class="__cf_email__"
-                                                            data-cfemail="mailto:januriawan@duck.com">[email&#160;protected]</span></a></span>
-                                            </li>
-                                        </ul>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">02</span>
+                                    <div>
+                                        <span class="directory-kind">Data perdagangan</span>
+                                        <h5
+                                            data-project-id="satudata"
+                                            data-url="https://satudata.kemendag.go.id/"
+                                        >
+                                            Portal Satu Data Perdagangan
+                                        </h5>
+                                        <p>
+                                            Portal penyajian data dan statistik perdagangan untuk
+                                            mendukung pencarian informasi, analisis, dan penyusunan
+                                            kebijakan.
+                                        </p>
                                     </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">03</span>
+                                    <div>
+                                        <span class="directory-kind">Informasi publik</span>
+                                        <h5>
+                                            Portal Pejabat Pengelola Informasi dan Dokumentasi
+                                            (PPID) Kemendag
+                                        </h5>
+                                        <p>
+                                            Website layanan keterbukaan informasi publik yang
+                                            menyediakan informasi dan dokumentasi kementerian serta
+                                            akses permohonan informasi.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">04</span>
+                                    <div>
+                                        <span class="directory-kind">Layanan perdagangan</span>
+                                        <h5>Sistem Informasi Perdagangan (SIP) Kemendag</h5>
+                                        <p>
+                                            Portal akses informasi dan layanan perdagangan yang
+                                            menghubungkan kebutuhan pengguna dengan berbagai
+                                            platform digital Kemendag.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">05</span>
+                                    <div>
+                                        <span class="directory-kind">Publikasi ilmiah</span>
+                                        <h5>Portal Jurnal Ilmiah Kementerian Perdagangan</h5>
+                                        <p>
+                                            Website publikasi ilmiah untuk penyajian jurnal,
+                                            artikel, dan hasil kajian di lingkungan Kementerian
+                                            Perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">06</span>
+                                    <div>
+                                        <span class="directory-kind">Informasi keamanan siber</span>
+                                        <h5>
+                                            Portal Computer Security Incident Response Team (CSIRT)
+                                            Kemendag
+                                        </h5>
+                                        <p>
+                                            Website informasi tim tanggap insiden keamanan siber
+                                            Kemendag, termasuk publikasi dan kanal pelaporan
+                                            insiden.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">07</span>
+                                    <div>
+                                        <span class="directory-kind">Portal pembelajaran</span>
+                                        <h5
+                                            data-project-id="kudagang"
+                                            data-url="https://kudagang.lc.kemendag.go.id/"
+                                        >
+                                            Portal Kudagang Kementerian Perdagangan
+                                        </h5>
+                                        <p>
+                                            Pintu masuk ekosistem pembelajaran Kemendag yang
+                                            menghimpun akses ke layanan pembelajaran, pengetahuan,
+                                            dan sumber daya pendidikan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">08</span>
+                                    <div>
+                                        <span class="directory-kind">Pembelajaran daring</span>
+                                        <h5>Learning Management System (LMS) Kudagang</h5>
+                                        <p>
+                                            Platform pembelajaran daring untuk penyelenggaraan
+                                            pelatihan dan akses materi belajar di lingkungan
+                                            Kementerian Perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">09</span>
+                                    <div>
+                                        <span class="directory-kind">Manajemen pengetahuan</span>
+                                        <h5>Knowledge Management System (KMS) Kudagang</h5>
+                                        <p>
+                                            Platform berbagi pengetahuan untuk menghimpun dan
+                                            menyebarluaskan wawasan, pengalaman, serta praktik kerja
+                                            di lingkungan Kemendag.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">10</span>
+                                    <div>
+                                        <span class="directory-kind">Repositori digital</span>
+                                        <h5>Repository Kudagang Kementerian Perdagangan</h5>
+                                        <p>
+                                            Repositori digital untuk dokumentasi dan publikasi bahan
+                                            pengetahuan serta karya di lingkungan Kementerian
+                                            Perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">11</span>
+                                    <div>
+                                        <span class="directory-kind">Pendidikan tinggi</span>
+                                        <h5>
+                                            Learning Management System Akademi Metrologi dan
+                                            Instrumentasi (AKMET)
+                                        </h5>
+                                        <p>
+                                            Platform pembelajaran daring untuk mendukung kegiatan
+                                            akademik dan akses materi perkuliahan di Akademi
+                                            Metrologi dan Instrumentasi.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">12</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Badan Pengembangan Sumber Daya Manusia
+                                            Perdagangan (BPSDMP)
+                                        </h5>
+                                        <p>
+                                            Website profil dan informasi program pengembangan
+                                            kompetensi serta kegiatan sumber daya manusia di bidang
+                                            perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">13</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Pusat Pendidikan dan Pelatihan Aparatur
+                                            Perdagangan (Pusdiklat)
+                                        </h5>
+                                        <p>
+                                            Website informasi kelembagaan, program pendidikan dan
+                                            pelatihan, serta kegiatan pengembangan kompetensi
+                                            aparatur perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">14</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Pusat Pembinaan Jabatan Fungsional Perdagangan
+                                            (Pusbin JFP)
+                                        </h5>
+                                        <p>
+                                            Website informasi pembinaan jabatan fungsional
+                                            perdagangan, publikasi kegiatan, dan rujukan bagi
+                                            pejabat fungsional.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">15</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>Website Badan Kebijakan Perdagangan (BKPerdag)</h5>
+                                        <p>
+                                            Website informasi kelembagaan, kajian, dan publikasi
+                                            yang berkaitan dengan analisis serta rekomendasi
+                                            kebijakan perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">16</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Direktorat Jenderal Pengembangan Ekspor Nasional
+                                            (PEN)
+                                        </h5>
+                                        <p>
+                                            Website informasi program dan kegiatan pengembangan
+                                            ekspor nasional, termasuk publikasi bagi pelaku usaha
+                                            dan pemangku kepentingan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">17</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Direktorat Jenderal Perdagangan Dalam Negeri
+                                            (PDN)
+                                        </h5>
+                                        <p>
+                                            Website informasi kebijakan, program, dan kegiatan yang
+                                            berkaitan dengan penyelenggaraan perdagangan di dalam
+                                            negeri.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">18</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Direktorat Jenderal Perdagangan Luar Negeri
+                                            (DAGLU)
+                                        </h5>
+                                        <p>
+                                            Website informasi kebijakan dan kegiatan perdagangan
+                                            luar negeri, dengan rujukan bagi pemangku kepentingan
+                                            ekspor dan impor.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">19</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Direktorat Jenderal Perundingan Perdagangan
+                                            Internasional (PPI)
+                                        </h5>
+                                        <p>
+                                            Website informasi kegiatan, kebijakan, dan perkembangan
+                                            perundingan perdagangan internasional Indonesia.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">20</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Direktorat Jenderal Perlindungan Konsumen dan
+                                            Tertib Niaga (PKTN)
+                                        </h5>
+                                        <p>
+                                            Website informasi program dan kegiatan perlindungan
+                                            konsumen serta penyelenggaraan tertib niaga.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">21</span>
+                                    <div>
+                                        <span class="directory-kind">Website unit kerja</span>
+                                        <h5>
+                                            Website Inspektorat Jenderal (ITJEN) Kementerian
+                                            Perdagangan
+                                        </h5>
+                                        <p>
+                                            Website profil dan publikasi kegiatan pengawasan
+                                            internal di lingkungan Kementerian Perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">22</span>
+                                    <div>
+                                        <span class="directory-kind">Website komite</span>
+                                        <h5>Website Komite Anti Dumping Indonesia (KADI)</h5>
+                                        <p>
+                                            Website informasi kelembagaan dan publikasi terkait
+                                            penanganan praktik dumping serta kebijakan antidumping
+                                            di Indonesia.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">23</span>
+                                    <div>
+                                        <span class="directory-kind">Website komite</span>
+                                        <h5>
+                                            Website Komite Pengamanan Perdagangan Indonesia (KPPI)
+                                        </h5>
+                                        <p>
+                                            Website informasi kelembagaan, penyelidikan, dan
+                                            publikasi terkait tindakan pengamanan perdagangan atau
+                                            safeguard.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">24</span>
+                                    <div>
+                                        <span class="directory-kind">Pengelolaan konten</span>
+                                        <h5>
+                                            Content Management System (CMS) Website Unit Eselon
+                                            Kemendag
+                                        </h5>
+                                        <p>
+                                            Sistem pengelolaan konten untuk mendukung pembaruan
+                                            informasi dan publikasi pada website unit eselon
+                                            Kementerian Perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">25</span>
+                                    <div>
+                                        <span class="directory-kind"
+                                            >Dukungan teknologi informasi</span
+                                        >
+                                        <h5
+                                            data-project-id="hero"
+                                            data-url="https://hero.kemendag.go.id/"
+                                        >
+                                            HERO Kemendag: Pusat Bantuan Layanan TI
+                                        </h5>
+                                        <p>
+                                            Platform pusat bantuan untuk pelaporan kendala dan
+                                            permintaan dukungan layanan teknologi informasi di
+                                            lingkungan Kemendag.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">26</span>
+                                    <div>
+                                        <span class="directory-kind"
+                                            >Administrasi perjalanan dinas</span
+                                        >
+                                        <h5>
+                                            Aplikasi Elektronik Surat Perjalanan Dinas (eSPPD)
+                                            Kemendag
+                                        </h5>
+                                        <p>
+                                            Aplikasi administrasi untuk mendukung pengelolaan
+                                            dokumen dan proses surat perjalanan dinas di lingkungan
+                                            Kementerian Perdagangan.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">27</span>
+                                    <div>
+                                        <span class="directory-kind">Website kegiatan</span>
+                                        <h5
+                                            data-project-id="raker"
+                                            data-url="https://raker.kemendag.go.id/"
+                                        >
+                                            Website Rapat Kerja (Raker) Kementerian Perdagangan
+                                        </h5>
+                                        <p>
+                                            Website kegiatan rapat kerja untuk penyajian informasi
+                                            acara, agenda, dan materi kegiatan kementerian.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">28</span>
+                                    <div>
+                                        <span class="directory-kind">Pertemuan daring</span>
+                                        <h5 data-project-id="kumeet">KUmeet — KUdagang Meeting</h5>
+                                        <p>
+                                            Platform pertemuan daring dalam ekosistem Kudagang,
+                                            dengan ruang meeting, percakapan, dan berbagi layar.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                        <section
+                            class="agency-group"
+                            data-agency="pip"
+                            aria-labelledby="agency-pip"
+                        >
+                            <div class="agency-heading">
+                                <div>
+                                    <span class="agency-order">02 / PIP</span>
+                                    <h4 id="agency-pip">Pusat Investasi Pemerintah</h4>
+                                    <p>
+                                        Badan Layanan Umum di lingkungan Kementerian Keuangan
+                                        Republik Indonesia.
+                                    </p>
                                 </div>
+                                <span class="agency-count" data-agency-count>6 proyek</span>
                             </div>
-                            <div class="januriawan_tm_counter">
-                                <ul>
-                                    <li>
-                                        <div class="list_inner">
-                                            <h3>10+</h3>
-                                            <span>Years of Experience</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <h3>50+</h3>
-                                            <span>Projects Completed</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <h3>30+</h3>
-                                            <span>Happy Clients</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="januriawan_tm_experience">
-                            <div class="tm_content">
-                                <div class="januriawan_tm_title">
-                                    <span>- Experience</span>
-                                    <h3>Everything about me!</h3>
+                            <ol class="directory-list">
+                                <li data-project>
+                                    <span class="directory-number">01</span>
+                                    <div>
+                                        <span class="directory-kind">Pembiayaan ultra mikro</span>
+                                        <h5>
+                                            Sistem Informasi Kredit Program Ultra Mikro (SIKP UMi)
+                                        </h5>
+                                        <p>
+                                            Sistem informasi untuk mendukung penatausahaan data
+                                            pembiayaan Ultra Mikro dan kebutuhan informasi penyalur
+                                            di lingkungan PIP.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">02</span>
+                                    <div>
+                                        <span class="directory-kind">Data pembiayaan</span>
+                                        <h5>Portal Satu Data Ultra Mikro (UMi)</h5>
+                                        <p>
+                                            Portal data terkait program pembiayaan Ultra Mikro untuk
+                                            mendukung kebutuhan informasi dan pemantauan program.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">03</span>
+                                    <div>
+                                        <span class="directory-kind">Pendampingan usaha</span>
+                                        <h5 data-project-id="pendampingan">
+                                            Sistem Pendampingan Pusat Investasi Pemerintah
+                                        </h5>
+                                        <p>
+                                            Sistem informasi pendampingan bagi ekosistem pembiayaan
+                                            PIP, dengan fokus pada dokumentasi kegiatan pendampingan
+                                            usaha.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">04</span>
+                                    <div>
+                                        <span class="directory-kind">Aplikasi web</span>
+                                        <h5 data-project-id="neo">
+                                            New Era Office (NEO) Pusat Investasi Pemerintah
+                                        </h5>
+                                        <p>
+                                            Proyek pengembangan aplikasi New Era Office (NEO) di
+                                            lingkungan Pusat Investasi Pemerintah.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">05</span>
+                                    <div>
+                                        <span class="directory-kind">Pengelolaan keuangan</span>
+                                        <h5>SIMEKA: Aplikasi Pengelolaan Keuangan PIP</h5>
+                                        <p>
+                                            Aplikasi yang mendukung proses perencanaan, pelaksanaan,
+                                            dan pelaporan keuangan di lingkungan Pusat Investasi
+                                            Pemerintah.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">06</span>
+                                    <div>
+                                        <span class="directory-kind">Aplikasi seluler</span>
+                                        <h5>
+                                            PIP Mobile: Aplikasi Seluler Pusat Investasi Pemerintah
+                                        </h5>
+                                        <p>
+                                            Proyek pengembangan aplikasi PIP untuk akses melalui
+                                            perangkat seluler.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                        <section
+                            class="agency-group"
+                            data-agency="setneg"
+                            aria-labelledby="agency-setneg"
+                        >
+                            <div class="agency-heading">
+                                <div>
+                                    <span class="agency-order"
+                                        >03 / Kementerian Sekretariat Negara RI</span
+                                    >
+                                    <h4 id="agency-setneg">Kementerian Sekretariat Negara RI</h4>
+                                    <p>
+                                        Proyek GIZ dalam konteks South-South and Triangular
+                                        Cooperation (SSTC).
+                                    </p>
                                 </div>
-                                <div class="list">
-                                    <ul>
-                                        <li>
-                                            <img class="popup_image" src="img/experience/1.jpg" alt />
-                                            <div class="list_inner">
-                                                <div class="short">
-                                                    <div class="job">
-                                                        <span class="yellowColor">2019 - Present</span>
-                                                        <h3>Web Developer</h3>
-                                                    </div>
-                                                    <div class="place">
-                                                        <span>- Ministry of Trade</span>
-                                                    </div>
-                                                </div>
-                                                <div class="text">
-                                                    <p>Working Full time in one of the ministries in Indonesia, has made
-                                                        various projects that have been
-                                                        used by internal and external ministries.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img class="popup_image" src="img/experience/2.jpg" alt />
-                                            <div class="list_inner">
-                                                <div class="short">
-                                                    <div class="job">
-                                                        <span class="yellowColor">2018 - 2019</span>
-                                                        <h3>Freelancer</h3>
-                                                    </div>
-                                                    <div class="place">
-                                                        <span>- Self Employed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="text">
-                                                    <p>Working on web and graphic designs from online platforms or work
-                                                        from relatives, attending online and offline workshops and
-                                                        training.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img class="popup_image" src="img/experience/3.jpg" alt />
-                                            <div class="list_inner">
-                                                <div class="short">
-                                                    <div class="job">
-                                                        <span class="yellowColor">2017 - 2017</span>
-                                                        <h3>UX Designer</h3>
-                                                    </div>
-                                                    <div class="place">
-                                                        <span>- RistekDikti</span>
-                                                    </div>
-                                                </div>
-                                                <div class="text">
-                                                    <p>Learn to work with apprentices with UMKM, in the Integrated
-                                                        Learning to Work Program with UMKM, helping and getting feedback
-                                                        from others.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img class="popup_image" src="img/experience/4.jpg" alt />
-                                            <div class="list_inner">
-                                                <div class="short">
-                                                    <div class="job">
-                                                        <span class="yellowColor">2013 - 2016</span>
-                                                        <h3>IT Depart</h3>
-                                                    </div>
-                                                    <div class="place">
-                                                        <span>- Panzer Robotic</span>
-                                                    </div>
-                                                </div>
-                                                <div class="text">
-                                                    <p>Helping with Information Technology in the organization, creating
-                                                        websites and related content, as well as being the head of the
-                                                        IT division.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <span class="agency-count" data-agency-count>2 proyek</span>
                             </div>
-                        </div>
+                            <ol class="directory-list">
+                                <li data-project>
+                                    <span class="directory-number">01</span>
+                                    <div>
+                                        <span class="directory-kind">Portal kerja sama</span>
+                                        <h5>
+                                            GIZ SSTC Portal: Portal Kerja Sama Selatan-Selatan dan
+                                            Triangular
+                                        </h5>
+                                        <p>
+                                            Proyek portal informasi SSTC dalam lingkup kerja sama
+                                            GIZ dan Kementerian Sekretariat Negara RI.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li data-project>
+                                    <span class="directory-number">02</span>
+                                    <div>
+                                        <span class="directory-kind">Pengembangan kapasitas</span>
+                                        <h5 data-project-id="giz-capacity">
+                                            GIZ SSTC Capacity Building: Platform Pengembangan
+                                            Kapasitas
+                                        </h5>
+                                        <p>
+                                            Proyek platform digital untuk mendukung kegiatan
+                                            pengembangan kapasitas dalam program SSTC bersama GIZ
+                                            dan Kementerian Sekretariat Negara RI.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                    </div>
+                    <div id="additional-projects">
+                        <section
+                            class="agency-group"
+                            data-agency="other"
+                            aria-labelledby="agency-other"
+                        >
+                            <div class="agency-heading">
+                                <h4 id="agency-other">Karya lainnya</h4>
+                                <span class="agency-count" data-agency-count>2 proyek</span>
+                            </div>
+                            <ol class="directory-list">
+                                <li data-extra-project>
+                                    <span class="directory-number">01</span>
+                                    <div>
+                                        <span class="directory-kind">Website personal</span>
+                                        <h5
+                                            data-project-id="bayu"
+                                            data-url="https://bayukrisnamurthi.id/"
+                                        >
+                                            Website Personal Bayu Krisnamurthi
+                                        </h5>
+                                        <p>Website personal Bayu Krisnamurthi.</p>
+                                    </div>
+                                </li>
+                                <li data-extra-project>
+                                    <span class="directory-number">02</span>
+                                    <div>
+                                        <span class="directory-kind">Sistem pakar</span>
+                                        <h5
+                                            data-project-id="chirex"
+                                            data-url="https://github.com/januriawan/chirex"
+                                        >
+                                            Chirex 1.0
+                                        </h5>
+                                        <p>
+                                            Aplikasi sistem pakar untuk diagnosis penyakit pada
+                                            ayam.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                    </div>
+                    <div class="directory-empty" hidden>
+                        <h4>Tidak ada proyek yang sesuai.</h4>
+                        <p id="empty-project-message">
+                            Coba kata kunci lain atau tampilkan kembali semua instansi.
+                        </p>
+                        <button
+                            class="button button-dark"
+                            id="show-all-projects"
+                            type="button"
+                            hidden
+                        >
+                            Lihat proyek yang cocok
+                        </button>
+                        <button class="button button-dark" id="reset-projects" type="button">
+                            Reset pencarian
+                        </button>
                     </div>
                 </div>
-                <div class="januriawan_tm_section" id="service">
-                    <div class="januriawan_tm_services">
-                        <div class="tm_content">
-                            <div class="januriawan_tm_service_title">
-                                <div class="januriawan_tm_title">
-                                    <span>- Services</span>
-                                    <h3>My Services</h3>
-                                </div>
-                                <a href="../../cdn-cgi/l/email-protection.html#661513161609141226030a0f15054805090b"><span
-                                        class="__cf_email__"
-                                        data-cfemail="62111712120d101622070e0b11014c010d0f">[email&#160;protected]</span></a>
-                            </div>
-                            <div class="service_list">
-                                <ul>
-                                    <li>
-                                        <img class="popup_image" src="img/service/2.jpg" alt />
-                                        <div class="list_inner">
-                                            <div class="details">
-                                                <div class="title">
-                                                    <span>01</span>
-                                                    <h3>Web Design</h3>
-                                                </div>
-                                                <div class="text">
-                                                    <p>Web designing is the process of planning, conceptualizing, and
-                                                        implementing...</p>
-                                                </div>
-                                                <div class="januriawan_tm_read_more">
-                                                    <a href="#">Read More<span><img class="svg"
-                                                                src="img/svg/rightArrow.svg" alt /></span></a>
-                                                </div>
-                                            </div>
-                                            <a class="januriawan_tm_full_link" href="#"></a>
-
-                                            <div class="hidden_details">
-                                                <div class="descriptions">
-                                                    <p>Web designing is the process of planning, conceptualizing, and
-                                                        implementing the plan for designing a website in a way that is
-                                                        functional and offers a good user experience. User experience is
-                                                        central to the web designing process. </p>
-                                                    <p>Websites have an array of elements presented in ways that make
-                                                        them easy to navigate. Web
-                                                        designing essentially involves working on every attribute of the
-                                                        website that people interact with, so that the website is simple
-                                                        and efficient, allows users to quickly find the information they
-                                                        need, and looks visually pleasing. All these factors, when
-                                                        combined, decide how well the website is designed.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img class="popup_image" src="img/service/3.jpg" alt />
-                                        <div class="list_inner">
-                                            <div class="details">
-                                                <div class="title">
-                                                    <span>02</span>
-                                                    <h3>UI/UX Design</h3>
-                                                </div>
-                                                <div class="text">
-                                                    <p>UI and UX are intertwined. Interestingly, UI is also a part of
-                                                        UX...</p>
-                                                </div>
-                                                <div class="januriawan_tm_read_more">
-                                                    <a href="#">Read More<span><img class="svg"
-                                                                src="img/svg/rightArrow.svg" alt /></span></a>
-                                                </div>
-                                            </div>
-                                            <a class="januriawan_tm_full_link" href="#"></a>
-
-                                            <div class="hidden_details">
-                                                <div class="descriptions">
-                                                    <p>UI and UX are intertwined. Interestingly, UI is also a part of
-                                                        UX.
-                                                        When we log in to our Facebook, Twitter or Google account, we
-                                                        see a
-                                                        UI display. Every button, options menu, everything is carefully
-                                                        designed by a UI Designer.</p>
-
-                                                    <p>Meanwhile, UX Design is more about understanding the journey.
-                                                        In-depth understanding of users through their emotions and
-                                                        feelings,
-                                                        their abilities and limitations, and how their natural state is
-                                                        when
-                                                        they interact with a product or service.</p>
-
-                                                    <p>The link between UI and UX is important for the success of a
-                                                        project. Most product development processes require a UI
-                                                        designer
-                                                        and a UX designer to work collaboratively, focusing on a common
-                                                        goal
-                                                        to meet the needs and expectations of users.</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img class="popup_image" src="img/service/4.jpg" alt />
-                                        <div class="list_inner">
-                                            <div class="details">
-                                                <div class="title">
-                                                    <span>03</span>
-                                                    <h3>Graphic Design</h3>
-                                                </div>
-                                                <div class="text">
-                                                    <p>Graphic design is a form of communication that is done
-                                                        visually...</p>
-                                                </div>
-                                                <div class="januriawan_tm_read_more">
-                                                    <a href="#">Read More<span><img class="svg"
-                                                                src="img/svg/rightArrow.svg" alt /></span></a>
-                                                </div>
-                                            </div>
-                                            <a class="januriawan_tm_full_link" href="#"></a>
-
-                                            <div class="hidden_details">
-                                                <div class="descriptions">
-                                                    <p>Graphic design is a form of communication that is done visually.
-                                                        Graphic design will utilize an image as a medium in conveying
-                                                        messages. The information conveyed in it will be carried out as
-                                                        effectively as possible.</p>
-
-                                                    <p>Graphic design comes from two words, namely the word design and
-                                                        the
-                                                        word graphics. Design is a method of aesthetic design. This
-                                                        design
-                                                        method is based on creativity.</p>
-
-                                                    <p>While graphics have the meaning of the science of a point design,
-                                                        as
-                                                        well as lines. Then it will form an image, which can provide
-                                                        information and relate to the printing process.</p>
-
-                                                    <p>So it can be concluded that graphic design is a science that
-                                                        relies
-                                                        on creativity in creating a design in the form of an image. The
-                                                        ultimate goal is for the benefit of printing.</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img class="popup_image" src="img/service/5.jpg" alt />
-                                        <div class="list_inner">
-                                            <div class="details">
-                                                <div class="title">
-                                                    <span>04</span>
-                                                    <h3>User Research</h3>
-                                                </div>
-                                                <div class="text">
-                                                    <p>User research is a collection of data related to
-                                                        customer behavior...
-                                                    </p>
-                                                </div>
-                                                <div class="januriawan_tm_read_more">
-                                                    <a href="#">Read More<span><img class="svg"
-                                                                src="img/svg/rightArrow.svg" alt /></span></a>
-                                                </div>
-                                            </div>
-                                            <a class="januriawan_tm_full_link" href="#"></a>
-
-                                            <div class="hidden_details">
-                                                <div class="descriptions">
-                                                    <p>User research is a collection of data related to
-                                                        customer behavior, demand, market analysis, and motivation to
-                                                        buy a
-                                                        product. It also gives away the different ways that audiences
-                                                        deliver to the companies they buy from.</p>
-
-                                                    <p>User research is generally done by user experience (UX) to find
-                                                        the
-                                                        best design for their client's website or smartphone app. Some
-                                                        methods for conducting research include surveys, focus groups,
-                                                        and
-                                                        interviews to record the return on investment (ROI) on the
-                                                        designs
-                                                        you release to the public.</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img class="popup_image" src="img/service/6.jpg" alt />
-                                        <div class="list_inner">
-                                            <div class="details">
-                                                <div class="title">
-                                                    <span>05</span>
-                                                    <h3>Animation</h3>
-                                                </div>
-                                                <div class="text">
-                                                    <p>Simply put, an animator is a person who creates animation...</p>
-                                                </div>
-                                                <div class="januriawan_tm_read_more">
-                                                    <a href="#">Read More<span><img class="svg"
-                                                                src="img/svg/rightArrow.svg" alt /></span></a>
-                                                </div>
-                                            </div>
-                                            <a class="januriawan_tm_full_link" href="#"></a>
-
-                                            <div class="hidden_details">
-                                                <div class="descriptions">
-                                                    <p>Simply put, an animator is a person who creates animation.
-                                                        Meanwhile, in a broad sense, animator is a profession related to
-                                                        the
-                                                        art of creating various images that come alive or move. The
-                                                        animator
-                                                        must think of the right drawing pattern, so that it can be used
-                                                        as
-                                                        an animation that is worth showing.</p>
-
-                                                    <p>Given the complex field of work, an animator must be committed to
-                                                        certain aspects. Animators must be able to decide what type of
-                                                        animation to pursue. Then, create a slick portfolio if you want
-                                                        a
-                                                        career as a successful animator.</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img class="popup_image" src="img/service/7.jpg" alt />
-                                        <div class="list_inner">
-                                            <div class="details">
-                                                <div class="title">
-                                                    <span>06</span>
-                                                    <h3>Video Editing</h3>
-                                                </div>
-                                                <div class="text">
-                                                    <p>The definition of what video editing is is a long process of
-                                                        making a video...</p>
-                                                </div>
-                                                <div class="januriawan_tm_read_more">
-                                                    <a href="#">Read More<span><img class="svg"
-                                                                src="img/svg/rightArrow.svg" alt /></span></a>
-                                                </div>
-                                            </div>
-                                            <a class="januriawan_tm_full_link" href="#"></a>
-
-                                            <div class="hidden_details">
-                                                <div class="descriptions">
-                                                    <p>The definition of what video editing is is a long process of
-                                                        making a video starting from selection, adding meta text/titles,
-                                                        variations, transitions/movements, resulting effects, selecting
-                                                        songs, sound effects, and narration, to coloring a raw image
-                                                        recording. into a video that has the appearance and video format
-                                                        needed to be broadcast on certain needs.</p>
-
-                                                    <p>The editing process is an important element in the field of
-                                                        cinematography and cannot be separated from the world of
-                                                        broadcasting. In short, what conclusions can be drawn from video
-                                                        editing? is a series of processes of selecting or editing images
-                                                        from shooting recordings by cutting image to image (cut to cut)
-                                                        and also combining images with inserted effects and also a
-                                                        transition.</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="work-footer">
+                    <p>More about my work and experience.</p>
+                    <a
+                        class="text-link"
+                        href="https://www.linkedin.com/in/januriawan/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Find me on LinkedIn <span aria-hidden="true">↗</span></a
+                    >
                 </div>
-                <div class="januriawan_tm_section" id="portfolio">
-                    <div class="januriawan_tm_portfolio">
-                        <div class="tm_content">
-                            <div class="januriawan_tm_portfolio_title">
-                                <div class="januriawan_tm_title">
-                                    <span>- Projects</span>
-                                    <h3>Recent completed works</h3>
-                                </div>
-                                <div class="buttons">
-                                    <a class="prev_button" href="#"><svg width="5" height="8" viewBox="0 0 5 8"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg" class="svg replaced-svg">
-                                            <path
-                                                d="M4.17374 0.177653L4.53352 0.537184C4.65179 0.661774 4.71094 0.807288 4.71094 0.973392C4.71094 1.14292 4.65179 1.28671 4.53352 1.40498L2.20241 3.7352L4.53345 6.0654C4.65172 6.18366 4.71087 6.32748 4.71087 6.49694C4.71087 6.66312 4.65172 6.80861 4.53345 6.93321L4.17368 7.28802C4.05223 7.40951 3.9067 7.47021 3.73721 7.47021C3.56457 7.47021 3.42068 7.40944 3.30559 7.28804L0.183176 4.16675C0.0617164 4.05164 0.000937306 3.90787 0.000937299 3.73522C0.000937291 3.5658 0.0616997 3.42034 0.183176 3.29897L3.30559 0.177671C3.42392 0.0593949 3.56779 0.000215104 3.73721 0.000215096C3.90354 0.0001984 4.04899 0.0593777 4.17374 0.177653Z"
-                                                fill=""></path>
-                                        </svg></a>
-                                    <a class="next_button" href="#">
-                                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg" class="svg replaced-svg">
-                                            <path
-                                                d="M0.536858 0.177166L0.177307 0.5366C0.0591135 0.661157 -2.91168e-07 0.806632 -2.83909e-07 0.972691C-2.76501e-07 1.14217 0.0591135 1.28592 0.177307 1.40417L2.50697 3.73376L0.177375 6.06333C0.0591808 6.18156 6.71968e-05 6.32534 6.72042e-05 6.49476C6.72115e-05 6.6609 0.0591808 6.80634 0.177375 6.93092L0.536925 7.28563C0.658292 7.40708 0.803734 7.46777 0.973118 7.46777C1.14566 7.46777 1.28945 7.40701 1.40447 7.28565L4.52494 4.1652C4.64632 4.05011 4.70707 3.90638 4.70707 3.73377C4.70707 3.56441 4.64634 3.41898 4.52494 3.29765L1.40447 0.177183C1.28621 0.0589389 1.14243 -0.00022464 0.973117 -0.000224633C0.80689 -0.000241315 0.661532 0.0589223 0.536858 0.177166Z"
-                                                fill=""></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio_list">
-                                <ul class="owl-carousel gallery_zoom">
-                                    <li>
-                                        <div class="list_inner">
-                                            <div class="image">
-                                                <img src="img/portfolio/1.jpg" alt />
-                                                <div class="main" data-img-url="img/portfolio/1.jpg"></div>
-                                                <a class="januriawan_tm_full_link portfolio_popup" href="#"></a>
-                                            </div>
-                                            <div class="details">
-                                                <span class="category"><a href="#">Goverment Website</a></span>
-                                                <h3 class="title"><a class="line_effect portfolio_popup"
-                                                        href="#">kemendag.go.id</a></h3>
-                                            </div>
+                <div class="clients" lang="id" aria-labelledby="clients-title">
+                    <div class="clients-heading">
+                        <div>
+                            <span class="section-label">Kolaborasi</span>
+                            <h3 id="clients-title">Partner &amp; kolaborator</h3>
+                        </div>
+                        <p>Instansi, program, brand, dan komunitas dalam portofolio saya.</p>
+                    </div>
+                    <section class="partner-group" aria-labelledby="institution-partners-title">
+                        <h4 id="institution-partners-title">Instansi &amp; program</h4>
+                        <div class="partner-slider" role="region" aria-labelledby="institution-partners-title">
+                            <ul class="client-logos institution-logos" aria-labelledby="institution-partners-title">
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/kementerian-perdagangan.png"
+                                                width="222"
+                                                height="52"
+                                                loading="lazy"
+                                                alt="Logo Kementerian Perdagangan"
+                                            />
                                         </div>
-                                        <div class="hidden_content_portfolio">
-                                            <div class="popup_details">
-                                                <div class="main_details">
-                                                    <div class="textbox">
-                                                        <p>Creating the main website for Ministry of Trade
-                                                            Republic of Indonesia, using Laravel 7, the website is
-                                                            responsive according to the device, there are many features
-                                                            in it such as dark mode, interactive maps, digital
-                                                            magazines, text to speech.</p>
-                                                        <p>this website engine is also used on derivative/echelon 1
-                                                            websites, namely by address as follows.
-                                                        <ul>
-                                                            <li>
-                                                                <a href="https://itjen.kemendag.go.id/"
-                                                                    target="_blank">1. Inspektorat
-                                                                    Jenderal</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="https://ditjenpdn.kemendag.go.id/"
-                                                                    target="_blank">2. Direktorat Jenderal Perdagangan
-                                                                    Dalam Negeri</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="https://ditjendaglu.kemendag.go.id/"
-                                                                    target="_blank">3. Direktorat Jenderal Perdagangan
-                                                                    Luar Negeri</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="https://ditjenppi.kemendag.go.id/"
-                                                                    target="_blank">4. Direktorat Jenderal Perundingan
-                                                                    Perdagangan Internasional</a>
-                                                            </li>
-                                                        </ul>
-                                                        </p>
-                                                    </div>
-                                                    <div class="detailbox">
-                                                        <ul>
-                                                            <li>
-                                                                <span class="first">Client</span>
-                                                                <span>Ministry of Trade</span>
-                                                            </li>
-                                                            <li>
-                                                                <span class="first">Language</span>
-                                                                <span><a href="#">PHP</a></span>
-                                                            </li>
-                                                            <li>
-                                                                <span class="first">Year</span>
-                                                                <span>2022</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <figcaption>Kementerian Perdagangan RI</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/kementerian-keuangan.png"
+                                                width="1816"
+                                                height="483"
+                                                loading="lazy"
+                                                alt="Logo Kementerian Keuangan"
+                                            />
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <div class="image">
-                                                <img src="img/portfolio/2.jpg" alt />
-                                                <div class="main" data-img-url="img/portfolio/2.jpg"></div>
-                                                <a class="januriawan_tm_full_link" href="https://hero.kemendag.go.id/"
-                                                    target="_blank"></a>
-                                            </div>
-                                            <div class="details">
-                                                <span class="category"><a href="#">Help Center</a></span>
-                                                <h3 class="title"><a class="line_effect"
-                                                        href="https://hero.kemendag.go.id/"
-                                                        target="_blank">hero.kemendag.go.id</a></h3>
-                                            </div>
+                                        <figcaption>Kementerian Keuangan RI</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/pusat-investasi-pemerintah.png"
+                                                width="668"
+                                                height="264"
+                                                loading="lazy"
+                                                alt="Logo Pusat Investasi Pemerintah"
+                                            />
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <div class="image">
-                                                <img src="img/portfolio/3.jpg" alt />
-                                                <div class="main" data-img-url="img/portfolio/3.jpg"></div>
-                                                <a class="januriawan_tm_full_link" href="https://raker.kemendag.go.id/"
-                                                    target="_blank"></a>
-                                            </div>
-                                            <div class="details">
-                                                <span class="category"><a href="#">Event Website</a></span>
-                                                <h3 class="title"><a class="line_effect"
-                                                        href="https://raker.kemendag.go.id/"
-                                                        target="_blank">raker.kemendag.go.id</a></h3>
-                                            </div>
+                                        <figcaption>Pusat Investasi Pemerintah</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/ktln-kementerian-sekretariat-negara.png"
+                                                width="701"
+                                                height="285"
+                                                loading="lazy"
+                                                alt="Logo KTLN Kementerian Sekretariat Negara"
+                                            />
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <div class="image">
-                                                <img src="img/portfolio/4.jpg" alt />
-                                                <div class="main" data-img-url="img/portfolio/4.jpg"></div>
-                                                <a class="januriawan_tm_full_link" href="https://bayukrisnamurthi.id/"
-                                                    target="_blank"></a>
-                                            </div>
-                                            <div class="details">
-                                                <span class="category"><a href="#">Personal Website</a></span>
-                                                <h3 class="title"><a class="line_effect"
-                                                        href="https://bayukrisnamurthi.id/"
-                                                        target="_blank">bayukrisnamurthi.id</a></h3>
-                                            </div>
+                                        <figcaption>
+                                            KTLN · Kementerian Sekretariat Negara RI
+                                        </figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/giz.png"
+                                                width="3000"
+                                                height="829"
+                                                loading="lazy"
+                                                alt="Logo GIZ"
+                                            />
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <div class="image">
-                                                <img src="img/portfolio/5.jpg" alt />
-                                                <div class="main" data-img-url="img/portfolio/5.jpg"></div>
-                                                <a class="januriawan_tm_full_link"
-                                                    href="https://github.com/januriawan/chirex" target="_blank"></a>
-                                            </div>
-                                            <div class="details">
-                                                <span class="category"><a href="#">Expert System</a></span>
-                                                <h3 class="title"><a class="line_effect"
-                                                        href="https://github.com/januriawan/chirex"
-                                                        target="_blank">Chirex 1.0</a></h3>
-                                            </div>
+                                        <figcaption>GIZ</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/pembiayaan-ultra-mikro.png"
+                                                width="1080"
+                                                height="816"
+                                                loading="lazy"
+                                                alt="Logo UMi"
+                                            />
                                         </div>
-                                    </li>
-                                </ul>
-                                <div class="januriawan_tm_button" data-position="center">
-                                    <a href="https://www.linkedin.com/in/januriawan/">View all projects</a>
-                                </div>
+                                        <figcaption>UMi · Pembiayaan Ultra Mikro</figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                            <div class="partner-slider-controls">
+                                <button class="partner-autoplay" type="button" aria-label="Jeda slide otomatis" aria-pressed="false">
+                                    <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                                </button>
+                                <button class="partner-prev" type="button" aria-label="Partner sebelumnya">
+                                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                                </button>
+                                <span class="partner-pagination"></span>
+                                <button class="partner-next" type="button" aria-label="Partner berikutnya">
+                                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="januriawan_tm_partners">
-                        <div class="tm_content">
-                            <div class="januriawan_tm_title">
-                                <span>- Clients</span>
-                                <h3>Customers &amp; clients</h3>
+                    </section>
+                    <section class="partner-group" aria-labelledby="brand-partners-title">
+                        <h4 id="brand-partners-title">Brand &amp; komunitas</h4>
+                        <div class="partner-slider" role="region" aria-labelledby="brand-partners-title">
+                            <ul class="client-logos brand-logos" aria-labelledby="brand-partners-title">
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/perspektif-bayu-krisnamurthi.png"
+                                                width="222"
+                                                height="52"
+                                                loading="lazy"
+                                                alt="Logo Perspektif Bayu Krisnamurthi"
+                                            />
+                                        </div>
+                                        <figcaption>Perspektif Bayu Krisnamurthi</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/panzer-robotics.png"
+                                                width="222"
+                                                height="52"
+                                                loading="lazy"
+                                                alt="Logo Panzer Robotics"
+                                            />
+                                        </div>
+                                        <figcaption>Panzer Robotics</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/hero-kemendag.png"
+                                                width="222"
+                                                height="52"
+                                                loading="lazy"
+                                                alt="Logo HERO Kemendag"
+                                            />
+                                        </div>
+                                        <figcaption>HERO Kemendag</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/nagan-tour.png"
+                                                width="222"
+                                                height="52"
+                                                loading="lazy"
+                                                alt="Logo Nagan Tour"
+                                            />
+                                        </div>
+                                        <figcaption>Nagan Tour</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/jasa-pcb.png"
+                                                width="222"
+                                                height="52"
+                                                loading="lazy"
+                                                alt="Logo Jasa PCB"
+                                            />
+                                        </div>
+                                        <figcaption>Jasa PCB</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/pena.png"
+                                                width="125"
+                                                height="52"
+                                                loading="lazy"
+                                                alt="Logo PENA"
+                                            />
+                                        </div>
+                                        <figcaption>PENA</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure class="partner-item">
+                                        <div class="partner-image">
+                                            <img
+                                                src="img/partners/persatuan-radiografer-indonesia.png"
+                                                width="103"
+                                                height="104"
+                                                loading="lazy"
+                                                alt="Logo Persatuan Radiografer Indonesia"
+                                            />
+                                        </div>
+                                        <figcaption>Persatuan Radiografer Indonesia</figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                            <div class="partner-slider-controls">
+                                <button class="partner-autoplay" type="button" aria-label="Jeda slide otomatis" aria-pressed="false">
+                                    <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                                </button>
+                                <button class="partner-prev" type="button" aria-label="Partner sebelumnya">
+                                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                                </button>
+                                <span class="partner-pagination"></span>
+                                <button class="partner-next" type="button" aria-label="Partner berikutnya">
+                                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                                </button>
                             </div>
-                            <div class="partners_inner">
-                                <ul>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img src="img/partners/1.png" alt />
-                                            <a class="januriawan_tm_full_link" a href="#"></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img src="img/partners/6.png" alt />
-                                            <a class="januriawan_tm_full_link" a href="#"></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img src="img/partners/3.png" alt />
-                                            <a class="januriawan_tm_full_link" a href="#"></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img src="img/partners/7.png" alt />
-                                            <a class="januriawan_tm_full_link" a href="#"></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img style="width: 150px;" src="img/partners/5.png" alt />
-                                            <a class="januriawan_tm_full_link" a href="#"></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img src="img/partners/4.png" alt />
-                                            <a class="januriawan_tm_full_link" a href="#"></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img src="img/partners/2.png" alt />
-                                            <a class="januriawan_tm_full_link" a href="#"></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img src="img/partners/8.png" alt />
-                                            <a class="januriawan_tm_full_link" a href="#"></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                              <p class="more-text-center"><b>An many more....</b></p>
                         </div>
-                    </div>
+                    </section>
                 </div>
-                <div class="januriawan_tm_section" id="contact">
-                    <div class="januriawan_tm_contact">
-                        <div class="tm_content">
-                            <div class="wrapper">
-                                <div class="left">
-                                    <div class="januriawan_tm_title">
-                                        <span>- Let's Connect</span>
-                                        <h3>Get in touch</h3>
-                                    </div>
-                                    <div class="text">
-                                        <p>I'm currently avaliable to take on new projects, so feel free to send me a
-                                            message about anything that you want to run past me. You can contact anytime
-                                            at 24/7</p>
-                                    </div>
-                                    <div class="info">
-                                        <ul>
-                                            <li>
-                                                <a href="mailto:januriawan@duck.com"><span class="__cf_email__"
-                                                        data-cfemail="mailto:januriawan@duck.com">[email&#160;protected]</span></a>
-                                            </li>
-                                            <li>
-                                                <a class="href_location" href="#">Jakarta Pusat 1011, DKI Jakarta,
-                                                    Indonesia</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <div class="fields">
-                                        <form action="send_message" method="post" class="contact_form"
-                                            id="contact_form">
-                                            <div class="returnmessage"
-                                                data-success="Your message has been received, We will contact you soon.">
-                                            </div>
-                                            <div class="empty_notice"><span>Please Fill Required Fields</span></div>
-                                            <div class="first">
-                                                <ul>
-                                                    <li>
-                                                        <input id="name" type="text" placeholder="Enter your name"
-                                                            autocomplete="off">
-                                                    </li>
-                                                    <li>
-                                                        <input id="email" type="text" placeholder="Your email"
-                                                            autocomplete="off">
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="last">
-                                                <textarea id="message" placeholder="Write something..."></textarea>
-                                            </div>
-                                            <div class="januriawan_tm_button">
-                                                <a id="send_message" target="_blank" href="mailto:januriawan@duck.com">Submit now</a>
-                                            </div>
+            </section>
 
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="januriawan_tm_map">
-                                <div class="mapouter">
-                                    <div class="gmap_canvas"><iframe width="100%" height="375" id="gmap_canvas"
-                                            src="https://maps.google.com/maps?width=q00%&amp;height=375&amp;hl=en&amp;q=Kementerian Perdagangan&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                                            frameborder="0" scrolling="no" marginheight="0"
-                                            marginwidth="0"></iframe><br>
-                                        <style>
-                                            .mapouter {
-                                                position: relative;
-                                                text-align: right;
-                                                height: 375px;
-                                                width: 100%;
-                                            }
-                                        </style><a href="https://www.embedgooglemap.net">how to add google map</a>
-                                        <style>
-                                            .gmap_canvas {
-                                                overflow: hidden;
-                                                background: none !important;
-                                                height: 375px;
-                                                width: 100%;
-                                            }
-                                        </style>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+            <section class="section contact" id="contact" aria-labelledby="contact-title">
+                <div class="contact-layout">
+                    <div class="contact-copy">
+                        <span class="section-label">04 / Contact</span>
+                        <h2 id="contact-title">
+                            Have something<br />in mind?<br /><span class="accent"
+                                >Let's talk.</span
+                            >
+                        </h2>
+                        <p>
+                            Tell me about your project, an idea you'd like to explore, or a design
+                            challenge you're working on.
+                        </p>
+                        <a class="contact-email" href="mailto:januriawan@duck.com"
+                            ><i class="fa-solid fa-envelope" aria-hidden="true"></i
+                            ><span>januriawan@duck.com</span></a
+                        >
+                        <p class="location">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jakarta,
+                            Indonesia
+                        </p>
                     </div>
+                    <form id="contact-form" action="mailto:januriawan@duck.com" method="get">
+                        <h3>A little about your project</h3>
+                        <label for="contact-name">Your name</label
+                        ><input
+                            id="contact-name"
+                            name="name"
+                            autocomplete="name"
+                            placeholder="What should I call you?"
+                            required
+                            maxlength="120"
+                        />
+                        <label for="contact-email">Email address</label
+                        ><input
+                            id="contact-email"
+                            type="email"
+                            name="email"
+                            autocomplete="email"
+                            placeholder="you@example.com"
+                            required
+                            maxlength="254"
+                        />
+                        <label for="contact-message">What are you working on?</label
+                        ><textarea
+                            id="contact-message"
+                            name="body"
+                            rows="4"
+                            placeholder="A few details about your project…"
+                            required
+                            maxlength="5000"
+                        ></textarea>
+                        <button class="button button-primary" type="submit">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Create email
+                            draft
+                        </button>
+                        <p class="form-note">
+                            Opens your email app with these details. Send the email from there.
+                        </p>
+                        <p class="form-status" id="form-status" role="status"></p>
+                    </form>
                 </div>
+            </section>
+            <footer class="page-footer">
+                <p>© <span data-year>2026</span> Fajar Januriawan. All rights reserved.</p>
+                <a href="#home"
+                    >Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i
+                ></a>
+            </footer>
+        </main>
 
+        <dialog id="project-dialog" lang="id" aria-labelledby="project-dialog-title">
+            <div class="dialog-top">
+                <span class="section-label">Detail proyek</span
+                ><button
+                    class="dialog-close"
+                    data-close-dialog
+                    type="button"
+                    aria-label="Tutup detail proyek"
+                >
+                    Tutup <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
             </div>
-        </div>
-        <div class="mouse-cursor cursor-outer"></div>
-        <div class="mouse-cursor cursor-inner"></div>
-    </div>
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
-    <script src="js/plugins.js"></script>
-    <script src="js/init.js"></script>
-</body>
-
+            <div class="project-dialog-body">
+                <div id="dialog-media" hidden>
+                    <button id="expand-project-image" type="button" aria-label="Perbesar pratinjau">
+                        <img id="dialog-project-image" alt="" hidden /><span
+                            ><i class="fa-solid fa-expand" aria-hidden="true"></i> Perbesar
+                            pratinjau</span
+                        >
+                    </button>
+                    <p id="project-preview-status" role="status"></p>
+                </div>
+                <div class="project-dialog-copy">
+                    <p id="dialog-project-agency" class="directory-kind"></p>
+                    <h2 id="project-dialog-title">Detail proyek</h2>
+                    <p id="dialog-project-description"></p>
+                    <a
+                        id="dialog-project-link"
+                        class="button button-dark"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden
+                        >Kunjungi website
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+                    ></a>
+                    <details id="kemendag-notes" hidden>
+                        <summary>Catatan proyek / 2022</summary>
+                        <p>
+                            A responsive website built with Laravel 7 for the Ministry of Trade,
+                            Republic of Indonesia. The project includes dark mode, interactive maps,
+                            digital magazines, and text-to-speech functionality.
+                        </p>
+                        <p>The website engine was also used for these ministry directorates:</p>
+                        <ul class="directorate-links">
+                            <li>
+                                <a
+                                    href="https://itjen.kemendag.go.id/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Inspektorat Jenderal</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://ditjenpdn.kemendag.go.id/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Direktorat Jenderal Perdagangan Dalam Negeri</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://ditjendaglu.kemendag.go.id/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Direktorat Jenderal Perdagangan Luar Negeri</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://ditjenppi.kemendag.go.id/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Direktorat Jenderal Perundingan Perdagangan Internasional</a
+                                >
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+            <div class="project-dialog-footer">
+                <button id="previous-project" type="button">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Sebelumnya</button
+                ><span id="project-position" role="status"></span
+                ><button id="next-project" type="button">
+                    Berikutnya <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </dialog>
+        <dialog id="project-image-dialog" lang="id" aria-labelledby="full-image-title">
+            <div class="dialog-top">
+                <h2 id="full-image-title">Pratinjau proyek</h2>
+                <button class="dialog-close" data-close-dialog type="button">
+                    Tutup <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div
+                class="full-image-scroll"
+                tabindex="0"
+                role="region"
+                aria-label="Gambar proyek, gulir untuk melihat selengkapnya"
+            >
+                <p id="full-preview-status" role="status"></p>
+                <img id="full-project-image" alt="" hidden />
+            </div>
+        </dialog>
+    </body>
 </html>
