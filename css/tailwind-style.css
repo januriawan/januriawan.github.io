@@ -871,17 +871,19 @@ h2 {
 .contact::before {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: auto 0 0;
+    height: clamp(160px, 30%, 260px);
     z-index: -1;
     border-radius: inherit;
     pointer-events: none;
-    background-image: repeating-radial-gradient(
-        ellipse at 50% 0,
-        transparent 0 18px,
-        rgb(2 58 239 / 0.045) 19px 20px,
-        transparent 21px 36px
+    background-image: repeating-linear-gradient(
+        135deg,
+        transparent 0 22px,
+        var(--contact-pattern-color, rgb(2 58 239 / 0.09)) 22px 23px,
+        transparent 23px 44px
     );
-    background-size: 144px 72px;
+    -webkit-mask-image: linear-gradient(transparent, #000);
+    mask-image: linear-gradient(transparent, #000);
 }
 .contact .section-label {
     color: var(--accent);

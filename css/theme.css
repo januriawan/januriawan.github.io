@@ -228,7 +228,7 @@
     background: #24384c;
 }
 :root[data-theme="dark"] .contact::before {
-    opacity: 0.6;
+    --contact-pattern-color: rgb(168 188 255 / 0.12);
 }
 @keyframes dark-scene-sky {
     0%,
