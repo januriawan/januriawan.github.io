@@ -935,22 +935,64 @@ h2 {
     border-color: #dbe3eb;
     color: #1e293b;
 }
-.contact::before {
-    content: "";
+.contact-art {
     position: absolute;
-    inset: auto 0 0;
-    height: clamp(160px, 30%, 260px);
+    inset: 0;
     z-index: -1;
+    overflow: hidden;
     border-radius: inherit;
+    color: var(--theme-link, var(--accent));
     pointer-events: none;
-    background-image: repeating-linear-gradient(
-        135deg,
-        transparent 0 22px,
-        var(--contact-pattern-color, rgb(2 58 239 / 0.09)) 22px 23px,
-        transparent 23px 44px
-    );
-    -webkit-mask-image: linear-gradient(transparent, #000);
-    mask-image: linear-gradient(transparent, #000);
+}
+.contact-gunungan {
+    position: absolute;
+    top: 100px;
+    left: -72px;
+    width: 260px;
+    height: auto;
+    opacity: 0.03;
+    transform-origin: 50% 96%;
+    animation: gunungan-sway 12s ease-in-out infinite alternate;
+    animation-play-state: paused;
+}
+.contact-art[data-motion="playing"] .contact-gunungan {
+    animation-play-state: running;
+}
+.contact-gunungan-right {
+    top: 180px;
+    right: -72px;
+    left: auto;
+    width: 240px;
+    opacity: 0.04;
+    animation-duration: 15s;
+    animation-delay: -6s;
+    animation-direction: alternate-reverse;
+}
+@keyframes gunungan-sway {
+    from { transform: rotate(-3deg); }
+    to { transform: rotate(3deg); }
+}
+@media (min-width: 1100px) {
+    .contact-gunungan {
+        top: auto;
+        bottom: -80px;
+        left: -30px;
+        width: clamp(280px, 24vw, 380px);
+    }
+}
+@media (min-width: 1100px) {
+    .contact-gunungan-right {
+        right: auto;
+        bottom: -95px;
+        left: 190px;
+        width: clamp(240px, 20vw, 320px);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .contact-gunungan {
+        animation: none;
+        transform: rotate(-2deg);
+    }
 }
 .contact .section-label {
     color: var(--accent);

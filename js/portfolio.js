@@ -50,6 +50,23 @@ motionToggle.addEventListener("click", () => {
 reducedMotion.addEventListener("change", syncSceneMotion);
 syncSceneMotion();
 
+const contactArt = document.querySelector(".contact-art");
+let contactVisible = !("IntersectionObserver" in window);
+
+function syncContactMotion() {
+    contactArt.dataset.motion = !reducedMotion.matches && contactVisible ? "playing" : "paused";
+}
+
+reducedMotion.addEventListener("change", syncContactMotion);
+if ("IntersectionObserver" in window) {
+    const contactObserver = new IntersectionObserver(([entry]) => {
+        contactVisible = entry.isIntersecting;
+        syncContactMotion();
+    });
+    contactObserver.observe(document.querySelector("#contact"));
+}
+syncContactMotion();
+
 const menu = document.querySelector("#main-navigation");
 const menuToggle = document.querySelector(".menu-toggle");
 const sidebar = document.querySelector(".sidebar");
