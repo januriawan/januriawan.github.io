@@ -293,8 +293,13 @@ button,
     padding-inline: 16px;
     font-size: 0.7rem;
 }
-.motion-toggle:hover {
+.motion-toggle:hover:not(:disabled) {
     background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.motion-toggle:disabled {
+    cursor: not-allowed;
 }
 .section {
     margin: 16px;

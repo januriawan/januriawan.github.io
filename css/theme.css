@@ -155,10 +155,14 @@
 }
 :root[data-theme="dark"] .menu-toggle:hover,
 :root[data-theme="dark"] .social-links a:hover,
-:root[data-theme="dark"] .motion-toggle:hover,
 :root[data-theme="dark"] .dialog-close:hover,
 :root[data-theme="dark"] .agency-filters button:not([aria-pressed="true"]):hover {
     background: var(--accent-soft);
+}
+:root[data-theme="dark"] .motion-toggle:hover:not(:disabled) {
+    background: var(--accent-soft);
+    border-color: var(--theme-link);
+    color: var(--theme-link);
 }
 :root[data-theme="dark"] .actions .text-link,
 :root[data-theme="dark"] .preview-label {

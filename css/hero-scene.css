@@ -17,10 +17,6 @@
     padding: 8px 12px;
     font-size: 0.75rem;
 }
-.motion-toggle:hover {
-    background: #294553;
-    color: #fff;
-}
 .motion-symbol {
     width: 12px;
     text-align: center;
