@@ -154,9 +154,9 @@ button,
 @media (min-width: 1050px) {
     .sidebar-avatar-wrap {
         --avatar-frame: 4px;
-        width: 92px;
-        height: 92px;
-        margin-bottom: 20px;
+        width: 88px;
+        height: 88px;
+        margin-bottom: 16px;
     }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1222,11 +1222,11 @@ dialog h2 {
 @media (min-width: 1050px) {
     .sidebar {
         margin: 0;
-        padding: 32px 20px;
+        padding: 24px 20px;
         border: 0;
         border-right: 1px solid var(--line);
         border-radius: 0;
-        gap: 32px;
+        gap: 20px;
     }
     .sidebar-avatar {
         width: 72px;
@@ -1235,21 +1235,37 @@ dialog h2 {
         border-width: 4px;
     }
     .identity {
-        padding: 8px 12px;
+        padding: 4px 12px;
     }
     .identity-name {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
     .identity-role {
+        margin-top: 8px;
         font-size: 0.75rem;
         line-height: 1.6;
     }
+    #main-navigation {
+        gap: 4px;
+    }
+    #main-navigation a {
+        padding-block: 10px;
+    }
     .sidebar-bottom {
-        padding: 24px 12px 0;
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        margin-top: 0;
+        padding: 0 12px;
         font-size: 0.75rem;
     }
     .social-links {
         gap: 8px 14px;
+        margin-top: auto;
+        padding-top: 12px;
+    }
+    .sidebar-bottom small {
+        margin-top: 12px;
     }
     .social-links a {
         font-size: 0.7rem;
@@ -1312,6 +1328,37 @@ dialog h2 {
     }
     .hero-scene .lighthouse {
         scale: 1.1;
+    }
+}
+@media (min-width: 1050px) and (max-height: 700px) {
+    .sidebar {
+        padding-block: 12px;
+        gap: 10px;
+    }
+    .sidebar-avatar-wrap {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 8px;
+    }
+    .identity-name {
+        font-size: 1.2rem;
+    }
+    .identity-role {
+        margin-top: 6px;
+        font-size: 0.7rem;
+    }
+    #main-navigation {
+        gap: 2px;
+    }
+    #main-navigation a {
+        padding-block: 8px;
+        line-height: 1.5;
+    }
+    .social-links {
+        padding-top: 10px;
+    }
+    .sidebar-bottom small {
+        margin-top: 10px;
     }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1426,15 +1473,15 @@ dialog h2 {
     font-size: 0.75rem;
     line-height: 1.5;
 }
-.mobile-menu .sidebar-avatar-wrap:hover .open-to-work-badge,
-.mobile-menu .sidebar-avatar-wrap:active .open-to-work-badge {
+.mobile-menu .identity:hover .open-to-work-badge,
+.mobile-menu .identity:active .open-to-work-badge {
     opacity: 1;
     transform: rotate(0) scale(1);
 }
 .mobile-menu .sidebar-bottom {
     display: block;
-    margin-top: auto;
-    padding-top: 20px;
+    margin-top: -12px;
+    padding-top: 12px;
     border-top: 1px solid var(--line);
     font-size: 0.8rem;
 }
@@ -1500,8 +1547,8 @@ dialog h2 {
     .mobile-navbar .identity-role {
         display: none;
     }
-    .mobile-navbar .sidebar-avatar-wrap:hover .open-to-work-badge,
-    .mobile-navbar .sidebar-avatar-wrap:active .open-to-work-badge {
+    .mobile-navbar .identity:hover .open-to-work-badge,
+    .mobile-navbar .identity:active .open-to-work-badge {
         opacity: 1;
         transform: rotate(0) scale(1);
     }

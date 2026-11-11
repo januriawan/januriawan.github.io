@@ -29,7 +29,7 @@ Tautan tersedia langsung di baris daftar dan melalui detail proyek. Label mengik
 | Ultra-Micro Credit Program Information System (SIKP UMi) | [Buka](https://sikp.umi.kemenkeu.go.id/) | Halaman login SIKP UMi terindeks; koneksi langsung timeout saat pemeriksaan. |
 | Ultra-Micro (UMi) One Data Portal | [Buka](https://data.umi.id/) | Dapat dibuka; identitas halaman sesuai. |
 | PIP New Era Office (NEO) | [Buka](https://neo.umi.id/) | Mengarah ke halaman login NEO PIP; metadata menyebut Pusat Investasi Pemerintah. |
-| PIP Mobile: Government Investment Center Mobile Application | [Buka](https://play.google.com/store/apps/details?id=app.arif.pipmobile) | Listing PIP Mobile di Google Play; ditampilkan sebagai “View app / Lihat aplikasi”. |
+| PIP Mobile: Government Investment Center Mobile Application | [Buka](https://neo.umi.id/pip-mobile) | Halaman PIP Mobile di NEO, sesuai URL pengganti dari pemilik; ditampilkan sebagai “View app / Lihat aplikasi”. |
 | GIZ SSTC Capacity Building Platform | [Buka](https://cb.afiind.com/) | Demo publik di domain pengembang; ditampilkan sebagai “View demo / Lihat demo”. |
 
 Sumber silang yang digunakan:
@@ -40,7 +40,7 @@ Sumber silang yang digunakan:
 - [LMS AKMET](https://lmsakmet.kemendag.go.id/) mengidentifikasi Akademi Metrologi dan Instrumentasi.
 - [Halaman layanan PIP pada DJPb](https://djpb.kemenkeu.go.id/portal/id/layanan/badan-layanan-umum/pusat-investasi-pemerintah.html) menyebut SIKP UMi dan Satu Data UMi; identitas kedua aplikasi dicek pada halaman tujuannya.
 - [Kebijakan NEO PIP](https://neo.umi.id/kebijakan-keamanan) mengidentifikasi tim IT dan kantor PIP. Halaman login `neo.umi.id` juga menyebut Pusat Investasi Pemerintah dalam metadata.
-- [Listing PIP Mobile di Google Play](https://play.google.com/store/apps/details?id=app.arif.pipmobile) memuat nama dan deskripsi aplikasi versi mobile sistem PIP. Publisher tampil sebagai Inovasi Karya Digital; tautan ini tidak dilabeli sebagai website resmi instansi.
+- [Halaman PIP Mobile di NEO](https://neo.umi.id/pip-mobile) menggantikan tautan Google Play sesuai instruksi pemilik. URL pengganti belum dapat dibuka melalui alat pemeriksaan web pada revisi ini.
 - [Portofolio pengembang Arunika](https://afiind.com/) mencantumkan IndoSSTC Capacity Building dan menautkan `cb.afiind.com`. Halaman demo tersebut memakai identitas IndoSSTC; karena domain pengembang, labelnya “Lihat demo”, bukan klaim sebagai website resmi Setneg.
 
 ## Belum memiliki URL yang terverifikasi

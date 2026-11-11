@@ -33,10 +33,12 @@
         <link rel="stylesheet" href="css/tailwind-style.css" />
         <link rel="stylesheet" href="css/project-explorer.css" />
         <link rel="stylesheet" href="css/theme.css" />
+        <link rel="stylesheet" href="css/cv.css" />
         <script src="js/vendor/swiper/swiper-bundle.min.js" defer></script>
         <script src="js/i18n.js" defer></script>
         <script src="js/portfolio.js" defer></script>
         <script src="js/project-explorer.js" defer></script>
+        <script src="js/cv.js" defer></script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
@@ -67,8 +69,8 @@
                             <path d="M 13.95 43.24 A 49 49 0 0 0 94.65 94.65" stroke="#287d15" />
                             <path d="M 94.65 94.65 A 49 49 0 0 0 106.05 76.76" stroke="url(#avatar-work-end)" />
                         </g>
-                        <text fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="700">
-                            <textPath href="#avatar-work-text" startOffset="50%" text-anchor="middle" textLength="124" lengthAdjust="spacing">#OPENTOWORK</textPath>
+                        <text fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="700">
+                            <textPath href="#avatar-work-text" startOffset="50%" text-anchor="middle">#OPENTOWORK</textPath>
                         </text>
                     </svg>
                 </span>
@@ -95,7 +97,11 @@
                 <div class="mobile-preferences"></div>
             </nav>
             <div class="sidebar-bottom">
-                <p>Based in Indonesia.<br />Creating for the web.</p>
+                <button class="cv-trigger" type="button" aria-haspopup="dialog" aria-controls="cv-dialog">
+                    <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+                    <span>Preview CV</span>
+                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                </button>
                 <div class="social-links" aria-label="Social profiles">
                     <a
                         href="https://github.com/januriawan"
@@ -1470,7 +1476,7 @@
                                     <span class="directory-number">06</span>
                                     <div>
                                         <span class="directory-kind">Mobile application</span>
-                                        <h5 data-url="https://play.google.com/store/apps/details?id=app.arif.pipmobile" data-url-label="View app">
+                                        <h5 data-url="https://neo.umi.id/pip-mobile" data-url-label="View app">
                                             PIP Mobile: Government Investment Center Mobile Application
                                         </h5>
                                         <p>
@@ -1478,7 +1484,7 @@
                                         </p>
                                         <a
                                             class="project-website-link"
-                                            href="https://play.google.com/store/apps/details?id=app.arif.pipmobile"
+                                            href="https://neo.umi.id/pip-mobile"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label="View app: PIP Mobile: Government Investment Center Mobile Application"
@@ -2379,6 +2385,31 @@
                 ><button id="next-project" type="button">
                     Next <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                 </button>
+            </div>
+        </dialog>
+        <dialog id="cv-dialog" class="cv-dialog" aria-labelledby="cv-title">
+            <div class="cv-header">
+                <h2 id="cv-title">Curriculum vitae</h2>
+                <button class="cv-close" type="button" aria-label="Close CV preview" autofocus>
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="cv-toolbar">
+                <div class="cv-languages" role="group" aria-label="CV language">
+                    <button type="button" data-cv-language="en" aria-pressed="true" lang="en">English</button>
+                    <button type="button" data-cv-language="id" aria-pressed="false" lang="id">Bahasa Indonesia</button>
+                </div>
+                <a class="cv-download" href="assets/pdf/fajar-januriawan-cv-en.pdf" download>
+                    <i class="fa-solid fa-download" aria-hidden="true"></i>
+                    <span>Download PDF</span>
+                </a>
+            </div>
+            <div class="cv-preview">
+                <iframe title="CV PDF preview"></iframe>
+            </div>
+            <div class="cv-footer">
+                <p>If the preview does not appear, open the PDF in a new tab.</p>
+                <a class="cv-open" href="assets/pdf/fajar-januriawan-cv-en.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>
             </div>
         </dialog>
         <dialog id="project-image-dialog" aria-labelledby="full-image-title">
