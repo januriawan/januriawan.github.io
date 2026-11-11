@@ -974,7 +974,7 @@ h2 {
     opacity: 0.055;
 }
 .jakarta-traffic {
-    opacity: 0.12;
+    opacity: 0.1;
 }
 .jakarta-road-vehicle {
     animation-duration: var(--traffic-duration);
