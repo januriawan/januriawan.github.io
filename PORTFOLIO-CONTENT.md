@@ -2,6 +2,8 @@
 
 Diperbarui 11 November 2026 berdasarkan daftar proyek dari pemilik portofolio.
 
+Project notes website utama Kemendag kini juga menautkan PEN, PKTN, BKPerdag, dan BPSDMP yang sudah tercatat dalam portofolio. Nama unit dan URL dicocokkan dengan bagian Eselon I pada [website resmi Kemendag](https://www.kemendag.go.id/) tanggal 11 November 2026. Daftar tambahan dipisahkan dari empat unit pengguna engine pada catatan proyek 2022; penambahan tautan tidak menyatakan versi teknologi atau tahun pengerjaan website unit tersebut.
+
 Daftar terbaru berisi 36 proyek instansi: 28 Kementerian Perdagangan, 6 Pusat Investasi Pemerintah (PIP), dan 2 Kementerian Sekretariat Negara dalam konteks GIZ SSTC. KUmeet ditambahkan berdasarkan screenshot baru pemilik. PPID Kemendag pada nomor 7 dan 28 dalam masukan pemilik digabung menjadi satu entri. Dua karya lain, Bayu Krisnamurthi dan Chirex, membuat total daftar menjadi 38 proyek.
 
 Urutan instansi mengikuti permintaan pemilik. Di dalam Kemendag, urutan dimulai dari portal utama dan informasi publik, dilanjutkan ekosistem pembelajaran, website unit kerja, lalu pengelolaan konten dan aplikasi operasional. Kelompok PIP dimulai dari informasi pembiayaan dan pendampingan, kemudian aplikasi organisasi. Kelompok Setneg menempatkan portal sebelum platform pengembangan kapasitas. Urutan ini berdasarkan fungsi, bukan tahun penyelesaian atau besarnya kontribusi.
