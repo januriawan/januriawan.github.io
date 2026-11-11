@@ -1426,8 +1426,8 @@ dialog h2 {
     font-size: 0.75rem;
     line-height: 1.5;
 }
-.mobile-menu .identity:hover .open-to-work-badge,
-.mobile-menu .identity:active .open-to-work-badge {
+.mobile-menu .sidebar-avatar-wrap:hover .open-to-work-badge,
+.mobile-menu .sidebar-avatar-wrap:active .open-to-work-badge {
     opacity: 1;
     transform: rotate(0) scale(1);
 }
@@ -1500,8 +1500,8 @@ dialog h2 {
     .mobile-navbar .identity-role {
         display: none;
     }
-    .mobile-navbar .identity:hover .open-to-work-badge,
-    .mobile-navbar .identity:active .open-to-work-badge {
+    .mobile-navbar .sidebar-avatar-wrap:hover .open-to-work-badge,
+    .mobile-navbar .sidebar-avatar-wrap:active .open-to-work-badge {
         opacity: 1;
         transform: rotate(0) scale(1);
     }
