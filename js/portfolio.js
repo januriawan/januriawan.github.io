@@ -1,5 +1,7 @@
 "use strict";
 
+const { t } = window.siteI18n;
+
 const themeToggle = document.querySelector(".theme-toggle");
 
 function applyTheme(dark) {
@@ -34,10 +36,10 @@ function syncSceneMotion() {
           ? "fa-solid fa-play"
           : "fa-solid fa-pause";
     motionToggle.querySelector(".motion-label").textContent = reducedMotion.matches
-        ? "Motion reduced"
+        ? t("Motion reduced")
         : paused
-          ? "Play animation"
-          : "Pause animation";
+          ? t("Play animation")
+          : t("Pause animation");
 }
 
 motionToggle.hidden = false;
@@ -59,6 +61,9 @@ function setMenuOpen(open) {
 }
 
 function syncNavigation() {
+    const preferences = document.querySelector(".site-preferences");
+    const slot = document.querySelector(mobileViewport.matches ? ".mobile-preferences" : ".desktop-preferences");
+    if (preferences.parentElement !== slot) slot.append(preferences);
     menuToggle.hidden = !mobileViewport.matches;
     setMenuOpen(false);
 }
@@ -122,17 +127,17 @@ contactForm.addEventListener("submit", (event) => {
     const nameInput = contactForm.elements.name;
     const messageInput = contactForm.elements.body;
     for (const field of [nameInput, messageInput]) {
-        field.setCustomValidity(field.value.trim() ? "" : "Please fill out this field.");
+        field.setCustomValidity(field.value.trim() ? "" : t("Please fill out this field."));
     }
     if (!contactForm.reportValidity()) return;
     const name = nameInput.value.trim();
     const email = contactForm.elements.email.value.trim();
     const message = messageInput.value.trim();
-    const subject = `Project enquiry from ${name}`;
-    const body = `${message}\n\nFrom: ${name}\nEmail: ${email}`;
+    const subject = t("Project enquiry from {name}", { name });
+    const body = `${message}\n\n${t("From: {name}\nEmail: {email}", { name, email })}`;
     window.location.href = `mailto:januriawan@duck.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     document.querySelector("#form-status").textContent =
-        "Your email draft is ready to open. If your email app did not open, email januriawan@duck.com directly. Your message has not been sent yet.";
+        t("Your email draft is ready to open. If your email app did not open, email januriawan@duck.com directly. Your message has not been sent yet.");
 });
 contactForm.addEventListener("input", (event) => {
     event.target.setCustomValidity("");
@@ -171,9 +176,9 @@ function syncPartnerSliders() {
                     nextEl: slider.querySelector(".partner-next"),
                 },
                 a11y: {
-                    prevSlideMessage: "Partner sebelumnya",
-                    nextSlideMessage: "Partner berikutnya",
-                    slideLabelMessage: "Partner {{index}} dari {{slidesLength}}",
+                    prevSlideMessage: t("Previous partner"),
+                    nextSlideMessage: t("Next partner"),
+                    slideLabelMessage: t("Partner {index} of {total}", { index: "{{index}}", total: "{{slidesLength}}" }),
                     slideRole: "listitem",
                 },
             });
@@ -200,7 +205,7 @@ function syncPartnerAutoplay(slider) {
     const button = slider.querySelector(".partner-autoplay");
     button.disabled = reducedMotion.matches;
     button.setAttribute("aria-pressed", String(paused));
-    button.setAttribute("aria-label", paused ? "Putar slide otomatis" : "Jeda slide otomatis");
+    button.setAttribute("aria-label", t(paused ? "Play automatic slides" : "Pause automatic slides"));
     button.querySelector("i").className = paused ? "fa-solid fa-play" : "fa-solid fa-pause";
 }
 
@@ -215,4 +220,27 @@ syncPartnerSliders();
 mobilePartners.addEventListener("change", syncPartnerSliders);
 reducedMotion.addEventListener("change", () => {
     partnerSliders.forEach(syncPartnerAutoplay);
+});
+
+document.addEventListener("languagechange", () => {
+    syncSceneMotion();
+    partnerSliders.forEach((slider) => {
+        syncPartnerAutoplay(slider);
+        const swiper = slider.swiper;
+        if (!swiper) return;
+        Object.assign(swiper.params.a11y, {
+            prevSlideMessage: t("Previous partner"),
+            nextSlideMessage: t("Next partner"),
+            slideLabelMessage: t("Partner {index} of {total}", { index: "{{index}}", total: "{{slidesLength}}" }),
+        });
+        swiper.slides.forEach((slide) => {
+            slide.setAttribute("aria-label", t("Partner {index} of {total}", {
+                index: Number(slide.dataset.swiperSlideIndex) + 1,
+                total: swiper.slides.length,
+            }));
+        });
+    });
+    for (const field of [contactForm.elements.name, contactForm.elements.body]) {
+        if (field.validity.customError) field.setCustomValidity(t("Please fill out this field."));
+    }
 });

@@ -255,3 +255,21 @@
         transform: none;
     }
 }
+.project-website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 8px;
+    color: var(--theme-link, var(--accent));
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.project-website-link:hover {
+    text-decoration-thickness: 2px;
+}
+.project-website-link i {
+    font-size: 0.75em;
+}

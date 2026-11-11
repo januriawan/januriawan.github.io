@@ -8,13 +8,13 @@
             content="Fajar Januriawan is a web designer, frontend developer and graphic designer based in Indonesia, with 10+ years of experience."
         />
         <meta name="author" content="Fajar Januriawan" />
-        <meta property="og:title" content="Fajar Januriawan | Designer & Developer" />
+        <meta property="og:title" content="Fajar Januriawan | Designer &amp; Developer" />
         <meta
             property="og:description"
             content="Web design, frontend development and graphic design. Based in Indonesia."
         />
         <meta property="og:image" content="img/background.jpg" />
-        <title>Fajar Januriawan | Designer & Developer</title>
+        <title>Fajar Januriawan | Designer &amp; Developer</title>
         <link rel="icon" href="img/favicon.png" type="image/png" />
         <link rel="stylesheet" href="css/vendor/fontawesome/css/fontawesome.min.css" />
         <link rel="stylesheet" href="css/vendor/fontawesome/css/solid.min.css" />
@@ -34,6 +34,7 @@
         <link rel="stylesheet" href="css/project-explorer.css" />
         <link rel="stylesheet" href="css/theme.css" />
         <script src="js/vendor/swiper/swiper-bundle.min.js" defer></script>
+        <script src="js/i18n.js" defer></script>
         <script src="js/portfolio.js" defer></script>
         <script src="js/project-explorer.js" defer></script>
     </head>
@@ -70,12 +71,14 @@
                 <a href="#service"
                     ><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Services</a
                 >
+                <a href="#skills"><i class="fa-solid fa-code" aria-hidden="true"></i> Skills</a>
                 <a href="#portfolio"
                     ><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Portfolio</a
                 >
                 <a href="#contact"
                     ><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a
                 >
+                <div class="mobile-preferences"></div>
             </nav>
             <div class="sidebar-bottom">
                 <p>Based in Indonesia.<br />Creating for the web.</p>
@@ -116,19 +119,27 @@
                     <div class="hero-location">
                         <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jakarta,
                             Indonesia</span>
-                        <button
-                            class="theme-toggle"
-                            type="button"
-                            role="switch"
-                            aria-checked="false"
-                            aria-label="Dark mode"
-                            title="Dark mode"
-                            hidden
-                        >
-                            <span class="theme-track" aria-hidden="true">
-                                <span class="theme-thumb"><i class="fa-solid fa-moon"></i></span>
-                            </span>
-                        </button>
+                        <div class="desktop-preferences">
+                            <div class="site-preferences" hidden>
+                                <button
+                                    class="theme-toggle"
+                                    type="button"
+                                    role="switch"
+                                    aria-checked="false"
+                                    aria-label="Dark mode"
+                                    title="Dark mode"
+                                    hidden
+                                >
+                                    <span class="theme-track" aria-hidden="true">
+                                        <span class="theme-thumb"><i class="fa-solid fa-moon"></i></span>
+                                    </span>
+                                </button>
+                                <div class="language-switch" role="group" aria-label="Language">
+                                    <button type="button" data-language="en" aria-pressed="true" aria-label="English" lang="en">EN</button>
+                                    <button type="button" data-language="id" aria-pressed="false" aria-label="Bahasa Indonesia" lang="id">ID</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="hero-layout">
@@ -142,17 +153,14 @@
                             </span>
                         </h1>
                         <p class="hero-description">
-                            I bring design and code together to build thoughtful websites and visual
-                            experiences.
+                            I bring design and code together to build thoughtful websites and visual experiences.
                         </p>
                         <div class="actions">
                             <a class="button button-primary" href="#portfolio"
-                                ><i class="fa-solid fa-briefcase" aria-hidden="true"></i> View my
-                                work</a
+                                ><i class="fa-solid fa-briefcase" aria-hidden="true"></i> View my work</a
                             >
                             <a class="text-link light-link" href="#contact"
-                                ><i class="fa-solid fa-envelope" aria-hidden="true"></i> Let's
-                                talk</a
+                                ><i class="fa-solid fa-envelope" aria-hidden="true"></i> Let's talk</a
                             >
                         </div>
                     </div>
@@ -256,18 +264,14 @@
                 </div>
                 <div class="about-layout">
                     <p class="intro">
-                        I'm Fajar Januriawan,<br />a web designer &amp; developer<br />based in
-                        Indonesia.
+                        I'm Fajar Januriawan,<br />a web designer &amp; developer<br />based in Indonesia.
                     </p>
                     <div class="about-copy">
                         <p>
-                            With 10+ years of experience in frontend development and graphic design,
-                            I enjoy turning ideas into websites that are useful, easy to navigate,
-                            and pleasing to look at.
+                            With 10+ years of experience in frontend development and graphic design, I enjoy turning ideas into websites that are useful, easy to navigate, and pleasing to look at.
                         </p>
                         <p>
-                            I enjoy every step of the process, from the first discussion and
-                            collaboration to designing the details and writing the code.
+                            I enjoy every step of the process, from the first discussion and collaboration to designing the details and writing the code.
                         </p>
                         <dl class="profile-details">
                             <div>
@@ -296,8 +300,7 @@
                                 <h4>Web Developer</h4>
                                 <p class="company">Ministry of Trade</p>
                                 <p>
-                                    Building websites and applications for internal teams and the
-                                    public at Indonesia's Ministry of Trade.
+                                    Building websites and applications for internal teams and the public at Indonesia's Ministry of Trade.
                                 </p>
                             </div>
                         </li>
@@ -307,8 +310,7 @@
                                 <h4>Freelance Designer</h4>
                                 <p class="company">Self-employed</p>
                                 <p>
-                                    Working on web and graphic design projects, alongside online and
-                                    in-person workshops and training.
+                                    Working on web and graphic design projects, alongside online and in-person workshops and training.
                                 </p>
                             </div>
                         </li>
@@ -318,8 +320,7 @@
                                 <h4>UX Designer</h4>
                                 <p class="company">RistekDikti</p>
                                 <p>
-                                    Collaborating with small businesses through the Integrated
-                                    Learning to Work Program with UMKM.
+                                    Collaborating with small businesses through the Integrated Learning to Work Program with UMKM.
                                 </p>
                             </div>
                         </li>
@@ -329,8 +330,7 @@
                                 <h4>IT Division</h4>
                                 <p class="company">Panzer Robotic</p>
                                 <p>
-                                    Creating websites and content, supporting the organization's IT
-                                    needs, and leading the IT division.
+                                    Creating websites and content, supporting the organization's IT needs, and leading the IT division.
                                 </p>
                             </div>
                         </li>
@@ -356,8 +356,7 @@
                             ></span>
                         </summary>
                         <p>
-                            Planning and designing responsive websites with clear navigation,
-                            considered layouts, and a focus on making information easy to find.
+                            Planning and designing responsive websites with clear navigation, considered layouts, and a focus on making information easy to find.
                         </p>
                     </details>
                     <details>
@@ -371,9 +370,7 @@
                             ></span>
                         </summary>
                         <p>
-                            Designing interfaces around the user's journey, from understanding their
-                            needs to arranging the screens and interactions that help them complete
-                            a task.
+                            Designing interfaces around the user's journey, from understanding their needs to arranging the screens and interactions that help them complete a task.
                         </p>
                     </details>
                     <details>
@@ -387,8 +384,7 @@
                             ></span>
                         </summary>
                         <p>
-                            Communicating ideas visually through typography, color, imagery, and
-                            layouts for digital and print materials.
+                            Communicating ideas visually through typography, color, imagery, and layouts for digital and print materials.
                         </p>
                     </details>
                     <details>
@@ -402,8 +398,7 @@
                             ></span>
                         </summary>
                         <p>
-                            Understanding how people use a product, what they need, and where they
-                            encounter difficulties, to inform design decisions.
+                            Understanding how people use a product, what they need, and where they encounter difficulties, to inform design decisions.
                         </p>
                     </details>
                     <details>
@@ -417,8 +412,7 @@
                             ></span>
                         </summary>
                         <p>
-                            Bringing visual ideas to life through movement, with an approach suited
-                            to the story and the format.
+                            Bringing visual ideas to life through movement, with an approach suited to the story and the format.
                         </p>
                     </details>
                     <details>
@@ -432,86 +426,197 @@
                             ></span>
                         </summary>
                         <p>
-                            Shaping footage into a finished video through selection, sequencing,
-                            titles, transitions, sound, and color adjustments.
+                            Shaping footage into a finished video through selection, sequencing, titles, transitions, sound, and color adjustments.
                         </p>
                     </details>
+                </div>
+            </section>
+
+            <section class="section skills" id="skills" aria-labelledby="skills-title">
+                <div class="section-heading">
+                    <span class="section-label">03 / Skills</span>
+                    <h2 id="skills-title">From code<br />to visual design.</h2>
+                    <p>Technologies and tools I use for development, AI, infrastructure, and design.</p>
+                </div>
+                <div class="skills-list">
+                    <div class="skill-group">
+                        <h3 id="skills-ai">
+                            <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                            <span>AI &amp; machine learning</span>
+                        </h3>
+                        <ul class="skill-tags" aria-labelledby="skills-ai">
+                            <li><i class="fa-solid fa-comments" aria-hidden="true"></i><span>LLM</span></li>
+                            <li><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>RAG</span></li>
+                            <li><i class="fa-solid fa-robot" aria-hidden="true"></i><span>AI Agents</span></li>
+                            <li><i class="fa-solid fa-brain" aria-hidden="true"></i><span>Neural Networks</span></li>
+                            <li><i class="fa-solid fa-eye" aria-hidden="true"></i><span>Computer Vision</span></li>
+                            <li><i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span>LVQ</span></li>
+                            <li><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i><span>Backpropagation</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3 id="skills-web">
+                            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                            <span>Programming &amp; web</span>
+                        </h3>
+                        <ul class="skill-tags" aria-labelledby="skills-web">
+                            <li><i class="fa-solid fa-code" aria-hidden="true"></i><span>TypeScript</span></li>
+                            <li><i class="fa-brands fa-js" aria-hidden="true"></i><span>JavaScript</span></li>
+                            <li><i class="fa-brands fa-vuejs" aria-hidden="true"></i><span>Vue.js</span></li>
+                            <li><i class="fa-brands fa-node-js" aria-hidden="true"></i><span>Node.js</span></li>
+                            <li><i class="fa-brands fa-php" aria-hidden="true"></i><span>PHP</span></li>
+                            <li><i class="fa-brands fa-laravel" aria-hidden="true"></i><span>Laravel</span></li>
+                            <li><i class="fa-solid fa-fire" aria-hidden="true"></i><span>CodeIgniter</span></li>
+                            <li><i class="fa-brands fa-python" aria-hidden="true"></i><span>Python</span></li>
+                            <li><i class="fa-solid fa-laptop-code" aria-hidden="true"></i><span>Django</span></li>
+                            <li><i class="fa-brands fa-java" aria-hidden="true"></i><span>Java</span></li>
+                            <li><i class="fa-solid fa-c" aria-hidden="true"></i><span>C</span></li>
+                            <li><i class="fa-solid fa-code" aria-hidden="true"></i><span>C++</span></li>
+                            <li><i class="fa-brands fa-html5" aria-hidden="true"></i><span>HTML</span></li>
+                            <li><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><span>CSS</span></li>
+                            <li><i class="fa-solid fa-wind" aria-hidden="true"></i><span>Tailwind CSS</span></li>
+                            <li><i class="fa-brands fa-bootstrap" aria-hidden="true"></i><span>Bootstrap</span></li>
+                            <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Full Stack Development</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3 id="skills-mobile">
+                            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                            <span>Mobile &amp; GIS</span>
+                        </h3>
+                        <ul class="skill-tags" aria-labelledby="skills-mobile">
+                            <li><i class="fa-brands fa-flutter" aria-hidden="true"></i><span>Flutter</span></li>
+                            <li><i class="fa-brands fa-android" aria-hidden="true"></i><span>Android</span></li>
+                            <li><i class="fa-solid fa-globe" aria-hidden="true"></i><span>GeoServer</span></li>
+                            <li><i class="fa-solid fa-map" aria-hidden="true"></i><span>Leaflet</span></li>
+                            <li><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span>PostGIS</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3 id="skills-data">
+                            <i class="fa-solid fa-database" aria-hidden="true"></i>
+                            <span>Databases</span>
+                        </h3>
+                        <ul class="skill-tags" aria-labelledby="skills-data">
+                            <li><i class="fa-solid fa-database" aria-hidden="true"></i><span>PostgreSQL</span></li>
+                            <li><i class="fa-solid fa-database" aria-hidden="true"></i><span>MySQL</span></li>
+                            <li><i class="fa-solid fa-server" aria-hidden="true"></i><span>SQL Server</span></li>
+                            <li><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>SQLite</span></li>
+                            <li><i class="fa-solid fa-cubes" aria-hidden="true"></i><span>NoSQL</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3 id="skills-devops">
+                            <i class="fa-solid fa-server" aria-hidden="true"></i>
+                            <span>Server &amp; DevOps</span>
+                        </h3>
+                        <ul class="skill-tags" aria-labelledby="skills-devops">
+                            <li><i class="fa-brands fa-linux" aria-hidden="true"></i><span>Linux</span></li>
+                            <li><i class="fa-solid fa-server" aria-hidden="true"></i><span>Nginx</span></li>
+                            <li><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i><span>Apache</span></li>
+                            <li><i class="fa-brands fa-docker" aria-hidden="true"></i><span>Docker</span></li>
+                            <li><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i><span>CI/CD</span></li>
+                            <li><i class="fa-solid fa-cloud" aria-hidden="true"></i><span>VPS</span></li>
+                            <li><i class="fa-brands fa-cpanel" aria-hidden="true"></i><span>cPanel</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3 id="skills-infrastructure">
+                            <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+                            <span>Infrastructure &amp; tools</span>
+                        </h3>
+                        <ul class="skill-tags" aria-labelledby="skills-infrastructure">
+                            <li><i class="fa-solid fa-wifi" aria-hidden="true"></i><span>MikroTik &amp; Wireless Networking</span></li>
+                            <li><i class="fa-solid fa-network-wired" aria-hidden="true"></i><span>IT Infrastructure</span></li>
+                            <li><i class="fa-brands fa-git-alt" aria-hidden="true"></i><span>Git</span></li>
+                            <li><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3 id="skills-design">
+                            <i class="fa-solid fa-pen-ruler" aria-hidden="true"></i>
+                            <span>Design tools</span>
+                        </h3>
+                        <ul class="skill-tags" aria-labelledby="skills-design">
+                            <li><i class="fa-solid fa-bezier-curve" aria-hidden="true"></i><span>Illustrator</span></li>
+                            <li><i class="fa-solid fa-image" aria-hidden="true"></i><span>Photoshop</span></li>
+                            <li><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>InDesign</span></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
             <section class="section work" id="portfolio" aria-labelledby="work-title">
                 <div class="section-heading work-heading">
                     <div>
-                        <span class="section-label">03 / Portfolio</span>
+                        <span class="section-label">04 / Portfolio</span>
                         <h2 id="work-title">Digital work for<br />public institutions.</h2>
                     </div>
                     <p>
-                        Public information, learning platforms,<br />and systems for everyday
-                        operations.
+                        Public information, learning platforms,<br />and systems for everyday operations.
                     </p>
                 </div>
-                <div class="project-directory" lang="id" aria-labelledby="directory-title">
+                <div class="project-directory" aria-labelledby="directory-title">
                     <div class="directory-heading">
                         <div>
-                            <span class="section-label">Jelajahi portofolio</span>
-                            <h3 id="directory-title">Galeri &amp; daftar proyek</h3>
+                            <span class="section-label">Explore the portfolio</span>
+                            <h3 id="directory-title">Gallery &amp; project directory</h3>
                         </div>
                         <p>
-                            Telusuri 36 proyek instansi dan 2 karya lainnya. Buka detail proyek
-                            untuk membaca deskripsi dan melihat pratinjaunya.
+                            Explore 36 institutional projects and 2 other works. Open a project to read its description and view the preview.
                         </p>
                     </div>
                     <div class="directory-tools" hidden>
                         <div class="project-search">
-                            <label for="project-search">Cari proyek</label>
+                            <label for="project-search">Search projects</label>
                             <div class="search-field">
                                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                                 <input
                                     id="project-search"
                                     type="search"
-                                    placeholder="Nama proyek, singkatan, atau jenis layanan"
+                                    placeholder="Project name, acronym, or type of service"
                                     autocomplete="off"
                                     aria-controls="project-gallery project-groups"
                                 />
                             </div>
                         </div>
-                        <div class="agency-filters" role="group" aria-label="Filter instansi">
+                        <div class="agency-filters" role="group" aria-label="Filter organizations">
                             <button type="button" data-agency-filter="all" aria-pressed="true">
-                                Semua proyek
+                                All projects
                             </button>
                             <button
                                 type="button"
                                 data-agency-filter="kemendag"
                                 aria-pressed="false"
                             >
-                                Kementerian Perdagangan RI
+                                Ministry of Trade, Republic of Indonesia
                             </button>
                             <button type="button" data-agency-filter="pip" aria-pressed="false">
-                                Pusat Investasi Pemerintah
+                                Government Investment Center (PIP)
                             </button>
                             <button type="button" data-agency-filter="setneg" aria-pressed="false">
-                                Kementerian Sekretariat Negara RI
+                                Ministry of State Secretariat, Republic of Indonesia
                             </button>
                             <button type="button" data-agency-filter="other" aria-pressed="false">
-                                Karya lainnya
+                                Other work
                             </button>
                         </div>
                         <div class="explorer-view-row">
                             <div
                                 class="explorer-views"
                                 role="group"
-                                aria-label="Tampilan portofolio"
+                                aria-label="Portfolio view"
                             >
                                 <button
                                     type="button"
                                     data-project-view="preview"
                                     aria-pressed="true"
                                 >
-                                    <i class="fa-solid fa-images" aria-hidden="true"></i> Pratinjau
+                                    <i class="fa-solid fa-images" aria-hidden="true"></i> Previews
                                     <span data-view-count="preview">11</span>
                                 </button>
                                 <button type="button" data-project-view="all" aria-pressed="false">
-                                    <i class="fa-solid fa-list" aria-hidden="true"></i> Semua proyek
+                                    <i class="fa-solid fa-list" aria-hidden="true"></i> All projects
                                     <span data-view-count="all">38</span>
                                 </button>
                             </div>
@@ -521,7 +626,7 @@
                                 role="status"
                                 aria-atomic="true"
                             >
-                                36 proyek instansi dan 2 karya lainnya.
+                                36 institutional projects and 2 other works.
                             </p>
                         </div>
                     </div>
@@ -529,7 +634,7 @@
                         id="project-gallery"
                         class="portfolio-gallery"
                         role="list"
-                        aria-label="Proyek dengan pratinjau"
+                        aria-label="Projects with previews"
                         hidden
                     >
                         <a
@@ -550,7 +655,7 @@
                                 width="1440"
                                 height="5079"
                                 loading="lazy"
-                                alt="Website utama Kementerian Perdagangan RI"
+                                alt="Ministry of Trade main website"
                         /></a>
                         <a
                             href="img/portfolio/satu-data-perdagangan.jpg"
@@ -560,7 +665,7 @@
                                 width="1440"
                                 height="4547"
                                 loading="lazy"
-                                alt="Portal Satu Data Perdagangan"
+                                alt="Trade One Data Portal"
                         /></a>
                         <a href="img/portfolio/portal-kudagang.jpg" data-showcase-for="kudagang"
                             ><img
@@ -568,7 +673,7 @@
                                 width="1440"
                                 height="4564"
                                 loading="lazy"
-                                alt="Portal pembelajaran Kudagang"
+                                alt="Kudagang learning portal"
                         /></a>
                         <a href="img/portfolio/new-era-office-pip.jpg" data-showcase-for="neo"
                             ><img
@@ -576,7 +681,7 @@
                                 width="2880"
                                 height="1450"
                                 loading="lazy"
-                                alt="Dashboard New Era Office PIP"
+                                alt="PIP New Era Office dashboard"
                         /></a>
                         <a
                             href="img/portfolio/sistem-pendampingan-pip.jpg"
@@ -586,7 +691,7 @@
                                 width="2880"
                                 height="1450"
                                 loading="lazy"
-                                alt="Dashboard SIPENDAMPINGAN PIP"
+                                alt="PIP SIPENDAMPINGAN dashboard"
                         /></a>
                         <a
                             href="img/portfolio/giz-sstc-capacity-building.jpg"
@@ -596,7 +701,7 @@
                                 width="1440"
                                 height="3138"
                                 loading="lazy"
-                                alt="Platform IndoSSTC Capacity Building"
+                                alt="IndoSSTC Capacity Building platform"
                         /></a>
                         <a href="img/portfolio/hero-kemendag.jpg" data-showcase-for="hero"
                             ><img
@@ -604,7 +709,7 @@
                                 width="900"
                                 height="1050"
                                 loading="lazy"
-                                alt="Pusat bantuan HERO Kemendag"
+                                alt="HERO Kemendag help center"
                         /></a>
                         <a href="img/portfolio/raker-kemendag.jpg" data-showcase-for="raker"
                             ><img
@@ -612,7 +717,7 @@
                                 width="900"
                                 height="1050"
                                 loading="lazy"
-                                alt="Website Rapat Kerja Kemendag"
+                                alt="Ministry of Trade Working Meeting website"
                         /></a>
                         <a href="img/portfolio/bayu-krisnamurthi.jpg" data-showcase-for="bayu"
                             ><img
@@ -620,7 +725,7 @@
                                 width="900"
                                 height="1050"
                                 loading="lazy"
-                                alt="Website personal Bayu Krisnamurthi"
+                                alt="Bayu Krisnamurthi&#x27;s personal website"
                         /></a>
                         <a href="img/portfolio/chirex.jpg" data-showcase-for="chirex"
                             ><img
@@ -628,7 +733,7 @@
                                 width="900"
                                 height="1050"
                                 loading="lazy"
-                                alt="Aplikasi sistem pakar Chirex 1.0"
+                                alt="Chirex 1.0 expert system"
                         /></a>
                     </div>
                     <div id="project-groups">
@@ -640,351 +745,500 @@
                             <div class="agency-heading">
                                 <div>
                                     <span class="agency-order"
-                                        >01 / Kementerian Perdagangan RI</span
+                                        >01 / Ministry of Trade</span
                                     >
-                                    <h4 id="agency-kemendag">Kementerian Perdagangan RI</h4>
+                                    <h4 id="agency-kemendag">Ministry of Trade, Republic of Indonesia</h4>
                                 </div>
-                                <span class="agency-count" data-agency-count>28 proyek</span>
+                                <span class="agency-count" data-agency-count>28 projects</span>
                             </div>
                             <ol class="directory-list">
                                 <li data-project>
                                     <span class="directory-number">01</span>
                                     <div>
-                                        <span class="directory-kind">Portal utama</span>
+                                        <span class="directory-kind">Main portal</span>
                                         <h5
                                             data-project-id="kemendag"
                                             data-url="https://kemendag.go.id/"
                                         >
-                                            Website Utama Kementerian Perdagangan
+                                            Ministry of Trade Main Website
                                         </h5>
                                         <p>
-                                            Portal informasi kementerian yang menyajikan profil
-                                            organisasi, berita, kebijakan, dan akses layanan
-                                            perdagangan bagi masyarakat.
+                                            A ministry information portal presenting the organization, news, policies, and public access to trade services.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Main Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">02</span>
                                     <div>
-                                        <span class="directory-kind">Data perdagangan</span>
+                                        <span class="directory-kind">Trade data</span>
                                         <h5
                                             data-project-id="satudata"
                                             data-url="https://satudata.kemendag.go.id/"
                                         >
-                                            Portal Satu Data Perdagangan
+                                            Trade One Data Portal
                                         </h5>
                                         <p>
-                                            Portal penyajian data dan statistik perdagangan untuk
-                                            mendukung pencarian informasi, analisis, dan penyusunan
-                                            kebijakan.
+                                            A trade data and statistics portal supporting information discovery, analysis, and policy development.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://satudata.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Trade One Data Portal"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">03</span>
                                     <div>
-                                        <span class="directory-kind">Informasi publik</span>
-                                        <h5>
-                                            Portal Pejabat Pengelola Informasi dan Dokumentasi
-                                            (PPID) Kemendag
+                                        <span class="directory-kind">Public information</span>
+                                        <h5 data-url="https://ppid.kemendag.go.id/">
+                                            Ministry of Trade Public Information Portal (PPID)
                                         </h5>
                                         <p>
-                                            Website layanan keterbukaan informasi publik yang
-                                            menyediakan informasi dan dokumentasi kementerian serta
-                                            akses permohonan informasi.
+                                            A public information website providing ministry information and documentation, including access to information requests.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://ppid.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Public Information Portal (PPID)"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">04</span>
                                     <div>
-                                        <span class="directory-kind">Layanan perdagangan</span>
-                                        <h5>Sistem Informasi Perdagangan (SIP) Kemendag</h5>
+                                        <span class="directory-kind">Trade services</span>
+                                        <h5 data-url="https://sip.kemendag.go.id/">Ministry of Trade Information System (SIP)</h5>
                                         <p>
-                                            Portal akses informasi dan layanan perdagangan yang
-                                            menghubungkan kebutuhan pengguna dengan berbagai
-                                            platform digital Kemendag.
+                                            A trade information and services portal connecting users with the ministry's digital platforms.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://sip.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Information System (SIP)"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">05</span>
                                     <div>
-                                        <span class="directory-kind">Publikasi ilmiah</span>
-                                        <h5>Portal Jurnal Ilmiah Kementerian Perdagangan</h5>
+                                        <span class="directory-kind">Academic publications</span>
+                                        <h5 data-url="https://jurnal.kemendag.go.id/">Ministry of Trade Academic Journals Portal</h5>
                                         <p>
-                                            Website publikasi ilmiah untuk penyajian jurnal,
-                                            artikel, dan hasil kajian di lingkungan Kementerian
-                                            Perdagangan.
+                                            An academic publishing website for journals, articles, and research within the Ministry of Trade.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://jurnal.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Academic Journals Portal"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">06</span>
                                     <div>
-                                        <span class="directory-kind">Informasi keamanan siber</span>
-                                        <h5>
-                                            Portal Computer Security Incident Response Team (CSIRT)
-                                            Kemendag
+                                        <span class="directory-kind">Cybersecurity information</span>
+                                        <h5 data-url="https://csirt.kemendag.go.id/">
+                                            Ministry of Trade Computer Security Incident Response Team (CSIRT) Portal
                                         </h5>
                                         <p>
-                                            Website informasi tim tanggap insiden keamanan siber
-                                            Kemendag, termasuk publikasi dan kanal pelaporan
-                                            insiden.
+                                            An information website for the ministry's cybersecurity incident response team, including publications and incident reporting channels.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://csirt.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Computer Security Incident Response Team (CSIRT) Portal"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">07</span>
                                     <div>
-                                        <span class="directory-kind">Portal pembelajaran</span>
+                                        <span class="directory-kind">Learning portal</span>
                                         <h5
                                             data-project-id="kudagang"
                                             data-url="https://kudagang.lc.kemendag.go.id/"
                                         >
-                                            Portal Kudagang Kementerian Perdagangan
+                                            Ministry of Trade Kudagang Portal
                                         </h5>
                                         <p>
-                                            Pintu masuk ekosistem pembelajaran Kemendag yang
-                                            menghimpun akses ke layanan pembelajaran, pengetahuan,
-                                            dan sumber daya pendidikan.
+                                            A gateway to the ministry's learning ecosystem, bringing together learning services, knowledge, and educational resources.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://kudagang.lc.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Kudagang Portal"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">08</span>
                                     <div>
-                                        <span class="directory-kind">Pembelajaran daring</span>
-                                        <h5>Learning Management System (LMS) Kudagang</h5>
+                                        <span class="directory-kind">Online learning</span>
+                                        <h5 data-url="https://kudagang.kemendag.go.id/lms/">Kudagang Learning Management System (LMS)</h5>
                                         <p>
-                                            Platform pembelajaran daring untuk penyelenggaraan
-                                            pelatihan dan akses materi belajar di lingkungan
-                                            Kementerian Perdagangan.
+                                            An online learning platform for training delivery and access to learning materials within the Ministry of Trade.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://kudagang.kemendag.go.id/lms/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Kudagang Learning Management System (LMS)"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">09</span>
                                     <div>
-                                        <span class="directory-kind">Manajemen pengetahuan</span>
-                                        <h5>Knowledge Management System (KMS) Kudagang</h5>
+                                        <span class="directory-kind">Knowledge management</span>
+                                        <h5 data-url="https://kudagang.kemendag.go.id/kms/">Kudagang Knowledge Management System (KMS)</h5>
                                         <p>
-                                            Platform berbagi pengetahuan untuk menghimpun dan
-                                            menyebarluaskan wawasan, pengalaman, serta praktik kerja
-                                            di lingkungan Kemendag.
+                                            A knowledge-sharing platform collecting and distributing insights, experience, and work practices within the Ministry of Trade.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://kudagang.kemendag.go.id/kms/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Kudagang Knowledge Management System (KMS)"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">10</span>
                                     <div>
-                                        <span class="directory-kind">Repositori digital</span>
-                                        <h5>Repository Kudagang Kementerian Perdagangan</h5>
+                                        <span class="directory-kind">Digital repository</span>
+                                        <h5 data-url="https://kudagang.kemendag.go.id/repo/">Ministry of Trade Kudagang Repository</h5>
                                         <p>
-                                            Repositori digital untuk dokumentasi dan publikasi bahan
-                                            pengetahuan serta karya di lingkungan Kementerian
-                                            Perdagangan.
+                                            A digital repository documenting and publishing knowledge resources and work within the Ministry of Trade.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://kudagang.kemendag.go.id/repo/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Kudagang Repository"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">11</span>
                                     <div>
-                                        <span class="directory-kind">Pendidikan tinggi</span>
-                                        <h5>
-                                            Learning Management System Akademi Metrologi dan
-                                            Instrumentasi (AKMET)
+                                        <span class="directory-kind">Higher education</span>
+                                        <h5 data-url="https://lmsakmet.kemendag.go.id/">
+                                            Academy of Metrology and Instrumentation (AKMET) Learning Management System
                                         </h5>
                                         <p>
-                                            Platform pembelajaran daring untuk mendukung kegiatan
-                                            akademik dan akses materi perkuliahan di Akademi
-                                            Metrologi dan Instrumentasi.
+                                            An online learning platform supporting academic activities and access to course materials at the Academy of Metrology and Instrumentation.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://lmsakmet.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Academy of Metrology and Instrumentation (AKMET) Learning Management System"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">12</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Badan Pengembangan Sumber Daya Manusia
-                                            Perdagangan (BPSDMP)
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://bpsdmp.kemendag.go.id/">
+                                            Trade Human Resources Development Agency (BPSDMP) Website
                                         </h5>
                                         <p>
-                                            Website profil dan informasi program pengembangan
-                                            kompetensi serta kegiatan sumber daya manusia di bidang
-                                            perdagangan.
+                                            A website presenting the agency and its programs for competency development and human resources activities in trade.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://bpsdmp.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Trade Human Resources Development Agency (BPSDMP) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">13</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Pusat Pendidikan dan Pelatihan Aparatur
-                                            Perdagangan (Pusdiklat)
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://pusdiklat.kemendag.go.id/">
+                                            Trade Personnel Education and Training Center (Pusdiklat) Website
                                         </h5>
                                         <p>
-                                            Website informasi kelembagaan, program pendidikan dan
-                                            pelatihan, serta kegiatan pengembangan kompetensi
-                                            aparatur perdagangan.
+                                            A website presenting the institution, education and training programs, and competency development activities for trade personnel.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://pusdiklat.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Trade Personnel Education and Training Center (Pusdiklat) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">14</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Pusat Pembinaan Jabatan Fungsional Perdagangan
-                                            (Pusbin JFP)
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://pusbinjfdag.kemendag.go.id/">
+                                            Trade Functional Positions Development Center (Pusbin JFP) Website
                                         </h5>
                                         <p>
-                                            Website informasi pembinaan jabatan fungsional
-                                            perdagangan, publikasi kegiatan, dan rujukan bagi
-                                            pejabat fungsional.
+                                            An information website for trade functional positions, including activity reports and resources for functional officers.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://pusbinjfdag.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Trade Functional Positions Development Center (Pusbin JFP) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">15</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>Website Badan Kebijakan Perdagangan (BKPerdag)</h5>
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://bkperdag.kemendag.go.id/">Trade Policy Agency (BKPerdag) Website</h5>
                                         <p>
-                                            Website informasi kelembagaan, kajian, dan publikasi
-                                            yang berkaitan dengan analisis serta rekomendasi
-                                            kebijakan perdagangan.
+                                            A website presenting the agency, research, and publications on trade policy analysis and recommendations.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://bkperdag.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Trade Policy Agency (BKPerdag) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">16</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Direktorat Jenderal Pengembangan Ekspor Nasional
-                                            (PEN)
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://ditjenpen.kemendag.go.id/">
+                                            Directorate General of National Export Development (PEN) Website
                                         </h5>
                                         <p>
-                                            Website informasi program dan kegiatan pengembangan
-                                            ekspor nasional, termasuk publikasi bagi pelaku usaha
-                                            dan pemangku kepentingan.
+                                            A website presenting national export development programs and activities, including publications for businesses and stakeholders.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://ditjenpen.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Directorate General of National Export Development (PEN) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">17</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Direktorat Jenderal Perdagangan Dalam Negeri
-                                            (PDN)
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://ditjenpdn.kemendag.go.id/">
+                                            Directorate General of Domestic Trade (PDN) Website
                                         </h5>
                                         <p>
-                                            Website informasi kebijakan, program, dan kegiatan yang
-                                            berkaitan dengan penyelenggaraan perdagangan di dalam
-                                            negeri.
+                                            A website presenting policies, programs, and activities related to domestic trade.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://ditjenpdn.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Directorate General of Domestic Trade (PDN) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">18</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Direktorat Jenderal Perdagangan Luar Negeri
-                                            (DAGLU)
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://ditjendaglu.kemendag.go.id/">
+                                            Directorate General of Foreign Trade (DAGLU) Website
                                         </h5>
                                         <p>
-                                            Website informasi kebijakan dan kegiatan perdagangan
-                                            luar negeri, dengan rujukan bagi pemangku kepentingan
-                                            ekspor dan impor.
+                                            A website presenting foreign trade policies and activities, with resources for export and import stakeholders.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://ditjendaglu.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Directorate General of Foreign Trade (DAGLU) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">19</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Direktorat Jenderal Perundingan Perdagangan
-                                            Internasional (PPI)
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://ditjenppi.kemendag.go.id/">
+                                            Directorate General of International Trade Negotiations (PPI) Website
                                         </h5>
                                         <p>
-                                            Website informasi kegiatan, kebijakan, dan perkembangan
-                                            perundingan perdagangan internasional Indonesia.
+                                            A website presenting Indonesia's international trade negotiations, policies, and developments.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://ditjenppi.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Directorate General of International Trade Negotiations (PPI) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">20</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Direktorat Jenderal Perlindungan Konsumen dan
-                                            Tertib Niaga (PKTN)
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://ditjenpktn.kemendag.go.id/">
+                                            Directorate General of Consumer Protection and Trade Compliance (PKTN) Website
                                         </h5>
                                         <p>
-                                            Website informasi program dan kegiatan perlindungan
-                                            konsumen serta penyelenggaraan tertib niaga.
+                                            A website presenting consumer protection programs and activities, and trade compliance initiatives.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://ditjenpktn.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Directorate General of Consumer Protection and Trade Compliance (PKTN) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">21</span>
                                     <div>
-                                        <span class="directory-kind">Website unit kerja</span>
-                                        <h5>
-                                            Website Inspektorat Jenderal (ITJEN) Kementerian
-                                            Perdagangan
+                                        <span class="directory-kind">Department website</span>
+                                        <h5 data-url="https://itjen.kemendag.go.id/">
+                                            Ministry of Trade Inspectorate General (ITJEN) Website
                                         </h5>
                                         <p>
-                                            Website profil dan publikasi kegiatan pengawasan
-                                            internal di lingkungan Kementerian Perdagangan.
+                                            A website presenting the organization and its internal oversight activities within the Ministry of Trade.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://itjen.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Inspectorate General (ITJEN) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">22</span>
                                     <div>
-                                        <span class="directory-kind">Website komite</span>
-                                        <h5>Website Komite Anti Dumping Indonesia (KADI)</h5>
+                                        <span class="directory-kind">Committee website</span>
+                                        <h5 data-url="https://kadi.kemendag.go.id/">Indonesian Anti-Dumping Committee (KADI) Website</h5>
                                         <p>
-                                            Website informasi kelembagaan dan publikasi terkait
-                                            penanganan praktik dumping serta kebijakan antidumping
-                                            di Indonesia.
+                                            A website presenting the committee and publications on dumping investigations and anti-dumping policy in Indonesia.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://kadi.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Indonesian Anti-Dumping Committee (KADI) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">23</span>
                                     <div>
-                                        <span class="directory-kind">Website komite</span>
-                                        <h5>
-                                            Website Komite Pengamanan Perdagangan Indonesia (KPPI)
+                                        <span class="directory-kind">Committee website</span>
+                                        <h5 data-url="https://kppi.kemendag.go.id/">
+                                            Indonesian Trade Safeguards Committee (KPPI) Website
                                         </h5>
                                         <p>
-                                            Website informasi kelembagaan, penyelidikan, dan
-                                            publikasi terkait tindakan pengamanan perdagangan atau
-                                            safeguard.
+                                            A website presenting the committee, investigations, and publications on trade safeguard measures.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://kppi.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Indonesian Trade Safeguards Committee (KPPI) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">24</span>
                                     <div>
-                                        <span class="directory-kind">Pengelolaan konten</span>
+                                        <span class="directory-kind">Content management</span>
                                         <h5>
-                                            Content Management System (CMS) Website Unit Eselon
-                                            Kemendag
+                                            Content Management System (CMS) for Ministry of Trade Department Websites
                                         </h5>
                                         <p>
-                                            Sistem pengelolaan konten untuk mendukung pembaruan
-                                            informasi dan publikasi pada website unit eselon
-                                            Kementerian Perdagangan.
+                                            A content management system supporting information updates and publishing on Ministry of Trade department websites.
                                         </p>
                                     </div>
                                 </li>
@@ -992,62 +1246,73 @@
                                     <span class="directory-number">25</span>
                                     <div>
                                         <span class="directory-kind"
-                                            >Dukungan teknologi informasi</span
+                                            >IT support</span
                                         >
                                         <h5
                                             data-project-id="hero"
                                             data-url="https://hero.kemendag.go.id/"
                                         >
-                                            HERO Kemendag: Pusat Bantuan Layanan TI
+                                            HERO Kemendag: IT Service Help Center
                                         </h5>
                                         <p>
-                                            Platform pusat bantuan untuk pelaporan kendala dan
-                                            permintaan dukungan layanan teknologi informasi di
-                                            lingkungan Kemendag.
+                                            A help center for reporting issues and requesting IT service support within the Ministry of Trade.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://hero.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: HERO Kemendag: IT Service Help Center"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">26</span>
                                     <div>
                                         <span class="directory-kind"
-                                            >Administrasi perjalanan dinas</span
+                                            >Official travel administration</span
                                         >
                                         <h5>
-                                            Aplikasi Elektronik Surat Perjalanan Dinas (eSPPD)
-                                            Kemendag
+                                            Ministry of Trade Electronic Official Travel Application (eSPPD)
                                         </h5>
                                         <p>
-                                            Aplikasi administrasi untuk mendukung pengelolaan
-                                            dokumen dan proses surat perjalanan dinas di lingkungan
-                                            Kementerian Perdagangan.
+                                            An administrative application for managing official travel documents and workflows within the Ministry of Trade.
                                         </p>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">27</span>
                                     <div>
-                                        <span class="directory-kind">Website kegiatan</span>
+                                        <span class="directory-kind">Event website</span>
                                         <h5
                                             data-project-id="raker"
                                             data-url="https://raker.kemendag.go.id/"
                                         >
-                                            Website Rapat Kerja (Raker) Kementerian Perdagangan
+                                            Ministry of Trade Working Meeting (Raker) Website
                                         </h5>
                                         <p>
-                                            Website kegiatan rapat kerja untuk penyajian informasi
-                                            acara, agenda, dan materi kegiatan kementerian.
+                                            A working meeting website presenting event information, agendas, and ministry meeting materials.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://raker.kemendag.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ministry of Trade Working Meeting (Raker) Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">28</span>
                                     <div>
-                                        <span class="directory-kind">Pertemuan daring</span>
+                                        <span class="directory-kind">Online meetings</span>
                                         <h5 data-project-id="kumeet">KUmeet — KUdagang Meeting</h5>
                                         <p>
-                                            Platform pertemuan daring dalam ekosistem Kudagang,
-                                            dengan ruang meeting, percakapan, dan berbagi layar.
+                                            An online meeting platform in the Kudagang ecosystem, with meeting rooms, chat, and screen sharing.
                                         </p>
                                     </div>
                                 </li>
@@ -1061,90 +1326,116 @@
                             <div class="agency-heading">
                                 <div>
                                     <span class="agency-order">02 / PIP</span>
-                                    <h4 id="agency-pip">Pusat Investasi Pemerintah</h4>
+                                    <h4 id="agency-pip">Government Investment Center (PIP)</h4>
                                     <p>
-                                        Badan Layanan Umum di lingkungan Kementerian Keuangan
-                                        Republik Indonesia.
+                                        A public service agency under Indonesia's Ministry of Finance.
                                     </p>
                                 </div>
-                                <span class="agency-count" data-agency-count>6 proyek</span>
+                                <span class="agency-count" data-agency-count>6 projects</span>
                             </div>
                             <ol class="directory-list">
                                 <li data-project>
                                     <span class="directory-number">01</span>
                                     <div>
-                                        <span class="directory-kind">Pembiayaan ultra mikro</span>
-                                        <h5>
-                                            Sistem Informasi Kredit Program Ultra Mikro (SIKP UMi)
+                                        <span class="directory-kind">Ultra-micro financing</span>
+                                        <h5 data-url="https://sikp.umi.kemenkeu.go.id/">
+                                            Ultra-Micro Credit Program Information System (SIKP UMi)
                                         </h5>
                                         <p>
-                                            Sistem informasi untuk mendukung penatausahaan data
-                                            pembiayaan Ultra Mikro dan kebutuhan informasi penyalur
-                                            di lingkungan PIP.
+                                            An information system supporting Ultra-Micro financing data administration and the information needs of PIP's financing partners.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://sikp.umi.kemenkeu.go.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ultra-Micro Credit Program Information System (SIKP UMi)"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">02</span>
                                     <div>
-                                        <span class="directory-kind">Data pembiayaan</span>
-                                        <h5>Portal Satu Data Ultra Mikro (UMi)</h5>
+                                        <span class="directory-kind">Financing data</span>
+                                        <h5 data-url="https://data.umi.id/">Ultra-Micro (UMi) One Data Portal</h5>
                                         <p>
-                                            Portal data terkait program pembiayaan Ultra Mikro untuk
-                                            mendukung kebutuhan informasi dan pemantauan program.
+                                            A data portal for the Ultra-Micro financing program, supporting information access and program monitoring.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://data.umi.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Ultra-Micro (UMi) One Data Portal"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">03</span>
                                     <div>
-                                        <span class="directory-kind">Pendampingan usaha</span>
+                                        <span class="directory-kind">Business mentoring</span>
                                         <h5 data-project-id="pendampingan">
-                                            Sistem Pendampingan Pusat Investasi Pemerintah
+                                            PIP Business Mentoring System
                                         </h5>
                                         <p>
-                                            Sistem informasi pendampingan bagi ekosistem pembiayaan
-                                            PIP, dengan fokus pada dokumentasi kegiatan pendampingan
-                                            usaha.
+                                            A mentoring information system for PIP's financing ecosystem, focused on documenting business mentoring activities.
                                         </p>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">04</span>
                                     <div>
-                                        <span class="directory-kind">Aplikasi web</span>
-                                        <h5 data-project-id="neo">
-                                            New Era Office (NEO) Pusat Investasi Pemerintah
+                                        <span class="directory-kind">Web application</span>
+                                        <h5 data-project-id="neo" data-url="https://neo.umi.id/">
+                                            PIP New Era Office (NEO)
                                         </h5>
                                         <p>
-                                            Proyek pengembangan aplikasi New Era Office (NEO) di
-                                            lingkungan Pusat Investasi Pemerintah.
+                                            Development of the New Era Office (NEO) application for the Government Investment Center.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://neo.umi.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: PIP New Era Office (NEO)"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">05</span>
                                     <div>
-                                        <span class="directory-kind">Pengelolaan keuangan</span>
-                                        <h5>SIMEKA: Aplikasi Pengelolaan Keuangan PIP</h5>
+                                        <span class="directory-kind">Financial management</span>
+                                        <h5>SIMEKA: PIP Financial Management Application</h5>
                                         <p>
-                                            Aplikasi yang mendukung proses perencanaan, pelaksanaan,
-                                            dan pelaporan keuangan di lingkungan Pusat Investasi
-                                            Pemerintah.
+                                            An application supporting financial planning, implementation, and reporting within the Government Investment Center.
                                         </p>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">06</span>
                                     <div>
-                                        <span class="directory-kind">Aplikasi seluler</span>
-                                        <h5>
-                                            PIP Mobile: Aplikasi Seluler Pusat Investasi Pemerintah
+                                        <span class="directory-kind">Mobile application</span>
+                                        <h5 data-url="https://play.google.com/store/apps/details?id=app.arif.pipmobile" data-url-label="View app">
+                                            PIP Mobile: Government Investment Center Mobile Application
                                         </h5>
                                         <p>
-                                            Proyek pengembangan aplikasi PIP untuk akses melalui
-                                            perangkat seluler.
+                                            Development of the PIP application for access on mobile devices.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://play.google.com/store/apps/details?id=app.arif.pipmobile"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="View app: PIP Mobile: Government Investment Center Mobile Application"
+                                        >
+                                            View app <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                             </ol>
@@ -1157,44 +1448,47 @@
                             <div class="agency-heading">
                                 <div>
                                     <span class="agency-order"
-                                        >03 / Kementerian Sekretariat Negara RI</span
+                                        >03 / Ministry of State Secretariat</span
                                     >
-                                    <h4 id="agency-setneg">Kementerian Sekretariat Negara RI</h4>
+                                    <h4 id="agency-setneg">Ministry of State Secretariat, Republic of Indonesia</h4>
                                     <p>
-                                        Proyek GIZ dalam konteks South-South and Triangular
-                                        Cooperation (SSTC).
+                                        GIZ projects in the context of South-South and Triangular Cooperation (SSTC).
                                     </p>
                                 </div>
-                                <span class="agency-count" data-agency-count>2 proyek</span>
+                                <span class="agency-count" data-agency-count>2 projects</span>
                             </div>
                             <ol class="directory-list">
                                 <li data-project>
                                     <span class="directory-number">01</span>
                                     <div>
-                                        <span class="directory-kind">Portal kerja sama</span>
+                                        <span class="directory-kind">Cooperation portal</span>
                                         <h5>
-                                            GIZ SSTC Portal: Portal Kerja Sama Selatan-Selatan dan
-                                            Triangular
+                                            GIZ SSTC Portal: South-South and Triangular Cooperation Portal
                                         </h5>
                                         <p>
-                                            Proyek portal informasi SSTC dalam lingkup kerja sama
-                                            GIZ dan Kementerian Sekretariat Negara RI.
+                                            An SSTC information portal within the cooperation between GIZ and Indonesia's Ministry of State Secretariat.
                                         </p>
                                     </div>
                                 </li>
                                 <li data-project>
                                     <span class="directory-number">02</span>
                                     <div>
-                                        <span class="directory-kind">Pengembangan kapasitas</span>
-                                        <h5 data-project-id="giz-capacity">
-                                            GIZ SSTC Capacity Building: Platform Pengembangan
-                                            Kapasitas
+                                        <span class="directory-kind">Capacity building</span>
+                                        <h5 data-project-id="giz-capacity" data-url="https://cb.afiind.com/" data-url-label="View demo">
+                                            GIZ SSTC Capacity Building Platform
                                         </h5>
                                         <p>
-                                            Proyek platform digital untuk mendukung kegiatan
-                                            pengembangan kapasitas dalam program SSTC bersama GIZ
-                                            dan Kementerian Sekretariat Negara RI.
+                                            A digital platform supporting capacity building activities in the SSTC program with GIZ and Indonesia's Ministry of State Secretariat.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://cb.afiind.com/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="View demo: GIZ SSTC Capacity Building Platform"
+                                        >
+                                            View demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                             </ol>
@@ -1207,27 +1501,36 @@
                             aria-labelledby="agency-other"
                         >
                             <div class="agency-heading">
-                                <h4 id="agency-other">Karya lainnya</h4>
-                                <span class="agency-count" data-agency-count>2 proyek</span>
+                                <h4 id="agency-other">Other work</h4>
+                                <span class="agency-count" data-agency-count>2 projects</span>
                             </div>
                             <ol class="directory-list">
                                 <li data-extra-project>
                                     <span class="directory-number">01</span>
                                     <div>
-                                        <span class="directory-kind">Website personal</span>
+                                        <span class="directory-kind">Personal website</span>
                                         <h5
                                             data-project-id="bayu"
                                             data-url="https://bayukrisnamurthi.id/"
                                         >
-                                            Website Personal Bayu Krisnamurthi
+                                            Bayu Krisnamurthi's Personal Website
                                         </h5>
-                                        <p>Website personal Bayu Krisnamurthi.</p>
+                                        <p>Bayu Krisnamurthi's personal website.</p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://bayukrisnamurthi.id/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Bayu Krisnamurthi&#x27;s Personal Website"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                                 <li data-extra-project>
                                     <span class="directory-number">02</span>
                                     <div>
-                                        <span class="directory-kind">Sistem pakar</span>
+                                        <span class="directory-kind">Expert system</span>
                                         <h5
                                             data-project-id="chirex"
                                             data-url="https://github.com/januriawan/chirex"
@@ -1235,18 +1538,26 @@
                                             Chirex 1.0
                                         </h5>
                                         <p>
-                                            Aplikasi sistem pakar untuk diagnosis penyakit pada
-                                            ayam.
+                                            An expert system application for diagnosing diseases in chickens.
                                         </p>
+                                        <a
+                                            class="project-website-link"
+                                            href="https://github.com/januriawan/chirex"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visit website: Chirex 1.0"
+                                        >
+                                            Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </li>
                             </ol>
                         </section>
                     </div>
                     <div class="directory-empty" hidden>
-                        <h4>Tidak ada proyek yang sesuai.</h4>
+                        <h4>No matching projects.</h4>
                         <p id="empty-project-message">
-                            Coba kata kunci lain atau tampilkan kembali semua instansi.
+                            Try another keyword or show all organizations again.
                         </p>
                         <button
                             class="button button-dark"
@@ -1254,10 +1565,10 @@
                             type="button"
                             hidden
                         >
-                            Lihat proyek yang cocok
+                            View matching projects
                         </button>
                         <button class="button button-dark" id="reset-projects" type="button">
-                            Reset pencarian
+                            Reset search
                         </button>
                     </div>
                 </div>
@@ -1271,16 +1582,16 @@
                         >Find me on LinkedIn <span aria-hidden="true">↗</span></a
                     >
                 </div>
-                <div class="clients" lang="id" aria-labelledby="clients-title">
+                <div class="clients" aria-labelledby="clients-title">
                     <div class="clients-heading">
                         <div>
-                            <span class="section-label">Kolaborasi</span>
-                            <h3 id="clients-title">Partner &amp; kolaborator</h3>
+                            <span class="section-label">Collaboration</span>
+                            <h3 id="clients-title">Partners &amp; collaborators</h3>
                         </div>
-                        <p>Instansi, program, brand, dan komunitas dalam portofolio saya.</p>
+                        <p>Institutions, programs, brands, and communities in my portfolio.</p>
                     </div>
                     <section class="partner-group" aria-labelledby="institution-partners-title">
-                        <h4 id="institution-partners-title">Instansi &amp; program</h4>
+                        <h4 id="institution-partners-title">Institutions &amp; programs</h4>
                         <div class="partner-slider" role="region" aria-labelledby="institution-partners-title">
                             <ul class="client-logos institution-logos" aria-labelledby="institution-partners-title">
                                 <li>
@@ -1291,10 +1602,10 @@
                                                 width="222"
                                                 height="52"
                                                 loading="lazy"
-                                                alt="Logo Kementerian Perdagangan"
+                                                alt="Ministry of Trade logo"
                                             />
                                         </div>
-                                        <figcaption>Kementerian Perdagangan RI</figcaption>
+                                        <figcaption>Ministry of Trade, Republic of Indonesia</figcaption>
                                     </figure>
                                 </li>
                                 <li>
@@ -1305,10 +1616,10 @@
                                                 width="1816"
                                                 height="483"
                                                 loading="lazy"
-                                                alt="Logo Kementerian Keuangan"
+                                                alt="Ministry of Finance logo"
                                             />
                                         </div>
-                                        <figcaption>Kementerian Keuangan RI</figcaption>
+                                        <figcaption>Ministry of Finance, Republic of Indonesia</figcaption>
                                     </figure>
                                 </li>
                                 <li>
@@ -1319,10 +1630,10 @@
                                                 width="668"
                                                 height="264"
                                                 loading="lazy"
-                                                alt="Logo Pusat Investasi Pemerintah"
+                                                alt="Government Investment Center logo"
                                             />
                                         </div>
-                                        <figcaption>Pusat Investasi Pemerintah</figcaption>
+                                        <figcaption>Government Investment Center (PIP)</figcaption>
                                     </figure>
                                 </li>
                                 <li>
@@ -1333,11 +1644,11 @@
                                                 width="701"
                                                 height="285"
                                                 loading="lazy"
-                                                alt="Logo KTLN Kementerian Sekretariat Negara"
+                                                alt="KTLN Ministry of State Secretariat logo"
                                             />
                                         </div>
                                         <figcaption>
-                                            KTLN · Kementerian Sekretariat Negara RI
+                                            KTLN · Ministry of State Secretariat
                                         </figcaption>
                                     </figure>
                                 </li>
@@ -1349,7 +1660,7 @@
                                                 width="3000"
                                                 height="829"
                                                 loading="lazy"
-                                                alt="Logo GIZ"
+                                                alt="GIZ logo"
                                             />
                                         </div>
                                         <figcaption>GIZ</figcaption>
@@ -1363,29 +1674,29 @@
                                                 width="1080"
                                                 height="816"
                                                 loading="lazy"
-                                                alt="Logo UMi"
+                                                alt="UMi logo"
                                             />
                                         </div>
-                                        <figcaption>UMi · Pembiayaan Ultra Mikro</figcaption>
+                                        <figcaption>UMi · Ultra-Micro Financing</figcaption>
                                     </figure>
                                 </li>
                             </ul>
                             <div class="partner-slider-controls">
-                                <button class="partner-autoplay" type="button" aria-label="Jeda slide otomatis" aria-pressed="false">
+                                <button class="partner-autoplay" type="button" aria-label="Pause automatic slides" aria-pressed="false">
                                     <i class="fa-solid fa-pause" aria-hidden="true"></i>
                                 </button>
-                                <button class="partner-prev" type="button" aria-label="Partner sebelumnya">
+                                <button class="partner-prev" type="button" aria-label="Previous partner">
                                     <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
                                 </button>
                                 <span class="partner-pagination"></span>
-                                <button class="partner-next" type="button" aria-label="Partner berikutnya">
+                                <button class="partner-next" type="button" aria-label="Next partner">
                                     <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
                     </section>
                     <section class="partner-group" aria-labelledby="brand-partners-title">
-                        <h4 id="brand-partners-title">Brand &amp; komunitas</h4>
+                        <h4 id="brand-partners-title">Brands &amp; communities</h4>
                         <div class="partner-slider" role="region" aria-labelledby="brand-partners-title">
                             <ul class="client-logos brand-logos" aria-labelledby="brand-partners-title">
                                 <li>
@@ -1396,7 +1707,7 @@
                                                 width="222"
                                                 height="52"
                                                 loading="lazy"
-                                                alt="Logo Perspektif Bayu Krisnamurthi"
+                                                alt="Perspektif Bayu Krisnamurthi logo"
                                             />
                                         </div>
                                         <figcaption>Perspektif Bayu Krisnamurthi</figcaption>
@@ -1410,7 +1721,7 @@
                                                 width="222"
                                                 height="52"
                                                 loading="lazy"
-                                                alt="Logo Panzer Robotics"
+                                                alt="Panzer Robotics logo"
                                             />
                                         </div>
                                         <figcaption>Panzer Robotics</figcaption>
@@ -1424,7 +1735,7 @@
                                                 width="222"
                                                 height="52"
                                                 loading="lazy"
-                                                alt="Logo HERO Kemendag"
+                                                alt="HERO Kemendag logo"
                                             />
                                         </div>
                                         <figcaption>HERO Kemendag</figcaption>
@@ -1438,7 +1749,7 @@
                                                 width="222"
                                                 height="52"
                                                 loading="lazy"
-                                                alt="Logo Nagan Tour"
+                                                alt="Nagan Tour logo"
                                             />
                                         </div>
                                         <figcaption>Nagan Tour</figcaption>
@@ -1452,7 +1763,7 @@
                                                 width="222"
                                                 height="52"
                                                 loading="lazy"
-                                                alt="Logo Jasa PCB"
+                                                alt="Jasa PCB logo"
                                             />
                                         </div>
                                         <figcaption>Jasa PCB</figcaption>
@@ -1466,7 +1777,7 @@
                                                 width="125"
                                                 height="52"
                                                 loading="lazy"
-                                                alt="Logo PENA"
+                                                alt="PENA logo"
                                             />
                                         </div>
                                         <figcaption>PENA</figcaption>
@@ -1480,7 +1791,7 @@
                                                 width="103"
                                                 height="104"
                                                 loading="lazy"
-                                                alt="Logo Persatuan Radiografer Indonesia"
+                                                alt="Persatuan Radiografer Indonesia logo"
                                             />
                                         </div>
                                         <figcaption>Persatuan Radiografer Indonesia</figcaption>
@@ -1488,14 +1799,14 @@
                                 </li>
                             </ul>
                             <div class="partner-slider-controls">
-                                <button class="partner-autoplay" type="button" aria-label="Jeda slide otomatis" aria-pressed="false">
+                                <button class="partner-autoplay" type="button" aria-label="Pause automatic slides" aria-pressed="false">
                                     <i class="fa-solid fa-pause" aria-hidden="true"></i>
                                 </button>
-                                <button class="partner-prev" type="button" aria-label="Partner sebelumnya">
+                                <button class="partner-prev" type="button" aria-label="Previous partner">
                                     <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
                                 </button>
                                 <span class="partner-pagination"></span>
-                                <button class="partner-next" type="button" aria-label="Partner berikutnya">
+                                <button class="partner-next" type="button" aria-label="Next partner">
                                     <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                                 </button>
                             </div>
@@ -1507,15 +1818,14 @@
             <section class="section contact" id="contact" aria-labelledby="contact-title">
                 <div class="contact-layout">
                     <div class="contact-copy">
-                        <span class="section-label">04 / Contact</span>
+                        <span class="section-label">05 / Contact</span>
                         <h2 id="contact-title">
                             Have something<br />in mind?<br /><span class="accent"
                                 >Let's talk.</span
                             >
                         </h2>
                         <p>
-                            Tell me about your project, an idea you'd like to explore, or a design
-                            challenge you're working on.
+                            Tell me about your project, an idea you'd like to explore, or a design challenge you're working on.
                         </p>
                         <a class="contact-email" href="mailto:januriawan@duck.com"
                             ><i class="fa-solid fa-envelope" aria-hidden="true"></i
@@ -1557,8 +1867,7 @@
                             maxlength="5000"
                         ></textarea>
                         <button class="button button-primary" type="submit">
-                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Create email
-                            draft
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Create email draft
                         </button>
                         <p class="form-note">
                             Opens your email app with these details. Send the email from there.
@@ -1575,31 +1884,30 @@
             </footer>
         </main>
 
-        <dialog id="project-dialog" lang="id" aria-labelledby="project-dialog-title">
+        <dialog id="project-dialog" aria-labelledby="project-dialog-title">
             <div class="dialog-top">
-                <span class="section-label">Detail proyek</span
+                <span class="section-label">Project details</span
                 ><button
                     class="dialog-close"
                     data-close-dialog
                     type="button"
-                    aria-label="Tutup detail proyek"
+                    aria-label="Close project details"
                 >
-                    Tutup <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    Close <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 </button>
             </div>
             <div class="project-dialog-body">
                 <div id="dialog-media" hidden>
-                    <button id="expand-project-image" type="button" aria-label="Perbesar pratinjau">
+                    <button id="expand-project-image" type="button" aria-label="Enlarge preview">
                         <img id="dialog-project-image" alt="" hidden /><span
-                            ><i class="fa-solid fa-expand" aria-hidden="true"></i> Perbesar
-                            pratinjau</span
+                            ><i class="fa-solid fa-expand" aria-hidden="true"></i> Enlarge preview</span
                         >
                     </button>
                     <p id="project-preview-status" role="status"></p>
                 </div>
                 <div class="project-dialog-copy">
                     <p id="dialog-project-agency" class="directory-kind"></p>
-                    <h2 id="project-dialog-title">Detail proyek</h2>
+                    <h2 id="project-dialog-title">Project details</h2>
                     <p id="dialog-project-description"></p>
                     <a
                         id="dialog-project-link"
@@ -1607,15 +1915,13 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         hidden
-                        >Kunjungi website
+                        ><span data-project-link-label>Visit website</span>
                         <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
                     ></a>
                     <details id="kemendag-notes" hidden>
-                        <summary>Catatan proyek / 2022</summary>
+                        <summary>Project notes / 2022</summary>
                         <p>
-                            A responsive website built with Laravel 7 for the Ministry of Trade,
-                            Republic of Indonesia. The project includes dark mode, interactive maps,
-                            digital magazines, and text-to-speech functionality.
+                            A responsive website built with Laravel 7 for the Ministry of Trade, Republic of Indonesia. The project includes dark mode, interactive maps, digital magazines, and text-to-speech functionality.
                         </p>
                         <p>The website engine was also used for these ministry directorates:</p>
                         <ul class="directorate-links">
@@ -1624,7 +1930,7 @@
                                     href="https://itjen.kemendag.go.id/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >Inspektorat Jenderal</a
+                                    >Inspectorate General</a
                                 >
                             </li>
                             <li>
@@ -1632,7 +1938,7 @@
                                     href="https://ditjenpdn.kemendag.go.id/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >Direktorat Jenderal Perdagangan Dalam Negeri</a
+                                    >Directorate General of Domestic Trade</a
                                 >
                             </li>
                             <li>
@@ -1640,7 +1946,7 @@
                                     href="https://ditjendaglu.kemendag.go.id/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >Direktorat Jenderal Perdagangan Luar Negeri</a
+                                    >Directorate General of Foreign Trade</a
                                 >
                             </li>
                             <li>
@@ -1648,7 +1954,7 @@
                                     href="https://ditjenppi.kemendag.go.id/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >Direktorat Jenderal Perundingan Perdagangan Internasional</a
+                                    >Directorate General of International Trade Negotiations</a
                                 >
                             </li>
                         </ul>
@@ -1657,25 +1963,25 @@
             </div>
             <div class="project-dialog-footer">
                 <button id="previous-project" type="button">
-                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Sebelumnya</button
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Previous</button
                 ><span id="project-position" role="status"></span
                 ><button id="next-project" type="button">
-                    Berikutnya <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    Next <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
         </dialog>
-        <dialog id="project-image-dialog" lang="id" aria-labelledby="full-image-title">
+        <dialog id="project-image-dialog" aria-labelledby="full-image-title">
             <div class="dialog-top">
-                <h2 id="full-image-title">Pratinjau proyek</h2>
+                <h2 id="full-image-title">Project preview</h2>
                 <button class="dialog-close" data-close-dialog type="button">
-                    Tutup <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    Close <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 </button>
             </div>
             <div
                 class="full-image-scroll"
                 tabindex="0"
                 role="region"
-                aria-label="Gambar proyek, gulir untuk melihat selengkapnya"
+                aria-label="Project image, scroll to see more"
             >
                 <p id="full-preview-status" role="status"></p>
                 <img id="full-project-image" alt="" hidden />

@@ -308,6 +308,82 @@ button,
     border-radius: var(--radius-card);
     background: #fff;
 }
+.skills .section-heading > p {
+    max-width: 580px;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+.skill-group {
+    display: grid;
+    gap: 18px;
+    padding-block: 24px;
+    border-top: 1px solid var(--line);
+}
+.skill-group:last-child {
+    padding-bottom: 0;
+}
+.skill-group h3 {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    min-width: 0;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+.skill-group h3 i {
+    flex: 0 0 20px;
+    width: 20px;
+    color: var(--theme-link, var(--accent));
+    text-align: center;
+}
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 8px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.skill-tags li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 100%;
+    padding: 7px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--soft);
+    color: var(--ink);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+.skill-tags li i {
+    flex: 0 0 16px;
+    width: 16px;
+    color: var(--theme-link, var(--accent));
+    font-size: 1rem;
+    text-align: center;
+}
+.skill-tags li span {
+    min-width: 0;
+}
+@media (min-width: 720px) {
+    .skill-group {
+        grid-template-columns: minmax(150px, 0.85fr) minmax(0, 2fr);
+        align-items: start;
+        gap: 28px;
+        padding-block: 28px;
+    }
+    .skill-group h3 {
+        padding-top: 7px;
+    }
+}
 .section-label {
     font-size: 0.8rem;
     font-weight: 600;

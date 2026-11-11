@@ -83,3 +83,8 @@ Sebelas JPEG diberi nama berdasarkan isi screenshot. Gambar tidak dipotong atau 
 | Screenshot KUmeet — KUdagang Meeting, 16-04-35 | `kumeet-kudagang-meeting.jpg` |
 
 Deskripsi KUmeet mengikuti fungsi yang terlihat pada screenshot: ruang meeting, chat, dan berbagi layar. Tidak ditambahkan klaim teknologi atau URL produksi. Catatan Laravel 7/tahun 2022 tetap khusus proyek Kemendag lama dalam disclosure, bukan digeneralisasi ke screenshot atau proyek lain. Tautan proyek yang sudah ada dipertahankan; NEO, SIPENDAMPINGAN, GIZ Capacity Building, dan KUmeet tidak diberi URL tebakan.
+
+
+## Pembaruan tautan proyek
+
+Pada 11 November 2026, 25 URL tambahan ditemukan dan ditambahkan; kini 32 dari 38 proyek memiliki tautan. Enam entri lainnya masih tanpa URL yang terverifikasi. Hasil, sumber, dan keterbatasan pemeriksaan dicatat dalam [PORTFOLIO-LINKS.md](PORTFOLIO-LINKS.md). Tautan tampil langsung pada daftar serta detail proyek, mengikuti bahasa EN/ID. Demo IndoSSTC dan listing aplikasi PIP Mobile memakai label khusus.
