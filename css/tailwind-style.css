@@ -98,6 +98,28 @@ button,
     color: var(--ink);
     gap: 12px;
 }
+.sidebar,
+.mobile-menu-body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+}
+.sidebar::-webkit-scrollbar,
+.mobile-menu-body::-webkit-scrollbar {
+    width: 4px;
+}
+.sidebar::-webkit-scrollbar-track,
+.mobile-menu-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb,
+.mobile-menu-body::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: var(--line);
+}
+.sidebar::-webkit-scrollbar-thumb:hover,
+.mobile-menu-body::-webkit-scrollbar-thumb:hover {
+    background: var(--muted);
+}
 .sidebar-avatar-wrap {
     --avatar-frame: 3px;
     position: relative;
@@ -1310,26 +1332,56 @@ dialog h2 {
 .mobile-menu-open body {
     overflow: hidden;
 }
+.mobile-navbar {
+    display: none;
+}
 @media (max-width: 1049px) {
+    html {
+        scroll-padding-top: calc(112px + env(safe-area-inset-top));
+    }
     body {
-        padding-bottom: calc(80px + env(safe-area-inset-bottom));
+        padding-top: calc(96px + env(safe-area-inset-top));
+    }
+    .mobile-navbar {
+        position: fixed;
+        inset: max(12px, env(safe-area-inset-top)) 16px auto;
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--theme-surface, #fff);
+        color: var(--ink);
+        box-shadow: 0 4px 18px rgb(15 23 42 / 0.08);
+    }
+    .skip-link:focus-visible {
+        z-index: 40;
+    }
+    .mobile-navbar-profile {
+        flex: 1;
+        min-width: 0;
+    }
+    .mobile-navbar .identity {
+        gap: 10px;
+    }
+    .mobile-navbar .identity-name {
+        font-size: 0.95rem;
+    }
+    .mobile-navbar .identity-role {
+        display: none;
+    }
+    .mobile-navbar .identity:hover .open-to-work-badge,
+    .mobile-navbar .identity:active .open-to-work-badge {
+        opacity: 1;
+        transform: rotate(0) scale(1);
     }
     .mobile-menu-toggle {
-        position: fixed;
-        inset: auto max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) auto;
-        z-index: 30;
-        gap: 12px;
-        min-height: 56px;
-        padding: 14px 20px;
-        border: 1px solid var(--accent);
-        background: var(--accent);
-        color: #fff;
-        box-shadow: 0 6px 20px rgb(15 23 42 / 0.18);
-    }
-    .mobile-menu-toggle:hover {
-        background: var(--accent-hover);
-        border-color: var(--accent-hover);
-        color: #fff;
+        flex-shrink: 0;
+        min-height: 44px;
+        padding: 8px 12px;
     }
 }
 @media (prefers-reduced-motion: reduce) {

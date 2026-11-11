@@ -53,6 +53,18 @@ syncSceneMotion();
 const menu = document.querySelector("#main-navigation");
 const menuToggle = document.querySelector(".menu-toggle");
 const sidebar = document.querySelector(".sidebar");
+const mobileNavbar = document.querySelector(".mobile-navbar");
+const mobileProfile = document.querySelector(".sidebar .identity").cloneNode(true);
+for (const element of mobileProfile.querySelectorAll("svg [id]")) {
+    element.id = `mobile-${element.id}`;
+}
+for (const element of mobileProfile.querySelectorAll("svg [href], svg [stroke]")) {
+    for (const attribute of ["href", "stroke"]) {
+        const value = element.getAttribute(attribute);
+        if (value) element.setAttribute(attribute, value.replaceAll("avatar-work-", "mobile-avatar-work-"));
+    }
+}
+mobileNavbar.querySelector(".mobile-navbar-profile").append(mobileProfile);
 const sidebarAnchor = document.createComment("sidebar");
 sidebar.before(sidebarAnchor);
 const mobileMenu = document.querySelector("#mobile-menu");
@@ -97,6 +109,7 @@ function syncNavigation() {
     const slot = document.querySelector(mobileViewport.matches ? ".mobile-preferences" : ".desktop-preferences");
     if (preferences.parentElement !== slot) slot.append(preferences);
     menu.hidden = false;
+    mobileNavbar.hidden = !mobileViewport.matches;
     menuToggle.hidden = !mobileViewport.matches;
     menuToggle.setAttribute("aria-expanded", "false");
 }
