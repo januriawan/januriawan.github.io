@@ -88,3 +88,15 @@ Deskripsi KUmeet mengikuti fungsi yang terlihat pada screenshot: ruang meeting, 
 ## Pembaruan tautan proyek
 
 Pada 11 November 2026, 25 URL tambahan ditemukan dan ditambahkan; kini 32 dari 38 proyek memiliki tautan. Enam entri lainnya masih tanpa URL yang terverifikasi. Hasil, sumber, dan keterbatasan pemeriksaan dicatat dalam [PORTFOLIO-LINKS.md](PORTFOLIO-LINKS.md). Tautan tampil langsung pada daftar serta detail proyek, mengikuti bahasa EN/ID. Demo IndoSSTC dan listing aplikasi PIP Mobile memakai label khusus.
+
+
+## Preview Portal SSTC
+
+Screenshot Portal SSTC dari pemilik ditambahkan ke proyek GIZ SSTC Portal. File `Screenshot 2026-11-11 at 18-08-13 Home - Portal SSTC South-South Technical Cooperation.jpg` diganti menjadi `img/portfolio/giz-sstc-portal.jpg` tanpa mengubah isi gambar (1440 × 4763). Galeri kini memiliki 12 preview, dengan Portal SSTC ditempatkan sebelum SSTC Capacity Building. Preview mendukung detail, tampilan gambar penuh, pencarian, dan EN/ID melalui mekanisme galeri yang sudah ada. Tidak ditambahkan URL website berdasarkan gambar.
+
+
+## KUmeet plugin Moodle dan widget JR
+
+Daftar kini memiliki 41 proyek: 36 proyek instansi dan 5 karya lainnya. Tiga entri baru ditambahkan ke Karya lainnya: KUmeet versi plugin Moodle, JR Accessibility, dan JR Weather. Ketiganya mendukung pencarian, filter, detail proyek, dan terjemahan EN/ID. Tidak ditambahkan preview tanpa gambar dari pemilik; jumlah preview tetap 12.
+
+KUmeet versi plugin Moodle dicatat berdasarkan instruksi pemilik, dengan deskripsi umum serta tanpa URL atau rincian fitur yang belum diberikan. [JR Accessibility](https://github.com/januriawan/jr-accessibility) dideskripsikan dari README sebagai widget aksesibilitas lintas framework tanpa backend. [JR Weather](https://github.com/januriawan/jr-weather) dideskripsikan sebagai widget jam real-time, cuaca multi-kota, dan jadwal sholat. Kedua repo ditautkan melalui label “View code / Lihat kode”, tanpa memasang widgetnya ke halaman portofolio.
