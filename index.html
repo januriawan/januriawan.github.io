@@ -42,13 +42,36 @@
         <a class="skip-link" href="#main">Skip to content</a>
         <header class="sidebar">
             <a class="identity" href="#home">
-                <img
-                    src="img/about/1.png"
-                    width="1000"
-                    height="1000"
-                    alt=""
-                    class="sidebar-avatar"
-                />
+                <span class="sidebar-avatar-wrap" role="img" aria-label="Fajar Januriawan — Open to work">
+                    <img
+                        src="img/about/1.png"
+                        width="1000"
+                        height="1000"
+                        alt=""
+                        class="sidebar-avatar"
+                    />
+                    <svg class="open-to-work-badge" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                        <defs>
+                            <linearGradient id="avatar-work-start" gradientUnits="userSpaceOnUse" x1="25.35" y1="25.35" x2="13.95" y2="43.24">
+                                <stop offset="0" stop-color="#287d15" stop-opacity="0" />
+                                <stop offset="1" stop-color="#287d15" />
+                            </linearGradient>
+                            <linearGradient id="avatar-work-end" gradientUnits="userSpaceOnUse" x1="94.65" y1="94.65" x2="106.05" y2="76.76">
+                                <stop offset="0" stop-color="#287d15" />
+                                <stop offset="1" stop-color="#287d15" stop-opacity="0" />
+                            </linearGradient>
+                            <path id="avatar-work-text" d="M 11.14 42.21 A 52 52 0 0 0 89.82 102.60" />
+                        </defs>
+                        <g fill="none" stroke-width="20">
+                            <path d="M 25.35 25.35 A 49 49 0 0 0 13.95 43.24" stroke="url(#avatar-work-start)" />
+                            <path d="M 13.95 43.24 A 49 49 0 0 0 94.65 94.65" stroke="#287d15" />
+                            <path d="M 94.65 94.65 A 49 49 0 0 0 106.05 76.76" stroke="url(#avatar-work-end)" />
+                        </g>
+                        <text fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="700">
+                            <textPath href="#avatar-work-text" startOffset="50%" text-anchor="middle" textLength="124" lengthAdjust="spacing">#OPENTOWORK</textPath>
+                        </text>
+                    </svg>
+                </span>
                 <span class="identity-name"
                     >Fajar<br />Januriawan<span class="accent">.</span></span
                 >

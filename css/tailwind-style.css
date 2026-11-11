@@ -98,6 +98,51 @@ button,
     color: var(--ink);
     gap: 12px;
 }
+.sidebar-avatar-wrap {
+    --avatar-frame: 3px;
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.sidebar-avatar-wrap .sidebar-avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.open-to-work-badge {
+    position: absolute;
+    inset: var(--avatar-frame);
+    width: calc(100% - var(--avatar-frame) - var(--avatar-frame));
+    height: calc(100% - var(--avatar-frame) - var(--avatar-frame));
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(-18deg) scale(0.88);
+    transition: opacity 0.2s ease, transform 0.32s ease;
+}
+.sidebar-avatar-wrap:hover .open-to-work-badge,
+.identity:focus-visible .open-to-work-badge {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+@media (min-width: 1050px) {
+    .sidebar-avatar-wrap {
+        --avatar-frame: 4px;
+        width: 92px;
+        height: 92px;
+        margin-bottom: 20px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .open-to-work-badge {
+        transition: none;
+        transform: none;
+    }
+}
 .sidebar-avatar {
     border: 3px solid #f1f5f9;
 }

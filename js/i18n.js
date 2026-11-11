@@ -2,6 +2,7 @@
 
 (() => {
     const entries = [
+        ["Fajar Januriawan — Open to work", "Fajar Januriawan — Terbuka untuk peluang kerja"],
         ["Moodle plugin", "Plugin Moodle"],
         ["KUmeet — Moodle Plugin", "KUmeet — Plugin Moodle"],
         ["A Moodle plugin version of KUmeet for integrating online meetings into the learning platform.", "Versi plugin Moodle dari KUmeet untuk mengintegrasikan pertemuan daring ke dalam platform pembelajaran."],
