@@ -22,6 +22,7 @@ Screenshot diambil dari versi lokal pada 11 November 2026.
 - Pilihan English dan Bahasa Indonesia, serta dark mode. Pilihan bahasa dan tema tersimpan di browser.
 - Direktori 43 proyek dengan 12 preview, pencarian, filter instansi, detail proyek, dan tampilan gambar penuh.
 - Daftar keahlian dalam tujuh kategori, termasuk AI, web, mobile/GIS, basis data, Server & DevOps, infrastruktur, dan desain.
+- Section Lisensi dan Sertifikasi berisi tujuh sertifikasi dengan logo penerbit lokal, tanggal terbit, ID kredensial yang tersedia, dan tautan sertifikat atau profil LinkedIn. Mendukung English/Bahasa Indonesia dan dark mode.
 - Sidebar desktop dan navbar melayang di mobile dengan panel menu geser. Avatar menampilkan badge Open to Work saat hover atau fokus keyboard.
 - Slider partner menggunakan Swiper, dengan autoplay dan looping di mobile.
 - Animasi ilustrasi pantai pada hero dan siluet Jakarta pada Contact, termasuk Monas, gedung Kemendag, KRL, kendaraan, halte, dan pejalan kaki. Animasi menyesuaikan pengaturan reduced motion.
@@ -48,6 +49,7 @@ Website menggunakan HTML, CSS, dan JavaScript, dengan Swiper dan Font Awesome ya
 | `css/` | Gaya halaman, tema, animasi, dan stylesheet vendor |
 | `js/` | Interaksi, terjemahan EN/ID, galeri proyek, dan Swiper |
 | `img/` | Foto profil, logo partner, preview proyek, favicon, dan screenshot README |
+| `img/certifications/` | Lima logo penerbit sertifikasi yang diunduh dari LinkedIn |
 | `assets/pdf/` | PDF CV statis versi Inggris dan Indonesia, masing-masing 17 halaman |
 | `scripts/build-cv.cjs` | Penyusunan ulang PDF dari konten dan terjemahan website, dijalankan saat pemeliharaan |
 

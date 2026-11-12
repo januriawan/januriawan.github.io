@@ -1222,11 +1222,11 @@ dialog h2 {
 @media (min-width: 1050px) {
     .sidebar {
         margin: 0;
-        padding: 24px 20px;
+        padding: 16px 20px;
         border: 0;
         border-right: 1px solid var(--line);
         border-radius: 0;
-        gap: 20px;
+        gap: 12px;
     }
     .sidebar-avatar {
         width: 72px;
@@ -1235,37 +1235,45 @@ dialog h2 {
         border-width: 4px;
     }
     .identity {
-        padding: 4px 12px;
+        flex-shrink: 0;
+        padding: 0 12px;
+    }
+    .sidebar-avatar-wrap {
+        margin-bottom: 10px;
     }
     .identity-name {
         font-size: 1.35rem;
     }
     .identity-role {
-        margin-top: 8px;
+        margin-top: 4px;
         font-size: 0.75rem;
         line-height: 1.6;
     }
     #main-navigation {
-        gap: 4px;
+        flex-shrink: 0;
+        margin-top: 12px;
+        gap: 2px;
     }
     #main-navigation a {
-        padding-block: 10px;
+        min-height: 44px;
+        padding-block: 8px;
+        line-height: 1.5;
     }
     .sidebar-bottom {
         display: flex;
-        flex: 1 0 auto;
+        flex: 0 0 auto;
         flex-direction: column;
-        margin-top: 0;
+        margin-top: auto;
         padding: 0 12px;
         font-size: 0.75rem;
     }
     .social-links {
         gap: 8px 14px;
-        margin-top: auto;
-        padding-top: 12px;
+        margin-top: 10px;
+        padding-top: 0;
     }
     .sidebar-bottom small {
-        margin-top: 12px;
+        margin-top: 8px;
     }
     .social-links a {
         font-size: 0.7rem;
@@ -1355,10 +1363,10 @@ dialog h2 {
         line-height: 1.5;
     }
     .social-links {
-        padding-top: 10px;
+        padding-top: 0;
     }
     .sidebar-bottom small {
-        margin-top: 10px;
+        margin-top: 8px;
     }
 }
 @media (prefers-reduced-motion: reduce) {
