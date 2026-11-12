@@ -156,7 +156,7 @@ function documentHtml(data, lang, images) {
         await page.goto(pathToFileURL(path.join(root, "index.html")).href);
         const en = await extract(page, source, "en");
         const id = await extract(page, source, "id");
-        if (en.projects.length !== 41 || en.previews.length !== 12 || en.skills.length !== 7 || en.jobs.length !== 4) throw new Error("Unexpected source content count; review the CV layout before updating.");
+        if (en.projects.length !== 43 || en.previews.length !== 12 || en.skills.length !== 7 || en.jobs.length !== 4) throw new Error("Unexpected source content count; review the CV layout before updating.");
         const images = new Map();
         const cropPage = await browser.newPage({ viewport: { width: 680, height: 230 }, deviceScaleFactor: 1.5 });
         for (const preview of en.previews) {

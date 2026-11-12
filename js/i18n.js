@@ -2,6 +2,10 @@
 
 (() => {
     const entries = [
+        ["Electronics services website", "Website layanan elektronika"],
+        ["A website presenting PCB design, printing, and component assembly services, along with microcontroller development and electronics training.", "Website yang menampilkan layanan desain, cetak, dan perakitan komponen PCB, serta pembuatan alat mikrokontroler dan pelatihan elektronika."],
+        ["Travel services website", "Website layanan wisata"],
+        ["A travel website presenting tour packages in Yogyakarta and other Indonesian destinations, vehicle rentals, hotel vouchers, and custom trip enquiries.", "Website perjalanan wisata yang menampilkan paket wisata di Yogyakarta dan destinasi Indonesia lainnya, sewa kendaraan, voucher hotel, serta layanan konsultasi perjalanan sesuai kebutuhan."],
         ["Navigation menu", "Menu navigasi"],
         ["Close menu", "Tutup menu"],
         ["Fajar Januriawan — Open to work", "Fajar Januriawan — Terbuka untuk peluang kerja"],
@@ -113,7 +117,7 @@
         ["and systems for everyday operations.", "dan sistem untuk kegiatan operasional sehari-hari."],
         ["Explore the portfolio", "Jelajahi portofolio"],
         ["Gallery & project directory", "Galeri & daftar proyek"],
-        ["Explore 36 institutional projects and 5 other works. Open a project to read its description and view the preview.", "Telusuri 36 proyek instansi dan 5 karya lainnya. Buka detail proyek untuk membaca deskripsi dan melihat pratinjaunya."],
+        ["Explore 36 institutional projects and 7 other works. Open a project to read its description and view the preview.", "Telusuri 36 proyek instansi dan 7 karya lainnya. Buka detail proyek untuk membaca deskripsi dan melihat pratinjaunya."],
         ["Search projects", "Cari proyek"],
         ["Project name, acronym, or type of service", "Nama proyek, singkatan, atau jenis layanan"],
         ["Filter organizations", "Filter instansi"],
@@ -124,7 +128,7 @@
         ["Other work", "Karya lainnya"],
         ["Portfolio view", "Tampilan portofolio"],
         ["Previews", "Pratinjau"],
-        ["36 institutional projects and 5 other works.", "36 proyek instansi dan 5 karya lainnya."],
+        ["36 institutional projects and 7 other works.", "36 proyek instansi dan 7 karya lainnya."],
         ["Projects with previews", "Proyek dengan pratinjau"],
         ["Ministry of Trade main website", "Website utama Kementerian Perdagangan RI"],
         ["Trade One Data Portal", "Portal Satu Data Perdagangan"],

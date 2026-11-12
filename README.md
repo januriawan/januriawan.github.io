@@ -20,13 +20,13 @@ Screenshot diambil dari versi lokal pada 11 November 2026.
 ## Fitur
 
 - Pilihan English dan Bahasa Indonesia, serta dark mode. Pilihan bahasa dan tema tersimpan di browser.
-- Direktori 41 proyek dengan 12 preview, pencarian, filter instansi, detail proyek, dan tampilan gambar penuh.
+- Direktori 43 proyek dengan 12 preview, pencarian, filter instansi, detail proyek, dan tampilan gambar penuh.
 - Daftar keahlian dalam tujuh kategori, termasuk AI, web, mobile/GIS, basis data, Server & DevOps, infrastruktur, dan desain.
 - Sidebar desktop dan navbar melayang di mobile dengan panel menu geser. Avatar menampilkan badge Open to Work saat hover atau fokus keyboard.
 - Slider partner menggunakan Swiper, dengan autoplay dan looping di mobile.
 - Animasi ilustrasi pantai pada hero dan siluet Jakarta pada Contact, termasuk Monas, gedung Kemendag, KRL, kendaraan, halte, dan pejalan kaki. Animasi menyesuaikan pengaturan reduced motion.
 - Formulir kontak menyiapkan draf di aplikasi email pengguna. Pengguna mengirim email melalui aplikasi tersebut.
-- Tombol Preview CV di sidebar dan menu mobile membuka pratinjau PDF, dengan pilihan English/Bahasa Indonesia dan unduhan langsung. Kedua PDF berisi profil, skill, riwayat kerja, sosial media, 12 preview, 41 proyek, serta halaman kontak terakhir, lengkap dengan footer dan nomor halaman.
+- Tombol Preview CV di sidebar dan menu mobile membuka pratinjau PDF, dengan pilihan English/Bahasa Indonesia dan unduhan langsung. Kedua PDF berisi profil, skill, riwayat kerja, sosial media, 12 preview, 43 proyek, serta halaman kontak terakhir, lengkap dengan footer dan nomor halaman.
 
 ## Menjalankan secara lokal
 
@@ -48,7 +48,7 @@ Website menggunakan HTML, CSS, dan JavaScript, dengan Swiper dan Font Awesome ya
 | `css/` | Gaya halaman, tema, animasi, dan stylesheet vendor |
 | `js/` | Interaksi, terjemahan EN/ID, galeri proyek, dan Swiper |
 | `img/` | Foto profil, logo partner, preview proyek, favicon, dan screenshot README |
-| `assets/pdf/` | PDF CV statis versi Inggris dan Indonesia, masing-masing 16 halaman |
+| `assets/pdf/` | PDF CV statis versi Inggris dan Indonesia, masing-masing 17 halaman |
 | `scripts/build-cv.cjs` | Penyusunan ulang PDF dari konten dan terjemahan website, dijalankan saat pemeliharaan |
 
 Konten utama dapat diperbarui di `index.html`; pasangan terjemahan berada di `js/i18n.js`.
