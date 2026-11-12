@@ -27,7 +27,7 @@ Screenshot diambil dari versi lokal pada 11 November 2026.
 - Slider partner menggunakan Swiper, dengan autoplay dan looping di mobile.
 - Animasi ilustrasi pantai pada hero dan siluet Jakarta pada Contact, termasuk Monas, gedung Kemendag, KRL, kendaraan, halte, dan pejalan kaki. Animasi menyesuaikan pengaturan reduced motion.
 - Formulir kontak menyiapkan draf di aplikasi email pengguna. Pengguna mengirim email melalui aplikasi tersebut.
-- Tombol Preview CV di sidebar dan menu mobile membuka pratinjau PDF, dengan pilihan English/Bahasa Indonesia dan unduhan langsung. Kedua PDF berisi profil, skill, riwayat kerja, sosial media, 12 preview, 43 proyek, serta halaman kontak terakhir, lengkap dengan footer dan nomor halaman.
+- Tombol Preview CV di sidebar dan menu mobile membuka pratinjau PDF, dengan pilihan English/Bahasa Indonesia dan unduhan langsung. Kedua PDF berisi profil, skill, riwayat kerja, tujuh sertifikasi beserta logo dan tautan kredensial, sosial media, 12 preview, 43 proyek, serta halaman kontak terakhir, lengkap dengan footer dan nomor halaman.
 
 ## Menjalankan secara lokal
 
@@ -50,7 +50,7 @@ Website menggunakan HTML, CSS, dan JavaScript, dengan Swiper dan Font Awesome ya
 | `js/` | Interaksi, terjemahan EN/ID, galeri proyek, dan Swiper |
 | `img/` | Foto profil, logo partner, preview proyek, favicon, dan screenshot README |
 | `img/certifications/` | Lima logo penerbit sertifikasi yang diunduh dari LinkedIn |
-| `assets/pdf/` | PDF CV statis versi Inggris dan Indonesia, masing-masing 17 halaman |
+| `assets/pdf/` | PDF CV statis versi Inggris dan Indonesia, masing-masing 18 halaman |
 | `scripts/build-cv.cjs` | Penyusunan ulang PDF dari konten dan terjemahan website, dijalankan saat pemeliharaan |
 
 Konten utama dapat diperbarui di `index.html`; pasangan terjemahan berada di `js/i18n.js`.
@@ -67,6 +67,6 @@ npm install --prefix /tmp/januriawan-cv-build playwright
 NODE_PATH=/tmp/januriawan-cv-build/node_modules node scripts/build-cv.cjs
 ```
 
-Script membaca profil, riwayat kerja, skill, sosial media, preview, serta daftar proyek dari `index.html` dan terjemahan `js/i18n.js`. Script memeriksa jumlah konten dan batas footer sebelum menyimpan PDF. Jika daftar proyek berubah, sesuaikan pemeriksaan jumlah dan tinjau kembali tata letaknya. Untuk memakai Chrome yang sudah terpasang, isi variabel `CHROME_PATH` dengan lokasi executable Chrome.
+Script membaca profil, riwayat kerja, skill, sertifikasi, sosial media, preview, serta daftar proyek dari `index.html` dan terjemahan `js/i18n.js`. Logo sertifikasi diambil dari file lokal di `img/certifications/`. Script memeriksa jumlah konten dan batas footer sebelum menyimpan PDF. Jika daftar proyek berubah, sesuaikan pemeriksaan jumlah dan tinjau kembali tata letaknya. Untuk memakai Chrome yang sudah terpasang, isi variabel `CHROME_PATH` dengan lokasi executable Chrome.
 
 Lisensi project tersedia di [LICENSE](LICENSE). Lisensi vendor disertakan pada folder masing-masing.

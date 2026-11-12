@@ -16,6 +16,7 @@ const labels = {
         document: "Curriculum vitae & portfolio", role: "Web designer & developer",
         profile: "Profile", experience: "Work experience", skills: "Skills & tools",
         skillsIntro: "Technologies and tools I use for development, AI, infrastructure, and design.",
+        credentialId: "Credential ID",
         social: "Find me online", selected: "Project previews", directory: "Project directory",
         selectedIntro: "A selection of interfaces and websites from my portfolio.",
         directoryIntro: "The complete project list, including projects shown in the previews.",
@@ -27,6 +28,7 @@ const labels = {
         document: "Curriculum vitae & portofolio", role: "Desainer & pengembang web",
         profile: "Profil", experience: "Riwayat kerja", skills: "Keahlian & perangkat",
         skillsIntro: "Teknologi dan perangkat yang saya gunakan untuk pengembangan, AI, infrastruktur, dan desain.",
+        credentialId: "ID Kredensial",
         social: "Temukan saya", selected: "Pratinjau proyek", directory: "Daftar proyek",
         selectedIntro: "Pilihan antarmuka dan website dari portofolio saya.",
         directoryIntro: "Daftar proyek lengkap, termasuk proyek yang ditampilkan dalam pratinjau.",
@@ -71,6 +73,15 @@ h2 .cv-icon { color: #023aef; font-size: .65em; vertical-align: .08em; }
 .social-row { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; padding-top: 16px; margin-top: 13px; border-top: 1px solid #dce3ed; font-size: 11px; }
 .skill { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 21px 0; border-bottom: 1px solid #e2e8f0; }
 .skill h3 { font-size: 14px; } .tags { display: flex; flex-wrap: wrap; gap: 6px; } .tag { font-size: 11px; background: #f1f5fb; padding: 4px 9px; border-radius: 5px; }
+.certifications { list-style: none; padding: 0; }
+.certifications li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid #e2e8f0; break-inside: avoid; }
+.certifications li:first-child { padding-top: 0; }
+.certifications li:last-child { border-bottom: 0; }
+.certifications img { width: 40px; height: 40px; border-radius: 5px; object-fit: contain; }
+.certifications h3 { font-size: 14px; margin-bottom: 2px; }
+.certifications .issuer { font-size: 11px; }
+.certifications .credential-meta { color: #536173; font-size: 10px; }
+.certifications a { display: inline-block; font-size: 10px; margin-top: 3px; }
 .preview-grid { display: grid; gap: 22px; } .preview-card { border: 1px solid #dce3ed; border-radius: 0; overflow: hidden; break-inside: avoid; }
 .preview-card img { display: block; width: 100%; height: 220px; object-fit: cover; object-position: top; background: #f1f5fb; border-bottom: 1px solid #e2e8f0; }
 .preview-copy { padding: 17px 20px; } .eyebrow { color: #536173; font-size: 9px; margin-bottom: 5px; }
@@ -114,6 +125,19 @@ async function extract(page, source, lang) {
                 items: [...group.querySelectorAll("li span")].map(text),
                 itemIcons: [...group.querySelectorAll("li i")].map((i) => i.className),
             })),
+            certificationsTitle: text(doc.querySelector("#certifications-title")),
+            certificationsIntro: text(doc.querySelector("#certifications .section-heading > p")),
+            certifications: [...doc.querySelectorAll(".certification-list > li")].map((row) => {
+                const metadata = row.querySelectorAll(".certification-meta");
+                const logo = row.querySelector("img");
+                const link = row.querySelector(".certification-link");
+                return {
+                    title: text(row.querySelector("h3")), issuer: text(row.querySelector(".certification-issuer")),
+                    issued: text(metadata[0]), credentialId: clean(metadata[1]).replace(/^Credential ID\s*/, ""),
+                    logo: logo.getAttribute("src"), logoAlt: window.siteI18n.t(logo.getAttribute("alt")),
+                    url: link.getAttribute("href"), linkLabel: text(link),
+                };
+            }),
             social: [...doc.querySelectorAll(".sidebar-bottom .social-links a")].map((a) => ({ name: a.getAttribute("aria-label"), url: a.href, icon: a.querySelector("i").className })),
             projects, previews,
         };
@@ -123,7 +147,7 @@ async function extract(page, source, lang) {
 function documentHtml(data, lang, images) {
     const l = labels[lang];
     const pages = [];
-    const sectionIcons = { "02": "fa-solid fa-laptop-code", "03": "fa-solid fa-images", "04": "fa-solid fa-list-check" };
+    const sectionIcons = { "02": "fa-solid fa-laptop-code", "03": "fa-solid fa-certificate", "04": "fa-solid fa-images", "05": "fa-solid fa-list-check" };
     const heading = (number, title, intro = "") => `<div class="page-heading"><p class="section-label">${number} / ${esc(l.document)}</p><h2>${icon(sectionIcons[number])}${esc(title)}</h2>${intro ? `<p class="intro">${esc(intro)}</p>` : ""}</div>`;
     const social = data.social.map((s) => `<a href="${esc(s.url)}">${icon(s.icon)}${esc(s.name)} / @januriawan</a>`).join("");
     pages.push({ section: l.profile, body: `
@@ -132,15 +156,16 @@ function documentHtml(data, lang, images) {
         <div class="experience"><h2>${icon("fa-solid fa-briefcase")}${l.experience}</h2>${data.jobs.map((j) => `<div class="job"><span class="date">${esc(j.date)}</span><div><h3>${esc(j.role)}</h3><p class="company">${esc(j.company)}</p><p>${esc(j.description)}</p></div></div>`).join("")}</div>
         <div class="social-row"><strong>${l.social}</strong>${social}</div>` });
     pages.push({ section: l.skills, body: heading("02", l.skills, l.skillsIntro) + data.skills.map((s) => `<div class="skill"><h3>${icon(s.icon)}${esc(s.name)}</h3><div class="tags">${s.items.map((item, index) => `<span class="tag">${icon(s.itemIcons[index])}${esc(item)}</span>`).join("")}</div></div>`).join("") });
+    pages.push({ section: data.certificationsTitle, body: heading("03", data.certificationsTitle, data.certificationsIntro) + `<ul class="certifications">${data.certifications.map((c) => `<li><img src="${pathToFileURL(path.join(root, c.logo))}" width="40" height="40" alt="${esc(c.logoAlt)}"><div><h3>${esc(c.title)}</h3><p class="issuer">${esc(c.issuer)}</p><p class="credential-meta">${esc(c.issued)}</p>${c.credentialId ? `<p class="credential-meta">${l.credentialId} ${esc(c.credentialId)}</p>` : ""}<a href="${esc(c.url)}">${esc(c.linkLabel)} ${icon("fa-solid fa-arrow-up-right-from-square")}</a></div></li>`).join("")}</ul>` });
     for (const [index, group] of chunks(data.previews, 2).entries()) {
-        pages.push({ section: l.selected, body: heading("03", l.selected, `${l.selectedIntro} ${index * 2 + 1}–${index * 2 + group.length} / ${data.previews.length}`) + `<div class="preview-grid">${group.map((p) => `<article class="preview-card"><img src="${images.get(p.id)}" alt="${esc(p.title)}"><div class="preview-copy"><div class="eyebrow">${esc(p.agency)} · ${esc(p.kind)}</div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p>${p.url ? `<a href="${esc(p.url)}">${esc(p.url)}</a>` : ""}</div></article>`).join("")}</div>` });
+        pages.push({ section: l.selected, body: heading("04", l.selected, `${l.selectedIntro} ${index * 2 + 1}–${index * 2 + group.length} / ${data.previews.length}`) + `<div class="preview-grid">${group.map((p) => `<article class="preview-card"><img src="${images.get(p.id)}" alt="${esc(p.title)}"><div class="preview-copy"><div class="eyebrow">${esc(p.agency)} · ${esc(p.kind)}</div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p>${p.url ? `<a href="${esc(p.url)}">${esc(p.url)}</a>` : ""}</div></article>`).join("")}</div>` });
     }
     const catalogPageSize = 6;
     for (const [index, group] of chunks(data.projects, catalogPageSize).entries()) {
         const offset = index * catalogPageSize;
-        pages.push({ section: l.directory, body: heading("04", l.directory, `${l.directoryIntro} ${offset + 1}–${offset + group.length} / ${data.projects.length}`) + `<ol class="catalog">${group.map((p, i) => `<li><span class="number">${String(offset + i + 1).padStart(2, "0")}</span><div><div class="eyebrow">${esc(p.agency)} · ${esc(p.kind)}</div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p>${p.url ? `<a href="${esc(p.url)}">${esc(p.url)}</a>` : `<p>${l.noLink}</p>`}</div></li>`).join("")}</ol>` });
+        pages.push({ section: l.directory, body: heading("05", l.directory, `${l.directoryIntro} ${offset + 1}–${offset + group.length} / ${data.projects.length}`) + `<ol class="catalog">${group.map((p, i) => `<li><span class="number">${String(offset + i + 1).padStart(2, "0")}</span><div><div class="eyebrow">${esc(p.agency)} · ${esc(p.kind)}</div><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p>${p.url ? `<a href="${esc(p.url)}">${esc(p.url)}</a>` : `<p>${l.noLink}</p>`}</div></li>`).join("")}</ol>` });
     }
-    pages.push({ section: l.contact, body: `<p class="section-label">05 / ${l.contact}</p><div class="contact-panel"><h2>${l.contactTitle}</h2><p>${l.contactIntro}</p><a href="mailto:januriawan@duck.com">${icon("fa-solid fa-envelope")}januriawan@duck.com</a></div><div class="contact-list"><div><span>${icon("fa-solid fa-location-dot")}${l.location}</span><strong>Jakarta, Indonesia</strong></div><div><span>${icon("fa-solid fa-globe")}${l.site}</span><a href="https://januriawan.my.id/">januriawan.my.id</a></div>${data.social.map((s) => `<div><span>${icon(s.icon)}${esc(s.name)}</span><a href="${esc(s.url)}">${esc(s.url.replace(/^https:\/\//, ""))}</a></div>`).join("")}</div>` });
+    pages.push({ section: l.contact, body: `<p class="section-label">06 / ${l.contact}</p><div class="contact-panel"><h2>${l.contactTitle}</h2><p>${l.contactIntro}</p><a href="mailto:januriawan@duck.com">${icon("fa-solid fa-envelope")}januriawan@duck.com</a></div><div class="contact-list"><div><span>${icon("fa-solid fa-location-dot")}${l.location}</span><strong>Jakarta, Indonesia</strong></div><div><span>${icon("fa-solid fa-globe")}${l.site}</span><a href="https://januriawan.my.id/">januriawan.my.id</a></div>${data.social.map((s) => `<div><span>${icon(s.icon)}${esc(s.name)}</span><a href="${esc(s.url)}">${esc(s.url.replace(/^https:\/\//, ""))}</a></div>`).join("")}</div>` });
     const iconStyles = ["fontawesome", "solid", "brands"].map((name) => `<link rel="stylesheet" href="${pathToFileURL(path.join(root, `css/vendor/fontawesome/css/${name}.min.css`))}">`).join("");
     return `<!DOCTYPE html><html lang="${lang}"><head><meta charset="utf-8"><title>Fajar Januriawan · CV · ${l.language}</title>${iconStyles}<style>${css}</style></head><body>${pages.map((p, i) => `<section class="sheet"><header class="masthead"><strong>Fajar Januriawan<span style="color:#023aef">.</span></strong><span class="muted">${esc(p.section)} / ${l.language}</span></header>${p.body}<footer class="footer"><span>© ${new Date().getUTCFullYear()} Fajar Januriawan · <a href="https://januriawan.my.id/">januriawan.my.id</a></span><span>${l.page} ${String(i + 1).padStart(2, "0")} / ${String(pages.length).padStart(2, "0")}</span></footer></section>`).join("")}</body></html>`;
 }
@@ -156,7 +181,9 @@ function documentHtml(data, lang, images) {
         await page.goto(pathToFileURL(path.join(root, "index.html")).href);
         const en = await extract(page, source, "en");
         const id = await extract(page, source, "id");
-        if (en.projects.length !== 43 || en.previews.length !== 12 || en.skills.length !== 7 || en.jobs.length !== 4) throw new Error("Unexpected source content count; review the CV layout before updating.");
+        for (const data of [en, id]) {
+            if (data.projects.length !== 43 || data.previews.length !== 12 || data.skills.length !== 7 || data.jobs.length !== 4 || data.certifications.length !== 7) throw new Error("Unexpected source content count; review the CV layout before updating.");
+        }
         const images = new Map();
         const cropPage = await browser.newPage({ viewport: { width: 680, height: 230 }, deviceScaleFactor: 1.5 });
         for (const preview of en.previews) {
@@ -182,7 +209,7 @@ function documentHtml(data, lang, images) {
             if (overflow.length) throw new Error(`${lang} content overlaps footer on pages: ${overflow.join(", ")}`);
             const pdfPath = path.join(output, `fajar-januriawan-cv-${lang}.pdf`);
             await page.pdf({ path: pdfPath, format: "A4", printBackground: true, preferCSSPageSize: true, tagged: true, outline: true });
-            console.log(`${path.relative(root, pdfPath)}: ${await page.locator(".sheet").count()} pages, ${data.previews.length} previews, ${data.projects.length} projects`);
+            console.log(`${path.relative(root, pdfPath)}: ${await page.locator(".sheet").count()} pages, ${data.certifications.length} certifications, ${data.previews.length} previews, ${data.projects.length} projects`);
         }
     } finally {
         await browser.close();
